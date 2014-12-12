@@ -116,14 +116,6 @@
     <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.iOS\TeeChart.PCL.iOS.csproj">
-      <Project>{701a58fb-ef7c-40dd-a9d4-3c5db2a94c98}</Project>
-      <Name>TeeChart.PCL.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj">
-      <Project>{9ce121fc-edcb-44ae-92e0-4587dc2c8697}</Project>
-      <Name>TeeChart.PCL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TeeChartDemo.PCL\TeeChartDemo.PCL.csproj">
       <Name>TeeChartDemo.PCL</Name>
     </ProjectReference>
@@ -139,6 +131,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="TeeChart.PCL">
+      <HintPath>F:\Program Files (x86)\Steema Software\TeeChart for Xamarin Forms 2014 4.0.2014.11280\netPortable45\TeeChart.PCL.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.PCL.iOS">
+      <HintPath>F:\Program Files (x86)\Steema Software\TeeChart for Xamarin Forms 2014 4.0.2014.11280\netPortable45\TeeChart.PCL.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
