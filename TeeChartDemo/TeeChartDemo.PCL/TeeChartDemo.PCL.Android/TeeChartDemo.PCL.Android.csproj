@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{86D588C5-54C6-4683-BAA5-289FFEFA3384}</ProjectGuid>
+    <ProjectGuid>{C1A0E53F-25ED-41D1-A0E3-1E3FCD84FE92}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,6 +54,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="TeeChart.PCL">
+      <HintPath>F:\Program Files (x86)\Steema Software\TeeChart for Xamarin Forms 2014 4.0.2014.11280\netPortable45\TeeChart.PCL.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.PCL.Android">
+      <HintPath>F:\Program Files (x86)\Steema Software\TeeChart for Xamarin Forms 2014 4.0.2014.11280\netPortable45\TeeChart.PCL.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\..\packages\Xamarin.Android.Support.v4.20.0.0.3\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
@@ -86,14 +92,6 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.Android\TeeChart.PCL.Android.csproj">
-      <Project>{192cc99a-4357-40f6-9349-1e1f26223787}</Project>
-      <Name>TeeChart.PCL.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj">
-      <Project>{9ce121fc-edcb-44ae-92e0-4587dc2c8697}</Project>
-      <Name>TeeChart.PCL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TeeChartDemo.PCL\TeeChartDemo.PCL.csproj">
       <Name>TeeChartDemo.PCL</Name>
     </ProjectReference>
