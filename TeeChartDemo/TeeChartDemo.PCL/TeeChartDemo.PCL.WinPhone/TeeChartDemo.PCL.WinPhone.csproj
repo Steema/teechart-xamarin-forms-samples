@@ -145,14 +145,6 @@
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.WP8\TeeChart.PCL.WP8.csproj">
-      <Project>{e7f99720-54bb-4f17-a03d-c807e3b32b49}</Project>
-      <Name>TeeChart.PCL.WP8</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj">
-      <Project>{9ce121fc-edcb-44ae-92e0-4587dc2c8697}</Project>
-      <Name>TeeChart.PCL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TeeChartDemo.PCL\TeeChartDemo.PCL.csproj">
       <Name>TeeChartDemo.PCL</Name>
     </ProjectReference>
@@ -163,6 +155,12 @@
       <HintPath>..\..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="TeeChart.PCL">
+      <HintPath>F:\Program Files (x86)\Steema Software\TeeChart for Xamarin Forms 2014 4.0.2014.11280\netPortable45\TeeChart.PCL.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.WP8">
+      <HintPath>F:\Program Files (x86)\Steema Software\TeeChart for Xamarin Forms 2014 4.0.2014.11280\netPortable45\TeeChart.WP8.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Xamarin.Forms.1.2.2.6243\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
