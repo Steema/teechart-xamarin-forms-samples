@@ -83,6 +83,11 @@ namespace TeeChartForWindowsPhone
     public static void ModifySeries(Chart tChart1, Color drawPenColor1, PageOrientation orientation) 
 #endif
     {
+      if (tChart1[0] is Steema.TeeChart.Styles.Circular)
+      {
+        (tChart1[0] as Steema.TeeChart.Styles.Circular).Circled = true;
+      }
+
       if (tChart1.Series[0] is Clock)
       {
         Clock clock = ((Clock)(tChart1.Series[0]));
