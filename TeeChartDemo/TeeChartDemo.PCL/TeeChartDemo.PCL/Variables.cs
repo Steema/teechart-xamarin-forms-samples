@@ -83,10 +83,17 @@ namespace TeeChartForWindowsPhone
     public static void ModifySeries(Chart tChart1, Color drawPenColor1, PageOrientation orientation) 
 #endif
     {
+#if PORTABLE
       if (tChart1[0] is Steema.TeeChart.Styles.Circular)
       {
         (tChart1[0] as Steema.TeeChart.Styles.Circular).Circled = true;
       }
+#else
+      if (tChart1[0] is Steema.TeeChart.Silverlight.Styles.Circular)
+      {
+        (tChart1[0] as Steema.TeeChart.Silverlight.Styles.Circular).Circled = true;
+      }
+#endif
 
       if (tChart1.Series[0] is Clock)
       {
@@ -113,9 +120,11 @@ namespace TeeChartForWindowsPhone
         {
             tChart1.Header.Text = "HorizArea - Pinch and drag to Vertical Scroll and Zoom";
           // Gesture options to vertical
+#if PORTABLE
           tChart1.Zoom.Direction = ZoomDirections.Vertical;
           tChart1.Panning.Allow = ScrollModes.Vertical;
-            
+#endif
+
           tChart1.Series.Add(new Styles.HorizArea());
           tChart1.Series.Add(new Styles.HorizArea());
           tChart1.Series.Add(new Styles.HorizArea());
@@ -132,10 +141,11 @@ namespace TeeChartForWindowsPhone
         else
         {
           tChart1.Header.Text = "Area - Pinch and drag to Horizontal Scroll and Zoom";
-
+#if PORTABLE
           // Gesture options to horizontal
           tChart1.Zoom.Direction = ZoomDirections.Horizontal;
           tChart1.Panning.Allow = ScrollModes.Horizontal;
+#endif
 
           tChart1.Series.Add(new Styles.Area());
           tChart1.Series.Add(new Styles.Area());
@@ -229,11 +239,13 @@ namespace TeeChartForWindowsPhone
       {
         Candle candle = ((Candle)(tChart1.Series[0]));
         candle.LinePen.Width = 3;
+#if PORTABLE
         candle.Pen.Color = Color.Black;
         candle.LinePen.Color = Color.Black;
-#if PORTABLE
         candle.DownCloseColor = Color.Fuschia;
 #else
+        candle.Pen.Color = Colors.Black;
+        candle.LinePen.Color = Colors.Black;
         candle.DownCloseColor = Colors.Orange;
 #endif
       }
@@ -316,7 +328,6 @@ namespace TeeChartForWindowsPhone
           tChart1.Legend.Font.Size = 16;
         }
 
-        tChart1.ClickSeries += tChart1_ClickSeries;
 
 #if !PORTABLE
         if ((orientation == PageOrientation.Landscape) ||
@@ -325,6 +336,8 @@ namespace TeeChartForWindowsPhone
         {
           tChart1.Legend.Alignment = LegendAlignments.Left;
         }
+#else
+        tChart1.ClickSeries += tChart1_ClickSeries;
 #endif
       }
 
@@ -332,7 +345,11 @@ namespace TeeChartForWindowsPhone
       {
         Styles.CustomError error = ((Styles.CustomError)(tChart1.Series[0]));
         error.ErrorPen.Width = 3;
+#if PORTABLE
         error.ErrorPen.Color = Color.Black;
+#else
+        error.ErrorPen.Color = Colors.Black;
+#endif
       }
 
 
@@ -340,7 +357,11 @@ namespace TeeChartForWindowsPhone
       {
         Gantt gantt = ((Styles.Gantt)(tChart1.Series[0]));
         gantt.LinePen.Width = 2;
+#if PORTABLE
         gantt.LinePen.Color = Color.Black;
+#else
+        gantt.LinePen.Color = Colors.Black;
+#endif
         tChart1.Axes.Bottom.Labels.Angle = 90;
         tChart1.Axes.Bottom.Labels.Font.Size = 8;
       }
@@ -502,7 +523,11 @@ namespace TeeChartForWindowsPhone
       if (tChart1.Series[0] is Styles.BarJoin)
       {
         BarJoin barJoin = ((BarJoin)(tChart1.Series[0]));
+#if PORTABLE
         barJoin.JoinPen.Color = Color.Red;
+#else
+        barJoin.JoinPen.Color = Colors.Red;
+#endif
         barJoin.JoinPen.Width = 2;
       }
 
@@ -551,7 +576,11 @@ namespace TeeChartForWindowsPhone
           (((Styles.Points)tChart1.Series[0]).Description == Texts.GalleryPoint))
       {
         tChart1.Legend.Transparent = true;
+#if PORTABLE
         tChart1.Legend.Font.Color = Color.Black;
+#else
+        tChart1.Legend.Font.Color = Colors.Black;
+#endif
         tChart1.Legend.Font.Size = 16;
         tChart1.Legend.Visible = true;
         tChart1.Legend.Alignment = LegendAlignments.Bottom;
@@ -572,7 +601,11 @@ namespace TeeChartForWindowsPhone
               points.Pointer.Style = PointerStyles.Triangle;
 
             points.Marks.Visible = false;
+#if PORTABLE
             points.Marks.Font.Color = Color.Black;
+#else
+            points.Marks.Font.Color = Colors.Black;
+#endif
             points.Marks.Font.Size = 15;
             points.Marks.Transparent = true;
             s.FillSampleValues();
@@ -607,7 +640,11 @@ namespace TeeChartForWindowsPhone
         Smith smith = ((Styles.Smith)tChart1.Series[0]);
 
         smith.Pen.Width = 2;
+#if PORTABLE
         smith.Pen.Color = Color.Black;
+#else
+        smith.Pen.Color = Colors.Black;
+#endif
       }
 
       if (tChart1.Series[0] is Styles.TagCloud)
@@ -680,7 +717,11 @@ namespace TeeChartForWindowsPhone
         tower.Origin = 500;
         tower.UseOrigin = true;
 
+#if PORTABLE
         tChart1.Tools.Add(typeof(Steema.TeeChart.Tools.Rotate));
+#else
+        tChart1.Tools.Add(typeof(Steema.TeeChart.Silverlight.Tools.Rotate));
+#endif
       }
 
       if (tChart1.Series[0] is Styles.Map)
@@ -692,7 +733,11 @@ namespace TeeChartForWindowsPhone
       if (tChart1.Series[0] is Styles.LinearGauge)
       {
           LinearGauge lineargauge = ((Styles.LinearGauge)tChart1.Series[0]);
-          lineargauge.Axis.Labels.Font.Color = Color.Silver;
+#if PORTABLE
+        lineargauge.Axis.Labels.Font.Color = Color.Silver;
+#else
+        lineargauge.Axis.Labels.Font.Color = Colors.LightGray;
+#endif
       }
     }
 
