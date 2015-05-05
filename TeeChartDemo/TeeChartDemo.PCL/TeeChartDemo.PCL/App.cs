@@ -9,9 +9,9 @@ using Xamarin.Forms;
 
 namespace TeeChartDemo.PCL
 {
-  public class App
+  public class App : Application
   {
-    public static Xamarin.Forms.Page GetMainPage()
+    public App()
     {
 
       Variables.AddSeries();
@@ -33,7 +33,7 @@ namespace TeeChartDemo.PCL
       mainTab.Children.Add(tools);
       mainTab.Children.Add(dash);
 
-      return mainPage;
+      MainPage = mainPage;
     }
 
     public static DataTemplate Cell { get; private set; }

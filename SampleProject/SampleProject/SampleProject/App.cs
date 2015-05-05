@@ -7,13 +7,14 @@ using Xamarin.Forms;
 
 namespace SampleProject
 {
-  public class App
+  public class App : Application
   {
-    public static Page GetMainPage()
+    public App()
     {
       var tChart1 = new Steema.TeeChart.Chart();
 
       tChart1.Series.Add(new Steema.TeeChart.Styles.Bar()).FillSampleValues();
+      tChart1.Aspect.View3D = false;
       
       ChartView chartView = new ChartView
       {
@@ -26,7 +27,7 @@ namespace SampleProject
 
       chartView.Model = tChart1;
 
-      return new ContentPage
+      MainPage = new ContentPage
       {
         Content = new StackLayout
         {

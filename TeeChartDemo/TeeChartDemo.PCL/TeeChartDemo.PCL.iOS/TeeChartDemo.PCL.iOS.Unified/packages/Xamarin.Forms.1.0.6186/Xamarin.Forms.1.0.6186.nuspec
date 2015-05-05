@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.Forms</id>
+    <version>1.0.6186</version>
+    <authors>Xamarin,  Inc.</authors>
+    <owners>Xamarin,  Inc.</owners>
+    <licenseUrl>http://download.xamarin.com/content/licenses/Xamarin.Forms.rtf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Build native UIs for iOS, Android, and Windows Phone from a single, shared C# codebase</description>
+    <copyright>Copyright 2013-2014</copyright>
+    <dependencies>
+      <group targetFramework="WindowsPhone8.0">
+        <dependency id="WPtoolkit" version="4.2013.08.16" />
+      </group>
+      <group targetFramework="MonoAndroid1.0">
+        <dependency id="Xamarin.Android.Support.v4" version="19.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
