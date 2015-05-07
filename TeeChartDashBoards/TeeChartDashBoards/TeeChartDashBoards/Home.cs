@@ -47,6 +47,7 @@ namespace TeeChartDashBoards
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Transparent,
                 Command = new Command(() => Navigation.PushAsync(new DashBoards.Page1()))
             };
 
@@ -54,6 +55,7 @@ namespace TeeChartDashBoards
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Transparent,
                 Command = new Command(() => Navigation.PushAsync(new DashBoards.Page2()))
             };
 
@@ -61,6 +63,7 @@ namespace TeeChartDashBoards
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Transparent,
                 Command = new Command(() => Navigation.PushAsync(new DashBoards.Page3()))
             };
 
@@ -68,6 +71,7 @@ namespace TeeChartDashBoards
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Transparent,
                 Command = new Command(() => Navigation.PushAsync(new DashBoards.Page4()))
             };
 
@@ -75,6 +79,7 @@ namespace TeeChartDashBoards
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Transparent,
                 Command = new Command(() => Navigation.PushAsync(new DashBoards.Page5()))
             };
 
@@ -82,6 +87,7 @@ namespace TeeChartDashBoards
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Transparent,
                 Command = new Command(() => Navigation.PushAsync(new DashBoards.Page6()))
             };
 
@@ -89,6 +95,7 @@ namespace TeeChartDashBoards
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Transparent,
                 Command = new Command(() => Navigation.PushAsync(new DashBoards.Page7()))
             };
 
