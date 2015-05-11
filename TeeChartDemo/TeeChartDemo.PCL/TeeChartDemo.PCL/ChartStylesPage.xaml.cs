@@ -35,6 +35,9 @@ namespace TeeChartDemo.PCL
       {
         VerticalOptions = LayoutOptions.FillAndExpand,
         HorizontalOptions = LayoutOptions.FillAndExpand,
+
+        WidthRequest = 400,
+        HeightRequest = 500
       };
 
       chart.Aspect.View3D = false;
@@ -80,7 +83,7 @@ namespace TeeChartDemo.PCL
         chart.Aspect.Chart3DPercent = 30;
       }
 
-      Variables.ModifySeries(chart, Color.White);
+      Variables.ModifySeries(chart, Color.White); 
       chartView.Model = chart;
 
       Content = new StackLayout
