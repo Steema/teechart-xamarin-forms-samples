@@ -11,16 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject.Android", "Sa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject.WinPhone", "SampleProject\SampleProject.WinPhone\SampleProject.WinPhone.csproj", "{13DF4256-6965-4A25-A539-7EEE635B3806}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject.iOS.Unified", "SampleProject\SampleProject.iOS.Unified\SampleProject.iOS.Unified.csproj", "{B17CF622-A557-4237-899E-E979E5C760D4}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL", "..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj", "{9CE121FC-EDCB-44AE-92E0-4587DC2C8697}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.Android", "..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.Android\TeeChart.PCL.Android.csproj", "{192CC99A-4357-40F6-9349-1E1F26223787}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{11100C41-B799-4BFC-96A0-5E79CD7AC7FB}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.iOS", "..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.iOS\TeeChart.PCL.iOS.csproj", "{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.iOS.Unified", "..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.iOS.Unified\TeeChart.PCL.iOS.Unified.csproj", "{AEAF2DFF-7866-44D9-91A3-0B2B303BAC22}"
 EndProject
@@ -290,6 +287,42 @@ Global
 		{192CC99A-4357-40F6-9349-1E1F26223787}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{192CC99A-4357-40F6-9349-1E1F26223787}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{192CC99A-4357-40F6-9349-1E1F26223787}.Release|x86.ActiveCfg = Release|Any CPU
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|ARM.ActiveCfg = Ad-Hoc|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|Mixed Platforms.ActiveCfg = Ad-Hoc|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|Mixed Platforms.Build.0 = Ad-Hoc|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Ad-Hoc|x86.ActiveCfg = Ad-Hoc|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|ARM.ActiveCfg = AppStore|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|Mixed Platforms.ActiveCfg = AppStore|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.AppStore|x86.ActiveCfg = AppStore|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|ARM.ActiveCfg = Debug|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|iPhone.Build.0 = Debug|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|Mixed Platforms.Build.0 = Debug|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Debug|x86.ActiveCfg = Debug|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|ARM.ActiveCfg = Release|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|iPhone.ActiveCfg = Release|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|iPhone.Build.0 = Release|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|Mixed Platforms.ActiveCfg = Release|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|Mixed Platforms.Build.0 = Release|iPhone
+		{701A58FB-EF7C-40DD-A9D4-3C5DB2A94C98}.Release|x86.ActiveCfg = Release|iPhone
 		{AEAF2DFF-7866-44D9-91A3-0B2B303BAC22}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
 		{AEAF2DFF-7866-44D9-91A3-0B2B303BAC22}.Ad-Hoc|ARM.ActiveCfg = Ad-Hoc|iPhone
 		{AEAF2DFF-7866-44D9-91A3-0B2B303BAC22}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone

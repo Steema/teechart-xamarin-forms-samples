@@ -36,8 +36,8 @@ namespace TeeChartDemo.PCL
         VerticalOptions = LayoutOptions.FillAndExpand,
         HorizontalOptions = LayoutOptions.FillAndExpand,
 
-        WidthRequest = 400,
-        HeightRequest = 500
+        WidthRequest = 300,
+        HeightRequest = 400
       };
 
       chart.Aspect.View3D = false;

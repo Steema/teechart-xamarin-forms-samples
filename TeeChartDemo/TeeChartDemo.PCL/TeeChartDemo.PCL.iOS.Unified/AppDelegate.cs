@@ -16,8 +16,8 @@ namespace TeeChartDemo.PCL.iOS
   // The UIApplicationDelegate for the application. This class is responsible for launching the 
   // User Interface of the application, as well as listening (and optionally responding) to 
   // application events from iOS.
-  [Register("AppDelegate")]
-  public partial class AppDelegate : UIApplicationDelegate
+    [Register("AppDelegate")]
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
   {
     // class-level declarations
     UIWindow window;
@@ -31,15 +31,10 @@ namespace TeeChartDemo.PCL.iOS
     //
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
-      Forms.Init();
+      global::Xamarin.Forms.Forms.Init();
+      LoadApplication(new App());
 
-      window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-      window.RootViewController = App.GetMainPage().CreateViewController();
-
-      window.MakeKeyAndVisible();
-
-      return true;
+      return base.FinishedLaunching(app, options);
     }
   }
 }

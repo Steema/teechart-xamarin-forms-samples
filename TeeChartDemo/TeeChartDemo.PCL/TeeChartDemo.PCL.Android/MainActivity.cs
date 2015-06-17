@@ -20,7 +20,7 @@ namespace TeeChartDemo.PCL.Droid
 
       Xamarin.Forms.Forms.Init(this, bundle);
 
-      SetPage(App.GetMainPage());
+      LoadApplication(new App());
     }
   }
 }
