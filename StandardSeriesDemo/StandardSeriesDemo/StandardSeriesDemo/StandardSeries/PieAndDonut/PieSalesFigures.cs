@@ -495,6 +495,9 @@ namespace StandardSeriesDemo
             numericGauge2.Markers[1].Text = "Lowest";
             numericGauge2.Markers[2].Text = "Twitter";
 
+            this.tChart1.Aspect.ZoomText = true;
+            this.tChart2.Aspect.ZoomText = true;
+            this.tChart3.Aspect.ZoomText = true;
 
             chartView1 = new ChartView
             {

@@ -372,6 +372,12 @@ namespace StandardSeriesDemo
             tChart4.Panel.Gradient.Visible = false;
             tChart5.Panel.Gradient.Visible = false;
 
+            this.tChart1.Aspect.ZoomText = true;
+            this.tChart2.Aspect.ZoomText = true;
+            this.tChart3.Aspect.ZoomText = true;
+            this.tChart4.Aspect.ZoomText = true;
+            this.tChart5.Aspect.ZoomText = true;
+
             initChart();
 
             chartView1 = new ChartView

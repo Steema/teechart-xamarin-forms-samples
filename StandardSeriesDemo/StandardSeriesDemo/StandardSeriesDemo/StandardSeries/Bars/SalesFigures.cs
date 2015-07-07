@@ -19,6 +19,8 @@ namespace StandardSeriesDemo
 		{
             tChart1 = new Chart();
             tChart1.Aspect.View3D = false;
+            tChart1.Zoom.Active = true;
+            tChart1.Aspect.ZoomText = true;
 
             this.bar1 = new Bar();
             this.bar2 = new Bar();
@@ -51,7 +53,7 @@ namespace StandardSeriesDemo
             this.tChart1.Axes.Top.Labels.Font.Size = 9;
             this.tChart1.Header.Font.Brush.Color = Color.Gray;
             this.tChart1.Header.Font.Size = 12;
-            this.tChart1.Header.Lines = new string[] {"Sales Figures"};
+            this.tChart1.Header.Lines = new string[] {tChart1.Zoom.Active.ToString() };//{"Sales Figures"};
             this.tChart1.Legend.Alignment = Steema.TeeChart.LegendAlignments.Bottom;
             this.tChart1.Legend.Font.Brush.Color = Color.FromRgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tChart1.Legend.Font.Size = 9;

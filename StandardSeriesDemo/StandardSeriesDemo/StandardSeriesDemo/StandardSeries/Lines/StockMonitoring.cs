@@ -195,6 +195,8 @@ namespace StandardSeriesDemo
             tChart1[1].FillSampleValues(10);
             tChart1[2].FillSampleValues(11);
 
+            this.tChart1.Aspect.ZoomText = true;
+
             chartView = new ChartView
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,

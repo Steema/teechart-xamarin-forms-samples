@@ -160,6 +160,8 @@ namespace StandardSeriesDemo
             bar3.Add(10.7);
             bar3.Add(11.9);
 
+            this.tChart1.Aspect.ZoomText = true;
+
             chartView = new ChartView
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,

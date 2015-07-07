@@ -87,6 +87,8 @@ namespace StandardSeriesDemo
             gantt1.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
             gantt1.Pointer.VertSize = 25;
 
+            this.tChart1.Aspect.ZoomText = true;
+
             Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(tChart1.Chart, 21);
 
             chartView = new ChartView

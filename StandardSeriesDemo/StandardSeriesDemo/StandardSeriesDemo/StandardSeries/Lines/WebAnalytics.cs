@@ -468,6 +468,11 @@ namespace StandardSeriesDemo
               annotation8.Shape.Font.Brush.Color = line3.Color;
               cursorTool1_Change(tChart4, new Steema.TeeChart.Tools.CursorChangeEventArgs());
 
+              this.tChart1.Aspect.ZoomText = true;
+              this.tChart2.Aspect.ZoomText = true;
+              this.tChart3.Aspect.ZoomText = true;
+              this.tChart4.Aspect.ZoomText = true;
+
 
             chartView1 = new ChartView
             {

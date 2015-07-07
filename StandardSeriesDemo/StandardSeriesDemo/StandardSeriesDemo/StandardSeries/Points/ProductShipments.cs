@@ -177,6 +177,8 @@ namespace StandardSeriesDemo
             tChart1.SubHeader.Font.Size = 10;
             tChart1.SubHeader.Alignment = TextAlignment.Start;
 
+            this.tChart1.Aspect.ZoomText = true;
+
             chartView = new ChartView
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,

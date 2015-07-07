@@ -55,6 +55,7 @@ namespace StandardSeriesDemo
             bCloud.Pen.Color = Color.FromRgb(169,169,169);
 
             bCloud.Marks.Font.Color = Color.Black;
+            this.tChart1.Aspect.ZoomText = true;
 
             chartView = new ChartView
             {

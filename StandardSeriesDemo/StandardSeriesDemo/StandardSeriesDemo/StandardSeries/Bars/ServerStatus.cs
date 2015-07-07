@@ -232,6 +232,10 @@ namespace StandardSeriesDemo
             calendar1.Sunday.Color = Steema.TeeChart.Themes.LookoutTheme.SeawashPalette[10];
             calendar1.Sunday.Font.Color = Color.Black;
 
+            this.tChart1.Aspect.ZoomText = true;
+            this.tChart2.Aspect.ZoomText = true;
+            this.tChart3.Aspect.ZoomText = true;
+
             chartView1 = new ChartView
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,

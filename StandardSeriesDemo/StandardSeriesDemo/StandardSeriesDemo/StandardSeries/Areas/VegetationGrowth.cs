@@ -25,6 +25,7 @@ namespace StandardSeriesDemo
             this.tChart1.Aspect.ElevationFloat = 350D;
             this.tChart1.Aspect.Perspective = 55;
             this.tChart1.Aspect.View3D = false;
+            this.tChart1.Aspect.ZoomText = true;
 
             this.tChart1.Axes.Bottom.Grid.Color = Color.FromRgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.tChart1.Axes.Bottom.Grid.Visible = false;

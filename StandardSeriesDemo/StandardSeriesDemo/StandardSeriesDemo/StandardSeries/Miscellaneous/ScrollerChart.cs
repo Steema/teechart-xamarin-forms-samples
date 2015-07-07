@@ -290,6 +290,7 @@ namespace StandardSeriesDemo
             scroller.EndLinePointer.Visible = false;
             */
 
+            this.tChart1.Aspect.ZoomText = true;
 
             chartView = new ChartView
             {
