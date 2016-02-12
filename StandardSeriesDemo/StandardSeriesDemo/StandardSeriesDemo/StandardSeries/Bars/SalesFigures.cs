@@ -21,6 +21,7 @@ namespace StandardSeriesDemo
             tChart1.Aspect.View3D = false;
             tChart1.Zoom.Active = true;
             tChart1.Aspect.ZoomText = true;
+            tChart1.Panning.Active = true;
 
             this.bar1 = new Bar();
             this.bar2 = new Bar();

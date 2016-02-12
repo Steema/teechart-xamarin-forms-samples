@@ -42,7 +42,7 @@ namespace StandardSeriesDemo.Droid
 
       if (Control == null)
       {
-        var chartView = new Steema.TeeChart.TChart(Context);
+        var chartView = new Steema.TeeChart.TChart(Context, true);
 
         chartView.Chart = NativeElement.Model;
 

@@ -76,7 +76,6 @@ namespace StandardSeriesDemo
             this.tChart6.Walls.Visible = false;
             // bar3
             this.bar3.BarRound = Steema.TeeChart.Styles.BarRounding.AtValue;
-            this.bar3.BarWidthPercent = 95;
             this.bar3.Brush.Color = Color.FromRgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
             this.bar3.Color = Color.FromRgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
             this.bar3.ColorEach = true;
@@ -118,7 +117,6 @@ namespace StandardSeriesDemo
             this.tChart5.Walls.Visible = false;
             // bar2
             this.bar2.BarRound = Steema.TeeChart.Styles.BarRounding.AtValue;
-            this.bar2.BarWidthPercent = 95;
             this.bar2.Brush.Color = Color.FromRgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
             this.bar2.Color = Color.FromRgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
             this.bar2.ColorEach = true;
@@ -333,7 +331,6 @@ namespace StandardSeriesDemo
           " in the evening class";
             // bar1
             this.bar1.BarRound = Steema.TeeChart.Styles.BarRounding.AtValue;
-            this.bar1.BarWidthPercent = 95;
             this.bar1.Brush.Color = Color.FromRgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
             this.bar1.Color = Color.FromRgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
             this.bar1.ColorEach = true;

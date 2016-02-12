@@ -17,6 +17,8 @@ namespace StandardSeriesDemo
             this.gantt1 = new Steema.TeeChart.Styles.Gantt();
             this.ganttTool1 = new Steema.TeeChart.Tools.GanttTool();
             this.tChart1.Aspect.View3D = false;
+            this.tChart1.Zoom.Active = true;
+            this.tChart1.Panning.Active = true;
             this.tChart1.Axes.Bottom.Increment = 30D;
             this.tChart1.Axes.Bottom.Labels.Font.Brush.Color = Color.Gray;
             this.tChart1.Axes.Bottom.Labels.Font.Size = 16;
@@ -65,8 +67,8 @@ namespace StandardSeriesDemo
             this.gantt1.Title = "gantt1";
             this.gantt1.YValues.DataMember = "Y";
             // ganttTool1
-            this.ganttTool1.Gantt = this.gantt1;
-            this.ganttTool1.Series = this.gantt1;
+            //this.ganttTool1.Gantt = this.gantt1;
+            //this.ganttTool1.Series = this.gantt1;
             this.ganttTool1.DragBar += new Steema.TeeChart.Tools.GanttDragEventHandler(this.ganttTool1_DragBar);
             this.ganttTool1.ResizeBar += new Steema.TeeChart.Tools.GanttResizeEventHandler(this.ganttTool1_ResizeBar);
 
@@ -87,7 +89,7 @@ namespace StandardSeriesDemo
             gantt1.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
             gantt1.Pointer.VertSize = 25;
 
-            this.tChart1.Aspect.ZoomText = true;
+            this.tChart1.Aspect.ZoomText = true; 
 
             Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(tChart1.Chart, 21);
 

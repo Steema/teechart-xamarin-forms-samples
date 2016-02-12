@@ -16,6 +16,9 @@ namespace StandardSeriesDemo
 		{
             tChart1 = new Chart();
             tChart1.Aspect.View3D = false;
+            tChart1.Zoom.Active = true;
+            tChart1.Aspect.ZoomText = true;
+            tChart1.Panning.Active = true;
 
             this.line1 = new Steema.TeeChart.Styles.Line();
             this.line2 = new Steema.TeeChart.Styles.Line();

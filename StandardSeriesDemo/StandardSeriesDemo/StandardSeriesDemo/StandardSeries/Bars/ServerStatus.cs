@@ -22,11 +22,11 @@ namespace StandardSeriesDemo
 
         private void tChart1_AfterDraw(object sender, Steema.TeeChart.Drawing.Graphics3D g)
         {
-          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(5) - 16, "Memory Usage");
-          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(4) - 16, "CPU usage");
-          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(3) - 16, "Storage space");
-          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(2) - 16, "Apps installed");
-          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(1) - 16, "Bandwidth");
+          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(5) - 10, "Memory Usage");
+          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(4) - 10, "CPU usage");
+          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(3) - 10, "Storage space");
+          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(2) - 10, "Apps installed");
+          tChart1.Graphics3D.TextOut(tChart1.Axes.Bottom.CalcPosValue(0), horizBar1.CalcYPos(1) - 10, "Bandwidth");
         }
 
         Random rnd1 = new Random();
@@ -101,7 +101,7 @@ namespace StandardSeriesDemo
             this.horizBar1.Title = "horizBar1";
             this.horizBar1.XValues.DataMember = "X";
             this.horizBar1.YValues.DataMember = "Bar";
-            this.horizBar1.YValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            this.horizBar1.YValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;            
             // horizBar2
             this.horizBar2.BarRound = Steema.TeeChart.Styles.BarRounding.AtValue;
             this.horizBar2.Brush.Color = Color.FromRgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(53)))));
@@ -114,10 +114,9 @@ namespace StandardSeriesDemo
             this.horizBar2.Marks.Font.Brush.Color = Color.FromRgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.horizBar2.Marks.Style = Steema.TeeChart.Styles.MarksStyles.Percent;
             this.horizBar2.Marks.Transparent = true;
-            this.horizBar2.MultiBar = Steema.TeeChart.Styles.MultiBars.None;
             this.horizBar2.Pen.Color = Color.FromRgb(((int)(((byte)(146)))), ((int)(((byte)(94)))), ((int)(((byte)(32)))));
             this.horizBar2.Title = "horizBar2";
-            this.horizBar2.YValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            this.horizBar2.YValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;            
             // tChart2
             this.tChart2.Aspect.ColorPaletteIndex = 21;
             this.tChart2.Footer.Font.Brush.Color = Color.Blue;
@@ -174,7 +173,6 @@ namespace StandardSeriesDemo
             this.tChart3.Walls.Back.Brush.Gradient.EndColor = Color.White;
             this.tChart3.Walls.Back.Visible = false;
             // horizBar3
-            this.horizBar3.BarHeightPercent = 100;
             this.horizBar3.BarRound = Steema.TeeChart.Styles.BarRounding.AtValue;
             this.horizBar3.Brush.Color = Color.FromRgb(((int)(((byte)(220)))), ((int)(((byte)(92)))), ((int)(((byte)(5)))));
             this.horizBar3.Color = Color.FromRgb(((int)(((byte)(220)))), ((int)(((byte)(92)))), ((int)(((byte)(5)))));
@@ -184,9 +182,8 @@ namespace StandardSeriesDemo
             this.horizBar3.Title = "Server 1";
             this.horizBar3.XValues.DataMember = "X";
             this.horizBar3.YValues.DataMember = "Bar";
-            this.horizBar3.YValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            this.horizBar3.YValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;            
             // horizBar4
-            this.horizBar4.BarHeightPercent = 100;
             this.horizBar4.BarRound = Steema.TeeChart.Styles.BarRounding.AtValue;
             this.horizBar4.Brush.Color = Color.FromRgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(0)))));
             this.horizBar4.Color = Color.FromRgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(0)))));
@@ -198,7 +195,6 @@ namespace StandardSeriesDemo
             this.horizBar4.YValues.DataMember = "Bar";
             this.horizBar4.YValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
             // horizBar5
-            this.horizBar5.BarHeightPercent = 100;
             this.horizBar5.BarRound = Steema.TeeChart.Styles.BarRounding.AtValue;
             this.horizBar5.Brush.Color = Color.FromRgb(((int)(((byte)(110)))), ((int)(((byte)(197)))), ((int)(((byte)(184)))));
             this.horizBar5.Color = Color.FromRgb(((int)(((byte)(110)))), ((int)(((byte)(197)))), ((int)(((byte)(184)))));
