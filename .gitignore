@@ -1,2 +1,3 @@
-TeeChartDemo/packages/
-SampleProject/packages/
+**/packages/
+**/obj*/
+**/bin*/
