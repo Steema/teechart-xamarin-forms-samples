@@ -7,4 +7,4 @@ Example charts in this demo are interactive, supporting pinch zoom, panning, rot
 
 ## Sample Requirements
 
-You'll need TeeChart for Xamarin.Forms evaluation or registered version to run this example. Fully functional evaluation version can be obtained at http://www.steema.com/download/mobile
+You'll need TeeChart for Xamarin.Forms evaluation or registered version to run this example. Fully functional evaluation version can be obtained at https://www.steema.com/downloads/forms
