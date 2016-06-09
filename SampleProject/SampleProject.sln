@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject", "SampleProject\SampleProject\SampleProject.csproj", "{EF498692-C6D0-4269-8F7D-3BFC45816B3F}"
 EndProject
@@ -11,13 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject.WinPhone", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject.iOS.Unified", "SampleProject\SampleProject.iOS.Unified\SampleProject.iOS.Unified.csproj", "{B17CF622-A557-4237-899E-E979E5C760D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL", "..\..\..\TeeChartforNET\Version 4\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj", "{9CE121FC-EDCB-44AE-92E0-4587DC2C8697}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL", "..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj", "{9CE121FC-EDCB-44AE-92E0-4587DC2C8697}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.Android", "..\..\..\TeeChartforNET\Version 4\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.Android\TeeChart.PCL.Android.csproj", "{192CC99A-4357-40F6-9349-1E1F26223787}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.Android", "..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.Android\TeeChart.PCL.Android.csproj", "{192CC99A-4357-40F6-9349-1E1F26223787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.iOS.Unified", "..\..\..\TeeChartforNET\Version 4\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.iOS.Unified\TeeChart.PCL.iOS.Unified.csproj", "{AEAF2DFF-7866-44D9-91A3-0B2B303BAC22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.iOS.Unified", "..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.iOS.Unified\TeeChart.PCL.iOS.Unified.csproj", "{AEAF2DFF-7866-44D9-91A3-0B2B303BAC22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.WP8", "..\..\..\TeeChartforNET\Version 4\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.WP8\TeeChart.PCL.WP8.csproj", "{E7F99720-54BB-4F17-A03D-C807E3B32B49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart.PCL.WP8", "..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.WP8\TeeChart.PCL.WP8.csproj", "{E7F99720-54BB-4F17-A03D-C807E3B32B49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
