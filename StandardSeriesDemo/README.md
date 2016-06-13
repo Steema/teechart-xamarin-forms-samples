@@ -9,9 +9,9 @@ http://steema.com/wp/blog/2015/06/18/check-out-the-new-standardseriesdemo-exampl
 
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo1.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo2.PNG=raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo3.PNG=raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo4.PNG=raw=true "Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo2.PNG=raw=true "Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo3.PNG=raw=true "Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo4.PNG=raw=true "Xamarin.Forms")
 
 ## Sample Requirements
 
