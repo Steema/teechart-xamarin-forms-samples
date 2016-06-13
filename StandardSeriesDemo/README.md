@@ -7,10 +7,11 @@ It contains several content pages which make use of the Chart component. Several
 You can also read an article which has been dedicated to this example project ported to all the the TeeChart versions here :
 http://steema.com/wp/blog/2015/06/18/check-out-the-new-standardseriesdemo-example/
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo1.PNG "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo2.PNG.png "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo3.PNG "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo4.PNG.png "Xamarin.Forms")
+
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo1.PNG?raw=true "Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo2.PNG=raw=true "Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo3.PNG=raw=true "Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo4.PNG=raw=true "Xamarin.Forms")
 
 ## Sample Requirements
 
