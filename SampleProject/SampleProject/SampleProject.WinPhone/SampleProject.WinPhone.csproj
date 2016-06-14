@@ -160,14 +160,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.WP8\TeeChart.PCL.WP8.csproj">
-      <Project>{e7f99720-54bb-4f17-a03d-c807e3b32b49}</Project>
-      <Name>TeeChart.PCL.WP8</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj">
-      <Project>{9ce121fc-edcb-44ae-92e0-4587dc2c8697}</Project>
-      <Name>TeeChart.PCL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SampleProject\SampleProject.csproj">
       <Name>SampleProject</Name>
     </ProjectReference>
@@ -176,6 +168,12 @@
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="TeeChart.PCL">
+      <HintPath>..\..\packages\TeeChart.Xamarin.Forms\TeeChart.PCL.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.WP8">
+      <HintPath>..\..\packages\TeeChart.Xamarin.Forms\TeeChart.WP8.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.2.0.45\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
