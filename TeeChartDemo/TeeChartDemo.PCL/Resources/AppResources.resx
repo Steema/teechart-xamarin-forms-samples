@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BelowSignal" xml:space="preserve">
+    <value>Below left and right signal strength</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>currency</value>
+  </data>
+  <data name="CurrentPosition" xml:space="preserve">
+    <value>current position</value>
+  </data>
+  <data name="DashDigital" xml:space="preserve">
+    <value>digital</value>
+  </data>
+  <data name="DashExposure" xml:space="preserve">
+    <value>exposure (fin$)</value>
+  </data>
+  <data name="DashGeographic" xml:space="preserve">
+    <value>geographic</value>
+  </data>
+  <data name="DashTrend" xml:space="preserve">
+    <value>trend</value>
+  </data>
+  <data name="DeltaAverage" xml:space="preserve">
+    <value>Δ avg</value>
+  </data>
+  <data name="DollarValue" xml:space="preserve">
+    <value>Value $ 000s</value>
+  </data>
+  <data name="EUIndex" xml:space="preserve">
+    <value>index of eu15</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>fixed</value>
+  </data>
+  <data name="Indexed" xml:space="preserve">
+    <value>Indexed</value>
+  </data>
+  <data name="LBGestureStyle1" xml:space="preserve">
+    <value>InChart</value>
+  </data>
+  <data name="LBGestureStyle2" xml:space="preserve">
+    <value>FullChart</value>
+  </data>
+  <data name="LBPoints1" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="MarketCost" xml:space="preserve">
+    <value>to market cost index</value>
+  </data>
+  <data name="OrganicFood" xml:space="preserve">
+    <value>organic food consumption 2009</value>
+  </data>
+  <data name="Participation" xml:space="preserve">
+    <value>Participation %</value>
+  </data>
+  <data name="PivotItemAbout" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="PivotItemDashboard" xml:space="preserve">
+    <value>dashboard</value>
+  </data>
+  <data name="PivotItemEmpty" xml:space="preserve">
+    <value>empty</value>
+  </data>
+  <data name="PivotItemSeries" xml:space="preserve">
+    <value>series</value>
+  </data>
+  <data name="PivotItemSettings" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="PivotItemThemes" xml:space="preserve">
+    <value>themes</value>
+  </data>
+  <data name="PivotItemTools" xml:space="preserve">
+    <value>tools</value>
+  </data>
+  <data name="PivotTitle" xml:space="preserve">
+    <value>            TEECHART.NET FOR WINDOWS PHONE 8</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>private</value>
+  </data>
+  <data name="Public" xml:space="preserve">
+    <value>public</value>
+  </data>
+  <data name="RecentMovement" xml:space="preserve">
+    <value>recent movement</value>
+  </data>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="RunText1" xml:space="preserve">
+    <value>Steema Software has been providing developers with tools for charting since 1995. The TeeChart for Windows Phone </value>
+  </data>
+  <data name="RunText2" xml:space="preserve">
+    <value> Library forms part of ongoing development making available for Phone </value>
+  </data>
+  <data name="RunText3" xml:space="preserve">
+    <value> application development all of the charting features that form part of the TeeChart Libraries. This preview application shows a few of the possibilities available to developers.</value>
+  </data>
+  <data name="SigFrequency" xml:space="preserve">
+    <value>Sig. Frequency</value>
+  </data>
+  <data name="TextBlock1" xml:space="preserve">
+    <value>Number of Data Points:</value>
+  </data>
+  <data name="TextBlock2" xml:space="preserve">
+    <value>Gesture Style:</value>
+  </data>
+  <data name="Variable" xml:space="preserve">
+    <value>variable</value>
+  </data>
+</root>

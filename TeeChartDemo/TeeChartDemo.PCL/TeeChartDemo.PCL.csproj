@@ -37,12 +37,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\Sources\TeeChart\Editors\Tools\ToolsGalleryDemos.cs">
-      <Link>ToolsGalleryDemos.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\TeeChartForWindowsPhone\Variables.cs">
-      <Link>Variables.cs</Link>
-    </Compile>
     <Compile Include="App.cs" />
     <Compile Include="ChartDashPage.xaml.cs">
       <DependentUpon>ChartDashPage.xaml</DependentUpon>
@@ -56,6 +50,23 @@
     <Compile Include="ChartView.cs" />
     <Compile Include="Localization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.ca.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.ca.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AppResources.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ToolsGalleryDemos.cs" />
+    <Compile Include="Variables.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj">
@@ -64,24 +75,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\..\..\TeeChartForWindowsPhone\Resources\AppResources.ca.resx">
-      <Link>Resources\AppResources.ca.resx</Link>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.ca.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\TeeChartForWindowsPhone\Resources\AppResources.es.resx">
-      <Link>Resources\AppResources.es.resx</Link>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.es.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\TeeChartForWindowsPhone\Resources\AppResources.resx">
-      <Link>Resources\AppResources.resx</Link>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="ChartStylesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.ca.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.ca.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

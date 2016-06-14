@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="es" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="TeeChartForWindowsPhone45" product-version="4.0.2013" build-num="2013">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.1100.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit translate="yes" id="Resx/BelowSignal" xml:space="preserve">
+          <source>Below left and right signal strength</source>
+          <target state="translated">Abajo de la fuerza de señal de la izquierda y la derecha</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Currency" xml:space="preserve">
+          <source>currency</source>
+          <target state="translated">devisa</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/CurrentPosition" xml:space="preserve">
+          <source>current position</source>
+          <target state="translated">posición actual</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/DashDigital" xml:space="preserve">
+          <source>digital</source>
+          <target state="translated">digital</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/DashTrend" xml:space="preserve">
+          <source>trend</source>
+          <target state="translated">tendencia</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/DeltaAverage" xml:space="preserve">
+          <source>Δ avg</source>
+          <target state="translated">Δ promedio</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/DollarValue" xml:space="preserve">
+          <source>Value $ 000s</source>
+          <target state="translated">Valor $ 000s</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/EUIndex" xml:space="preserve">
+          <source>index of eu15</source>
+          <target state="translated">índice de eu15</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Indexed" xml:space="preserve">
+          <source>Indexed</source>
+          <target state="translated">Indexado</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Fixed" xml:space="preserve">
+          <source>fixed</source>
+          <target state="translated">fijado</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/DashGeographic" xml:space="preserve">
+          <source>geographic</source>
+          <target state="translated">geográfico</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/DashExposure" xml:space="preserve">
+          <source>exposure (fin$)</source>
+          <target state="translated">exposición (fin$)</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/LBGestureStyle1" xml:space="preserve">
+          <source>InChart</source>
+          <target state="translated">DentroGráfico</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/TextBlock2" xml:space="preserve">
+          <source>Gesture Style:</source>
+          <target state="translated">Estilo de Gesto:</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Variable" xml:space="preserve">
+          <source>variable</source>
+          <target state="translated">variable</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/TextBlock1" xml:space="preserve">
+          <source>Number of Data Points:</source>
+          <target state="translated">Número de Puntos de Datos:</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/ResourceLanguage" xml:space="preserve">
+          <source>en</source>
+          <target state="translated">es</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/RunText3" xml:space="preserve">
+          <source> application development all of the charting features that form part of the TeeChart Libraries. This preview application shows a few of the possibilities available to developers.</source>
+          <target state="translated"> todas las funciones de gráficos que forman parte de las bibliotecas TeeChart. Esta aplicación de vista previa muestra algunas de las posibilidades disponibles para los desarrolladores.</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/RunText2" xml:space="preserve">
+          <source> Library forms part of ongoing development making available for Phone </source>
+          <target state="translated">forma parte del desarrollo en curso de la biblioteca y la hace disponible para el desarrollo de aplicaciones de Phone </target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/RunText1" xml:space="preserve">
+          <source>Steema Software has been providing developers with tools for charting since 1995. The TeeChart for Windows Phone </source>
+          <target state="translated">Steema Software proporciona a los desarrolladores las herramientas para crear gráficos desde 1995. El TeeChart para Windows Phone </target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/SigFrequency" xml:space="preserve">
+          <source>Sig. Frequency</source>
+          <target state="translated">Frecuencia de señal</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/ResourceFlowDirection" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/PivotTitle" xml:space="preserve">
+          <source>            TEECHART.NET FOR WINDOWS PHONE 8</source>
+          <target state="translated">            TEECHART.NET PARA WINDOWS PHONE 8</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Public" xml:space="preserve">
+          <source>public</source>
+          <target state="translated">público</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/RecentMovement" xml:space="preserve">
+          <source>recent movement</source>
+          <target state="translated">movimiento reciente</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Private" xml:space="preserve">
+          <source>private</source>
+          <target state="translated">privado</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/PivotItemTools" xml:space="preserve">
+          <source>tools</source>
+          <target state="translated">herramientas</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/PivotItemThemes" xml:space="preserve">
+          <source>themes</source>
+          <target state="translated">temas</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/PivotItemSettings" xml:space="preserve">
+          <source>settings</source>
+          <target state="translated">configuración</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/PivotItemSeries" xml:space="preserve">
+          <source>series</source>
+          <target state="translated">serie</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/PivotItemEmpty" xml:space="preserve">
+          <source>empty</source>
+          <target state="translated">vacio</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/PivotItemDashboard" xml:space="preserve">
+          <source>dashboard</source>
+          <target state="translated">panel de control</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/PivotItemAbout" xml:space="preserve">
+          <source>about</source>
+          <target state="translated">acerca de</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/LBPoints1" xml:space="preserve">
+          <source>Default</source>
+          <target state="translated">Por Defecto</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/MarketCost" xml:space="preserve">
+          <source>to market cost index</source>
+          <target state="translated">índice del coste al mercado</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/OrganicFood" xml:space="preserve">
+          <source>organic food consumption 2009</source>
+          <target state="translated">consunción de comida orgánica 2009</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/Participation" xml:space="preserve">
+          <source>Participation %</source>
+          <target state="translated">Participación %</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/LBGestureStyle2" xml:space="preserve">
+          <source>FullChart</source>
+          <target state="translated">GráficoEntero</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
