@@ -60,6 +60,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="TeeChart.PCL">
+      <HintPath>..\..\packages\TeeChart.Xamarin.Forms\TeeChart.PCL.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.PCL.Android">
+      <HintPath>..\..\packages\TeeChart.Xamarin.Forms\TeeChart.PCL.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
       <HintPath>..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
       <Private>True</Private>
@@ -130,14 +136,6 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL.Android\TeeChart.PCL.Android.csproj">
-      <Project>{192cc99a-4357-40f6-9349-1e1f26223787}</Project>
-      <Name>TeeChart.PCL.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Sources\TeeChart.Xamarin.Forms\TeeChart.PCL\TeeChart.PCL.csproj">
-      <Project>{9ce121fc-edcb-44ae-92e0-4587dc2c8697}</Project>
-      <Name>TeeChart.PCL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TeeChartDashBoards\TeeChartDashBoards.csproj">
       <Name>TeeChartDashBoards</Name>
     </ProjectReference>
