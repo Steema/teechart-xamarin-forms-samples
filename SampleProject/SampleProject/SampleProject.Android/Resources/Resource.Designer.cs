@@ -26,6 +26,7 @@ namespace SampleProject.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::SampleProject.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
