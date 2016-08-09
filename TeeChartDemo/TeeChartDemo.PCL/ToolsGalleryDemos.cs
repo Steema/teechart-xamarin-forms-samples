@@ -179,7 +179,6 @@ namespace Steema.TeeChart.Editors.Tools
       chart.DoubleClick += new EventHandler(chart_DoubleClick);
 #endif
 
-      chart.Aspect.View3D = true;
       chart.Legend.Visible = false;
       chart.Header.Text = "";
 
@@ -625,7 +624,6 @@ namespace Steema.TeeChart.Editors.Tools
         else if (tool == typeof(GridTranspose))
         {
           CreateChart(tool, "Swaps 3D Series data, rows by columns", series != null ? series : typeof(Surface));
-          chart[0].Marks.Visible = false;
           (chart[0] as Surface).HideCells = true;
           (chart.Tools[0] as GridTranspose).Series = (chart[0] as Surface);
           chart.Aspect.Orthogonal = false;
@@ -751,7 +749,6 @@ namespace Steema.TeeChart.Editors.Tools
 
           (chart[0] as Surface).HideCells = true;
           chart[0].FillSampleValues(20);
-          chart[0].Marks.Visible = false;
           (chart.Tools[0] as SurfaceNearestTool).Series = chart[0];
 
           chart.Tools.Add(typeof(Rotate));
@@ -1047,7 +1044,6 @@ namespace Steema.TeeChart.Editors.Tools
           (chart[0] as Surface).PaletteStyle = PaletteStyles.Rainbow;
 
           chart[0].FillSampleValues(20);
-          chart[0].Marks.Visible = false;
           (chart.Tools[0] as LegendPalette).Series = chart[0];
           (chart.Tools[0] as LegendPalette).Top = 100;
           (chart.Tools[0] as LegendPalette).Smooth = true;
@@ -1106,7 +1102,6 @@ namespace Steema.TeeChart.Editors.Tools
           chart.Axes.Left.EndPosition = 80;
           chart.Axes.Bottom.StartPosition = 25;
           chart.Axes.Bottom.EndPosition = 70;
-          chart[0].Marks.Visible = false;
           (chart.Tools[0] as ClipSeries).Series = chart[0];
         }
 #endif
@@ -1153,7 +1148,6 @@ namespace Steema.TeeChart.Editors.Tools
           CreateChart(tool, "Fill the region between two Series.");
           chart.Aspect.View3D = false;
           chart[0].FillSampleValues();
-          chart[0].Marks.Visible = false;
           chart.Series.Add(typeof(Line));
           for (int i = 0; i < chart[0].Count; i++)
           {
@@ -1191,19 +1185,12 @@ namespace Steema.TeeChart.Editors.Tools
           CreateChart(tool, "Scrolled Paging", typeof(FastLine));
           chart.Aspect.View3D = false;
           chart[0].FillSampleValues(500);
-          chart[0].Marks.Visible = false;
           ((ScrollPager)chart.Tools[0]).Series = chart[0];
 #if WPF || SILVERLIGHT || STORE
           if (themeType != null) Theme.ApplyChartTheme(themeType, ((ScrollPager)chart.Tools[0]).SubChartTChart.Chart);
 #else
           Steema.TeeChart.Themes.WebTheme theme = new Steema.TeeChart.Themes.WebTheme(((ScrollPager)chart.Tools[0]).SubChartTChart.Chart);
           theme.Apply();
-          int count = ((ScrollPager)chart.Tools[0]).SubChartTChart.Series.Count;
-          for (int i = 0; i < count; i++)
-          {
-            ((ScrollPager)chart.Tools[0]).SubChartTChart[i].Marks.Visible = false;
-          }
-          
 #endif
         }
 #endif

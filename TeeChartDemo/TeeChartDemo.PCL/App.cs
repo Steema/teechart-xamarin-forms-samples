@@ -25,6 +25,9 @@ namespace TeeChartDemo.PCL
       };
 
       var mainPage = new NavigationPage(mainTab);
+      mainPage.BarBackgroundColor = Color.FromRgb(0, 82, 160);
+      mainPage.BarTextColor = Color.White;
+
       var charts = GetChartStylesPage(mainPage);
       var tools = GetChartToolsPage(mainPage);
       var dash = GetChartDashPage(mainPage);
@@ -32,7 +35,7 @@ namespace TeeChartDemo.PCL
       mainTab.Children.Add(charts);
       mainTab.Children.Add(tools);
       mainTab.Children.Add(dash);
-
+     
       MainPage = mainPage;
     }
 
