@@ -11,17 +11,17 @@ You'll need TeeChart for Xamarin.Forms evaluation or registered version to run t
 
 Here some screenshots of the Demo app :
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image1.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image2.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image3.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image4.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image5.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image6.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image7.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image8.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image9.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image10.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/TeeChartDemo/Screenshots/image11.PNG?raw=true "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image1.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image2.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image3.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image4.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image5.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image6.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image7.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image8.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image9.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image10.png "Xamarin.Forms")
+![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image11.png "Xamarin.Forms")
 
 Author
 ------
