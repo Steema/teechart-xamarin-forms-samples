@@ -8,10 +8,10 @@ You can also read an article which has been dedicated to this example project po
 http://steema.com/wp/blog/2015/06/18/check-out-the-new-standardseriesdemo-example/
 
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo1.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo2.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo3.PNG?raw=true "Xamarin.Forms")
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo4.PNG?raw=true "Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo1.PNG?raw=true "TeeChart for Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo2.PNG?raw=true "TeeChart for Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo3.PNG?raw=true "TeeChart for Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/StandardSeriesDemo/Screenshots/StandardSeriesDemo4.PNG?raw=true "TeeChart for Xamarin.Forms")
 
 ## Sample Requirements
 
