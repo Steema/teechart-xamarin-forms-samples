@@ -168,6 +168,9 @@
   <data name="OrganicFood" xml:space="preserve">
     <value>organic food consumption 2009</value>
   </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
   <data name="Participation" xml:space="preserve">
     <value>Participation %</value>
   </data>

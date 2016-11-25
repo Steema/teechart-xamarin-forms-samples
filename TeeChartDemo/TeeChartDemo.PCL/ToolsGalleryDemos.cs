@@ -1199,7 +1199,7 @@ namespace Steema.TeeChart.Editors.Tools
           CreateChart(tool, "Axis breaks", series);
           chart.Aspect.View3D = false;
           chart[0].FillSampleValues();
-          //TODO pep
+                              
           AxisBreaksTool abt = chart.Tools[0] as AxisBreaksTool;
           AxisBreak ab = new AxisBreak(abt);
           tmpRange = Utils.Round(chart[0].mandatory.Range);

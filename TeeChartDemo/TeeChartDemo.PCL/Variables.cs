@@ -56,12 +56,14 @@ namespace TeeChartForWindowsPhone
             ToolsList = new List<ElementWrapper>();
             ThemesList = new List<ElementWrapper>();
             DashList = new List<ElementWrapper>();
+            OtherList = new List<ElementWrapper>();
         }
 
         public static List<ElementWrapper> SeriesList { get; set; }
         public static List<ElementWrapper> ToolsList { get; set; }
         public static List<ElementWrapper> ThemesList { get; set; }
         public static List<ElementWrapper> DashList { get; set; }
+        public static List<ElementWrapper> OtherList { get; set; }
         public static ElementWrapper Series { get; set; }
         public static ElementWrapper Tool { get; set; }
         public static ElementWrapper Theme { get; set; }
@@ -814,6 +816,23 @@ namespace TeeChartForWindowsPhone
             {
                 return String.Compare(x.ToString(), y.ToString());
             });
+        }
+
+        public static void AddOther()
+        {
+            List<String> list = new List<String>
+            {
+                "Click Annotation",
+                "Snap Cursor ToolTip",
+                "ScrollPager Tool",
+                "SubChart Tool",
+                "ColorLine Tool"
+            };
+
+            foreach (String t in list)
+            {
+                Variables.OtherList.Add(new ElementWrapper(t));
+            }
         }
 
         public static void AddDash()

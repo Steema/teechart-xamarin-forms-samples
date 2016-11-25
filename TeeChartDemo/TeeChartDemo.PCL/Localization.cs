@@ -155,6 +155,17 @@ namespace TeeChartDemo.PCL
     }
 
     /// <summary>
+    ///   Looks up a localized string similar to dashboard.
+    /// </summary>
+    public static string OtherItem
+    {
+        get
+        {
+            return ResourceManager.GetString("Other", ResourceCulture);
+        }
+    }
+
+    /// <summary>
     ///   Looks up a localized string similar to fixed.
     /// </summary>
     public static string Fixed

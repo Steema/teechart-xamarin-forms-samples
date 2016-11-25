@@ -215,6 +215,15 @@ namespace TeeChartDemo.PCL.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        internal static string Other {
+            get {
+                return ResourceManager.GetString("Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Participation %.
         /// </summary>
         internal static string Participation {

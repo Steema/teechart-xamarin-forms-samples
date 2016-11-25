@@ -18,6 +18,7 @@ namespace TeeChartDemo.PCL
       Variables.AddTools();
       Variables.AddThemes();
       Variables.AddDash();
+      Variables.AddOther();
 
       var mainTab = new TabbedPage()
       {
@@ -31,11 +32,13 @@ namespace TeeChartDemo.PCL
       var charts = GetChartStylesPage(mainPage);
       var tools = GetChartToolsPage(mainPage);
       var dash = GetChartDashPage(mainPage);
+      var events = GetChartEventsPage(mainPage);
 
       mainTab.Children.Add(charts);
       mainTab.Children.Add(tools);
       mainTab.Children.Add(dash);
-     
+      mainTab.Children.Add(events);
+
       MainPage = mainPage;
     }
 
@@ -109,13 +112,67 @@ namespace TeeChartDemo.PCL
       return controls;
     }
 
-
     /// <summary>
-    /// Gets the Chart Dash page.
+    /// Gets the Chart Events page.
     /// </summary>
     /// <param name="mainPage">The main page.</param>
     /// <returns>Content Page.</returns>
-    private static ContentPage GetChartDashPage(VisualElement mainPage)
+    private static ContentPage GetChartEventsPage(VisualElement mainPage)
+        {
+            var controls = new ContentPage
+            {
+                Title = AppResources.OtherItem,
+                Icon = "project-32.png"  
+            };
+
+            var lstControls = new ListView
+            {
+                ItemsSource = Variables.OtherList
+            };
+
+            lstControls.ItemSelected += async (sender, e) =>
+            {
+                ElementWrapper obj = e.SelectedItem as ElementWrapper;
+                switch (obj.ToString())
+                {
+                    case "Click Annotation":
+                    {
+                        await mainPage.Navigation.PushAsync(new Other.ClickAnnotation());
+                        break;
+                    }
+                    case "Snap Cursor ToolTip":
+                    {
+                        await mainPage.Navigation.PushAsync(new Other.SnapCursorToolTip());
+                        break;
+                    }
+                    case "ScrollPager Tool":
+                    {
+                        await mainPage.Navigation.PushAsync(new Other.ScrollPagerTool());
+                        break;
+                    }
+                    case "SubChart Tool":
+                    {
+                        await mainPage.Navigation.PushAsync(new Other.SubChartTool());
+                        break;
+                    }
+                    case "ColorLine Tool":
+                    {
+                        await mainPage.Navigation.PushAsync(new Other.ColorLineTool());
+                        break;
+                    }
+                }
+            };
+            controls.Content = lstControls;
+            return controls;
+        }
+
+
+        /// <summary>
+        /// Gets the Chart Dash page.
+        /// </summary>
+        /// <param name="mainPage">The main page.</param>
+        /// <returns>Content Page.</returns>
+        private static ContentPage GetChartDashPage(VisualElement mainPage)
     {
       var controls = new ContentPage
       {
