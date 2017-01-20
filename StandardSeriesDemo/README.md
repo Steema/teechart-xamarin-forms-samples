@@ -18,7 +18,7 @@ http://steema.com/wp/blog/2015/06/18/check-out-the-new-standardseriesdemo-exampl
 You'll need TeeChart for Xamarin.Forms evaluation or registered version to run the example on this repository. Fully functional evaluation version can be obtained at https://www.steema.com/downloads/forms
 
 ---
-Author
+### Author
 ------
 Josep Lluis Jorge
 @joseplluisjorge

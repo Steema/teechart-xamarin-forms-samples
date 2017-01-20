@@ -13,8 +13,8 @@ It shows how easily it is to create a DashBoard app to display some Charts with 
 
 You'll need TeeChart for Xamarin.Forms evaluation or registered version to run the example on this repository. Fully functional evaluation version can be obtained at https://www.steema.com/downloads/forms
 
-
-Author
+------
+### Author
 ------
 Josep Lluis Jorge
 @joseplluisjorge
