@@ -5,6 +5,8 @@ This is the basic structure of an application with TeeChart for Xamarin.Forms. I
 
 ## Sample Requirements
 
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/SampleProject/ScreenShots/ScreenShot1.png?raw=true "TeeChart for Xamarin.Forms")
+
 You'll need TeeChart for Xamarin.Forms evaluation or registered version to run the example on this repository. Fully functional evaluation version can be obtained at https://www.steema.com/downloads/forms
 
 
