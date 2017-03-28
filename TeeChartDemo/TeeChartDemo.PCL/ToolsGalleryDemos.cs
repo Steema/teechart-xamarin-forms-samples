@@ -188,7 +188,7 @@ namespace Steema.TeeChart.Editors.Tools
 #endif
       if (ATool != null)
       {
-        chart.Tools.Add(ATool);
+        chart.Tools.Add(Tool.NewFromType(ATool));
       }
 
       if (ASeries == null)
@@ -196,15 +196,15 @@ namespace Steema.TeeChart.Editors.Tools
 #if STORE || PORTABLE
         if (chart.Tools[0] is ToolAxis)
         {
-          chart.Series.Add(GetSeriesWithAxis());
+          chart.Series.Add(Series.NewFromType(GetSeriesWithAxis()));
         }
         else if (chart.Tools[0] is ToolSeries)
         {
-          chart.Series.Add(GetSeriesWithAxis());
+          chart.Series.Add(Series.NewFromType(GetSeriesWithAxis()));
         }
         else
         {
-          chart.Series.Add(GetSeriesWithOutAxis());
+          chart.Series.Add(Series.NewFromType(GetSeriesWithOutAxis()));
         }
 #else
         chart.Series.Add(new Line());
@@ -212,7 +212,7 @@ namespace Steema.TeeChart.Editors.Tools
       }
       else
       {
-        chart.Series.Add(ASeries);
+        chart.Series.Add(Series.NewFromType(ASeries));
       }
 
       chart[0].FillSampleValues();
@@ -251,14 +251,17 @@ namespace Steema.TeeChart.Editors.Tools
         allSeries = new List<Series>();
         foreach (var item in Utils.SeriesTypesOf)
         {
-          allSeries.Add(Series.CreateNewSeries(null, item, null));
-          if (allSeries.Last().UseAxis)
+          if (item.Name != "Clock")
           {
-            seriesWithAxis.Add(item);
-          }
-          else
-          {
-            seriesWithoutAxis.Add(item);
+            allSeries.Add(Series.CreateNewSeries(null, item, null));
+            if (allSeries.Last().UseAxis)
+            {
+              seriesWithAxis.Add(item);
+            }
+            else
+            {
+              seriesWithoutAxis.Add(item);
+            }
           }
         }
       }
@@ -596,7 +599,7 @@ namespace Steema.TeeChart.Editors.Tools
         else if (tool == typeof(ExtraLegend))
         {
           CreateChart(tool, "Show additional Legend panels", series != null ? series : typeof(Bar));
-          chart.Series.Add(series != null ? series : typeof(Bar));
+          chart.Series.Add(Series.NewFromType(series != null ? series : typeof(Bar)));
           chart[1].FillSampleValues();
           chart.Legend.Visible = true;
           chart.Legend.LegendStyle = LegendStyles.Values;
@@ -794,9 +797,9 @@ namespace Steema.TeeChart.Editors.Tools
           tmpY = chart[0].mandatory.Minimum;
           tmpRange = Utils.Round(chart[0].mandatory.Range);
           RandomColorLine(chart.Tools[0] as ColorLine, ref tmpY, tmpRange);
-          chart.Tools.Add(typeof(ColorLine));
+          chart.Tools.Add(Tool.NewFromType(typeof(ColorLine)));
           RandomColorLine(chart.Tools[1] as ColorLine, ref tmpY, tmpRange);
-          chart.Tools.Add(typeof(ColorLine));
+          chart.Tools.Add(Tool.NewFromType(typeof(ColorLine)));
           RandomColorLine(chart.Tools[2] as ColorLine, ref tmpY, tmpRange);
         }
         else if (tool == typeof(ColorBand))
@@ -806,9 +809,13 @@ namespace Steema.TeeChart.Editors.Tools
           tmpY = chart[0].mandatory.Minimum;
           tmpRange = Utils.Round(chart[0].mandatory.Range);
           RandomColorBand(chart.Tools[0] as ColorBand, ref tmpY, tmpRange);
-          int index = chart.Tools.Add(typeof(ColorBand));
+          Tool tmpTool = Tool.NewFromType(typeof(ColorBand));
+          chart.Tools.Add(tmpTool);
+          int index = chart.Tools.IndexOf(tmpTool);
           RandomColorBand(chart.Tools[index] as ColorBand, ref tmpY, tmpRange);
-          index = chart.Tools.Add(typeof(ColorBand));
+          tmpTool = Tool.NewFromType(typeof(ColorBand));
+          chart.Tools.Add(tmpTool);
+          index = chart.Tools.IndexOf(tmpTool);
           RandomColorBand(chart.Tools[index] as ColorBand, ref tmpY, tmpRange);
         }
 #if !STORE && !PORTABLE
@@ -1054,12 +1061,12 @@ namespace Steema.TeeChart.Editors.Tools
           chart.Axes.Right.RelativePosition = -2;
         }
 #endif
-        else if (tool == typeof(SeriesStats))
+        else if (tool == typeof(SeriesStats)) 
         {
           CreateChart(tool, "Calculates series statistics", series != null ? series : typeof(Line));
           chart[0].FillSampleValues(10);
           (chart.Tools[0] as SeriesStats).Series = chart[0];
-          chart.Tools.Add(typeof(Annotation));
+          chart.Tools.Add(Tool.NewFromType(typeof(Annotation)));
           Annotation at = (chart.Tools[1] as Annotation);
           at.Shape.Transparency = 10;
           at.Left = 80;
@@ -1083,7 +1090,7 @@ namespace Steema.TeeChart.Editors.Tools
         else if (tool == typeof(DataTableTool))
         {
           CreateChart(tool, "Displays a grid with Series data.", series != null ? series : typeof(Bar));
-          chart.Series.Add(series != null ? series : typeof(Bar));
+          chart.Series.Add(Series.NewFromType(series != null ? series : typeof(Bar)));
           chart[0].FillSampleValues(4);
           chart[1].FillSampleValues(4);
           chart[0].ValueFormat = "#.00";
@@ -1148,7 +1155,7 @@ namespace Steema.TeeChart.Editors.Tools
           CreateChart(tool, "Fill the region between two Series.");
           chart.Aspect.View3D = false;
           chart[0].FillSampleValues();
-          chart.Series.Add(typeof(Line));
+          chart.Series.Add(Series.NewFromType(typeof(Line)));
           for (int i = 0; i < chart[0].Count; i++)
           {
             chart[1].Add(chart[0].XValues[i], chart[0].YValues[i] / 2.0);
@@ -1449,7 +1456,9 @@ namespace Steema.TeeChart.Editors.Tools
 #endif
 
     {
-      chart.Series.Add(seriesType).FillSampleValues();
+      Series series = Series.NewFromType(seriesType);
+      chart.Series.Add(series);
+      series.FillSampleValues();
     }
 
 #if SILVERLIGHT || STORE 

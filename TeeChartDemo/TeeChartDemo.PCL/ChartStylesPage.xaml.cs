@@ -1,97 +1,105 @@
 ﻿using Steema.TeeChart.Drawing;
 using Steema.TeeChart.Styles;
+using Steema.TeeChart.Themes;
 using System;
 using Xamarin.Forms;
 using System.Reflection;
 
 namespace TeeChartDemo.PCL
 {
-    public partial class ChartStylesPage : ContentPage
+  public partial class ChartStylesPage : ContentPage
+  {
+    protected override void OnDisappearing()
     {
-        protected override void OnDisappearing()
-        {
-            //Android menu system issue
-            if (chart.Series[0].GetType() == typeof(Steema.TeeChart.Styles.Clock))
-            {
-                ((Steema.TeeChart.Styles.Clock)(chart.Series[0])).CancelTimer = true;
-            }
+      //Android menu system issue
+      if (chart.Series[0].GetType() == typeof(Steema.TeeChart.Styles.Clock))
+      {
+        ((Steema.TeeChart.Styles.Clock)(chart.Series[0])).CancelTimer = true;
+      }
 
-            base.OnDisappearing();
-        }
+      base.OnDisappearing();
+    }
 
-        Steema.TeeChart.Chart chart = new Steema.TeeChart.Chart();
+    Steema.TeeChart.Chart chart = new Steema.TeeChart.Chart();
 
-        public ChartStylesPage(Type seriesType)
-        {
-            chart.Series.Add(seriesType);
+    public ChartStylesPage(Type seriesType)
+    {
 
-            ChartView chartView = new ChartView
-            {
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
+      chart.Series.Add(Series.NewFromType(seriesType));
 
-                WidthRequest = 300,
-                HeightRequest = 400
-            };
+      chart.Aspect.View3D = false;
 
-            chart.Aspect.View3D = false;
+      ChartView chartView = new ChartView
+      {
+        VerticalOptions = LayoutOptions.FillAndExpand,
+        HorizontalOptions = LayoutOptions.FillAndExpand,
 
-            chart.Panel.Bevel.Inner = BevelStyles.None;
-            chart.Panel.Bevel.Outer = BevelStyles.None;
-            chart.Panel.Gradient.Visible = false;
-            chart.Panel.Color = Color.White;
+        WidthRequest = 300,
+        HeightRequest = 400
+      };
 
-            chart.Zoom.Active = true;
-            chart.Panning.Active = true;
-            chart.Touch.Style = Steema.TeeChart.TouchStyle.InChart;
+      chart.Panel.Bevel.Inner = BevelStyles.None;
+      chart.Panel.Bevel.Outer = BevelStyles.None;
+      chart.Panel.Gradient.Visible = true;
+      //chart.Panel.Color = Color.White;
 
-            Steema.TeeChart.Themes.TeeChartTheme theme = new Steema.TeeChart.Themes.TeeChartTheme(chart.Chart);
-            theme.Apply();
+      chart.Zoom.Active = true;
+      chart.Panning.Active = true;
+      chart.Touch.Style = Steema.TeeChart.TouchStyle.InChart;
 
-            Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, 18);
+      //Steema.TeeChart.Themes.TeeChartTheme theme = new Steema.TeeChart.Themes.TeeChartTheme(chart.Chart);
+      //theme.Apply();
+      //Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, 18);
 
-            chart.Panel.Gradient.Visible = false;
-            chart.Panel.Color = Color.White;
-            chart.Header.Font.Size = 14;
-            chart.Header.Font.Color = Color.Gray;
-            chart.Axes.Bottom.Labels.Font.Size = 12;
-            chart.Axes.Left.Labels.Font.Size = 12;
-            chart.Legend.Font.Size = 10;
-            chart.Axes.Bottom.AxisPen.Visible = true;
-            chart.Axes.Left.AxisPen.Visible = true;
-            chart.Axes.Left.AxisPen.Color = Color.Gray;
-            chart.Axes.Bottom.AxisPen.Color = Color.Gray;
-            chart.Axes.Bottom.AxisPen.Width = 1;
-            chart.Axes.Left.AxisPen.Width = 1;
-            chart.Legend.Visible = false;
-            chart.Axes.Left.Labels.Font.Color = Color.Gray;
-            chart.Axes.Bottom.Labels.Font.Color = Color.Gray;
+      BlackIsBackTheme theme = new BlackIsBackTheme(chart);
+      //ReportTheme theme = new ReportTheme(chart);
+      Steema.TeeChart.Themes.Theme.ApplyChartTheme(theme, chart);
+      Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, Theme.OnBlackPalette);
+      chart.CurrentTheme = Steema.TeeChart.ThemeType.BlackIsBack;
+      //Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, Theme.SeawashPalette);
 
-            foreach (var item in chart.Series)
-            {
-                item.FillSampleValues();
-            }
+      //chart.Panel.Gradient.Visible = false;
+      //chart.Panel.Color = Color.White;
+      chart.Header.Font.Size = 14;
+      chart.Header.Font.Color = Color.Gray;
+      chart.Axes.Bottom.Labels.Font.Size = 12;
+      chart.Axes.Left.Labels.Font.Size = 12;
+      chart.Legend.Font.Size = 10;
+      chart.Axes.Bottom.AxisPen.Visible = true;
+      chart.Axes.Left.AxisPen.Visible = true;
+      chart.Axes.Left.AxisPen.Color = Color.Gray;
+      chart.Axes.Bottom.AxisPen.Color = Color.Gray;
+      chart.Axes.Bottom.AxisPen.Width = 1;
+      chart.Axes.Left.AxisPen.Width = 1;
+      chart.Legend.Visible = false;
+      chart.Axes.Left.Labels.Font.Color = Color.Gray;
+      chart.Axes.Bottom.Labels.Font.Color = Color.Gray;
 
-            chart.Header.Text = chart[0].Description;
+      foreach (var item in chart.Series)
+      {
+        item.FillSampleValues();
+      }
 
-            if (seriesType != null && seriesType.GetTypeInfo().IsSubclassOf(typeof(Custom3D)) && seriesType != typeof(TagCloud)
-            && seriesType != typeof(Ternary) && seriesType != typeof(World))
-            {
-                chart.Aspect.View3D = true;
-                chart.Axes.Left.Grid.Visible = false;
-                chart.Axes.Bottom.Grid.Visible = false;
-                chart.Aspect.Chart3DPercent = 30;
-            }
+      chart.Header.Text = chart[0].Description;
 
-            Variables.ModifySeries(chart, Color.White);
-            chartView.Model = chart;
+      if (seriesType != null && seriesType.GetTypeInfo().IsSubclassOf(typeof(Custom3D)) && seriesType != typeof(TagCloud)
+      && seriesType != typeof(Ternary) && seriesType != typeof(World))
+      {
+        chart.Aspect.View3D = true;
+        chart.Axes.Left.Grid.Visible = false;
+        chart.Axes.Bottom.Grid.Visible = false;
+        chart.Aspect.Chart3DPercent = 30;
+      }
 
-            Content = new StackLayout
-            {
-                Children = {
+      Variables.ModifySeries(chart, Color.White);
+      chartView.Model = chart;
+
+      Content = new StackLayout
+      {
+        Children = {
                       chartView,
                   }
-            };
-        }
+      };
     }
+  }
 }

@@ -18,7 +18,7 @@ namespace TeeChartDemo.PCL
   {
     public static string Locale()
     {
-      return DependencyService.Get<ILocale>().GetCurrent();
+      return DependencyService.Get<ILocale>()?.GetCurrent();
     }
 
 
@@ -39,7 +39,8 @@ namespace TeeChartDemo.PCL
     {
       get
       {
-        return new CultureInfo(Locale());
+                //return Locale() == null ? CultureInfo.InvariantCulture : new CultureInfo(Locale());
+                return new CultureInfo("en-GB");
       }
 
     }

@@ -26,8 +26,8 @@ namespace TeeChartDemo.PCL
       };
 
       var mainPage = new NavigationPage(mainTab);
-      mainPage.BarBackgroundColor = Color.FromRgb(0, 82, 160);
-      mainPage.BarTextColor = Color.White;
+      mainPage.BarBackgroundColor = Color.FromRgb(0,0,0); // FromRgb(0, 82, 160);
+      mainPage.BarTextColor = Color.White;      
 
       var charts = GetChartStylesPage(mainPage);
       var tools = GetChartToolsPage(mainPage);
@@ -35,9 +35,14 @@ namespace TeeChartDemo.PCL
       var events = GetChartEventsPage(mainPage);
 
       mainTab.Children.Add(charts);
-      mainTab.Children.Add(tools);
+      if (!(Device.OS == TargetPlatform.Windows))
+        mainTab.Children.Add(tools);
       mainTab.Children.Add(dash);
-      mainTab.Children.Add(events);
+      if (!(Device.OS == TargetPlatform.Windows))
+        mainTab.Children.Add(events);
+
+      mainTab.BarBackgroundColor = Color.FromRgb(0, 0, 0);
+      mainTab.BarTextColor = Color.White;
 
       MainPage = mainPage;
     }
@@ -61,11 +66,16 @@ namespace TeeChartDemo.PCL
       var lstControls = new ListView();
 
       lstControls.ItemsSource = Variables.SeriesList;
+      lstControls.BackgroundColor = Color.FromRgb(0,0,0);
+      lstControls.RowHeight = 35;
 
-      Cell = new DataTemplate(typeof(TextCell));
+       Cell = new DataTemplate(typeof(TextCell));
 
-      Cell.SetBinding(TextCell.TextProperty, "Description");
-      Cell.SetBinding(TextCell.DetailProperty, "Summary");      
+      Cell.SetValue(TextCell.TextColorProperty, Color.White);
+      Cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
+
+      Cell.SetBinding(TextCell.TextProperty, "Description");            
+      // Cell.SetBinding(TextCell.DetailProperty, "Summary");                  
 
       lstControls.ItemTemplate = Cell;
 
@@ -98,8 +108,13 @@ namespace TeeChartDemo.PCL
 
       Cell = new DataTemplate(typeof(TextCell));
 
+      lstControls.BackgroundColor = Color.FromRgb(0, 0, 0);
+
       Cell.SetBinding(TextCell.TextProperty, "Description");
       Cell.SetBinding(TextCell.DetailProperty, "Summary");
+
+      Cell.SetValue(TextCell.TextColorProperty, Color.White);
+      Cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
 
       lstControls.ItemTemplate = Cell;
 
@@ -118,19 +133,32 @@ namespace TeeChartDemo.PCL
     /// <param name="mainPage">The main page.</param>
     /// <returns>Content Page.</returns>
     private static ContentPage GetChartEventsPage(VisualElement mainPage)
+    {
+        var controls = new ContentPage
         {
-            var controls = new ContentPage
-            {
-                Title = AppResources.OtherItem,
-                Icon = "project-32.png"  
-            };
+            Title = AppResources.OtherItem,
+            Icon = "project-32.png"  
+        };
 
-            var lstControls = new ListView
-            {
-                ItemsSource = Variables.OtherList
-            };
+        var lstControls = new ListView
+        {
+            ItemsSource = Variables.OtherList
+        };
 
-            lstControls.ItemSelected += async (sender, e) =>
+        Cell = new DataTemplate(typeof(TextCell));
+
+        lstControls.BackgroundColor = Color.FromRgb(0, 0, 0);
+
+        Cell.SetBinding(TextCell.TextProperty, "Description");
+        Cell.SetBinding(TextCell.DetailProperty, "Summary");
+
+        Cell.SetValue(TextCell.TextColorProperty, Color.White);
+        Cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
+
+        lstControls.ItemTemplate = Cell;
+
+
+        lstControls.ItemSelected += async (sender, e) =>
             {
                 ElementWrapper obj = e.SelectedItem as ElementWrapper;
                 switch (obj.ToString())
@@ -184,6 +212,19 @@ namespace TeeChartDemo.PCL
       {
         ItemsSource = Variables.DashList
       };
+
+      Cell = new DataTemplate(typeof(TextCell));
+
+      lstControls.BackgroundColor = Color.FromRgb(0, 0, 0);
+
+      Cell.SetBinding(TextCell.TextProperty, "Description");
+      Cell.SetBinding(TextCell.DetailProperty, "Summary");
+
+      Cell.SetValue(TextCell.TextColorProperty, Color.White);
+      Cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
+
+      lstControls.ItemTemplate = Cell;
+
 
       lstControls.ItemSelected += async (sender, e) =>
       {

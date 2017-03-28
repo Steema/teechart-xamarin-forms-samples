@@ -15,7 +15,7 @@ namespace TeeChartDemo.PCL
 
             ToolsGalleryDemos toolsDemos = new ToolsGalleryDemos(chart, typeof(TeeChartTheme));
 
-            Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, 18);
+            //Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, 18);
 
             ChartView chartView = new ChartView
             {
@@ -29,17 +29,19 @@ namespace TeeChartDemo.PCL
             chart.Aspect.View3D = false;
             chart.Panel.Bevel.Inner = BevelStyles.None;
             chart.Panel.Bevel.Outer = BevelStyles.None;
-            chart.Panel.Gradient.Visible = false;
-            chart.Panel.Color = Color.FromRgb(255, 255, 255);
+            chart.Panel.Gradient.Visible = true;
+            //chart.Panel.Color = Color.FromRgb(255, 255, 255);
 
             chart.Zoom.Active = false;
             chart.Touch.Style = Steema.TeeChart.TouchStyle.InChart;
 
             toolsDemos.CreateGallery(toolsType);
 
-
-            chart.Panel.Gradient.Visible = false;
-            chart.Panel.Color = Color.White;
+            BlackIsBackTheme theme = new BlackIsBackTheme(chart);
+            Steema.TeeChart.Themes.Theme.ApplyChartTheme(theme, chart);
+            Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, Theme.OnBlackPalette);
+            //chart.Panel.Gradient.Visible = false;
+            //chart.Panel.Color = Color.White;
             chart.Header.Font.Color = Color.Gray;
             chart.Axes.Left.AxisPen.Color = Color.Gray;
             chart.Axes.Bottom.AxisPen.Color = Color.Gray;
