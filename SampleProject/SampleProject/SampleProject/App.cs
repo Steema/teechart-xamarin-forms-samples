@@ -13,7 +13,8 @@ namespace SampleProject
     {
       var tChart1 = new Steema.TeeChart.Chart();
 
-      tChart1.Series.Add(new Steema.TeeChart.Styles.Bar()).FillSampleValues();
+      tChart1.Series.Add(new Steema.TeeChart.Styles.Bar());
+      tChart1.Series[0].FillSampleValues();
       tChart1.Aspect.View3D = false;
       
       ChartView chartView = new ChartView

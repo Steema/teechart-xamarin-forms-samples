@@ -1,6 +1,27 @@
-﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
->
-    <Deployment.Parts>
-    </Deployment.Parts>
-</Deployment>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="TeeChartDemo.PCL"
+            Version="1.0.0.0"
+            Publisher="CN=MyCompany, O=MyCompany, L=MyCity, S=MyState, C=MyCountry" />
+  <Properties>
+    <DisplayName>TeeChartDemo</DisplayName>
+    <PublisherDisplayName>Steema Software</PublisherDisplayName>
+    <Logo>Logo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>1.0</OSMinVersion>
+    <OSMaxVersionTested>1.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Applications>
+    <Application Id="TeeChartDemo" StartPage="App.xaml">
+      <VisualElements DisplayName="TeeChartDemo" Description="TeeChartDemo"
+           Logo="Logo.png" SmallLogo="StoreLogo.png"
+           ForegroundText="dark" BackgroundColor="#FFFFFF">
+        <SplashScreen Image="Assets\SplashScreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+</Package>
