@@ -26,8 +26,8 @@ namespace TeeChartDemo.PCL
       };
 
       var mainPage = new NavigationPage(mainTab);
-      mainPage.BarBackgroundColor = Color.FromRgb(0,0,0); // FromRgb(0, 82, 160);
-      mainPage.BarTextColor = Color.White;      
+      mainPage.BarBackgroundColor = Color.FromRgb(255, 255, 255); // FromRgb(0, 82, 160);
+      mainPage.BarTextColor = Color.Black;      
 
       var charts = GetChartStylesPage(mainPage);
       var tools = GetChartToolsPage(mainPage);
@@ -41,8 +41,8 @@ namespace TeeChartDemo.PCL
       if (!(Device.OS == TargetPlatform.Windows))
         mainTab.Children.Add(events);
 
-      mainTab.BarBackgroundColor = Color.FromRgb(0, 0, 0);
-      mainTab.BarTextColor = Color.White;
+      mainTab.BarBackgroundColor = Color.FromRgb(255, 255, 255);
+      mainTab.BarTextColor = Color.Black;
 
       MainPage = mainPage;
     }
@@ -66,13 +66,13 @@ namespace TeeChartDemo.PCL
       var lstControls = new ListView();
 
       lstControls.ItemsSource = Variables.SeriesList;
-      lstControls.BackgroundColor = Color.FromRgb(0,0,0);
+      lstControls.BackgroundColor = Color.FromRgb(255,255,255);
       lstControls.RowHeight = 35;
 
        Cell = new DataTemplate(typeof(TextCell));
 
-      Cell.SetValue(TextCell.TextColorProperty, Color.White);
-      Cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
+      Cell.SetValue(TextCell.TextColorProperty, Color.Black);
+      Cell.SetValue(TextCell.DetailColorProperty, Color.White);
 
       Cell.SetBinding(TextCell.TextProperty, "Description");            
       // Cell.SetBinding(TextCell.DetailProperty, "Summary");                  
@@ -108,13 +108,13 @@ namespace TeeChartDemo.PCL
 
       Cell = new DataTemplate(typeof(TextCell));
 
-      lstControls.BackgroundColor = Color.FromRgb(0, 0, 0);
+      lstControls.BackgroundColor = Color.FromRgb(255, 255, 255);
 
       Cell.SetBinding(TextCell.TextProperty, "Description");
       Cell.SetBinding(TextCell.DetailProperty, "Summary");
 
-      Cell.SetValue(TextCell.TextColorProperty, Color.White);
-      Cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
+      Cell.SetValue(TextCell.TextColorProperty, Color.Black);
+      Cell.SetValue(TextCell.DetailColorProperty, Color.White);
 
       lstControls.ItemTemplate = Cell;
 
@@ -147,13 +147,13 @@ namespace TeeChartDemo.PCL
 
         Cell = new DataTemplate(typeof(TextCell));
 
-        lstControls.BackgroundColor = Color.FromRgb(0, 0, 0);
+        lstControls.BackgroundColor = Color.FromRgb(255, 255, 255);
 
         Cell.SetBinding(TextCell.TextProperty, "Description");
         Cell.SetBinding(TextCell.DetailProperty, "Summary");
 
-        Cell.SetValue(TextCell.TextColorProperty, Color.White);
-        Cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
+        Cell.SetValue(TextCell.TextColorProperty, Color.Black);
+        Cell.SetValue(TextCell.DetailColorProperty, Color.White);
 
         lstControls.ItemTemplate = Cell;
 
@@ -215,13 +215,13 @@ namespace TeeChartDemo.PCL
 
       Cell = new DataTemplate(typeof(TextCell));
 
-      lstControls.BackgroundColor = Color.FromRgb(0, 0, 0);
+      lstControls.BackgroundColor = Color.FromRgb(255, 255, 255);
 
       Cell.SetBinding(TextCell.TextProperty, "Description");
       Cell.SetBinding(TextCell.DetailProperty, "Summary");
 
-      Cell.SetValue(TextCell.TextColorProperty, Color.White);
-      Cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
+      Cell.SetValue(TextCell.TextColorProperty, Color.Black);
+      Cell.SetValue(TextCell.DetailColorProperty, Color.White);
 
       lstControls.ItemTemplate = Cell;
 

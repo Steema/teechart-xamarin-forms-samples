@@ -724,9 +724,9 @@ namespace TeeChartForWindowsPhone
 
         tChart1.Panel.Transparent = false;
 #if PORTABLE
-        tChart1.Panel.Color = Color.Black;
-        tChart1.Panel.Gradient.StartColor = Color.Black;
-        tChart1.Panel.Gradient.EndColor = Color.Black;
+        tChart1.Panel.Color = Color.White;
+        tChart1.Panel.Gradient.StartColor = Color.White;
+        tChart1.Panel.Gradient.EndColor = Color.White;
 #else
         tChart1.Panel.Color = Colors.Black;
         tChart1.Panel.Gradient.StartColor = Colors.Black;

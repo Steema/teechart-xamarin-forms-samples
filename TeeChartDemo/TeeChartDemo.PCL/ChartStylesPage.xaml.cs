@@ -41,25 +41,16 @@ namespace TeeChartDemo.PCL
       chart.Panel.Bevel.Inner = BevelStyles.None;
       chart.Panel.Bevel.Outer = BevelStyles.None;
       chart.Panel.Gradient.Visible = true;
-      //chart.Panel.Color = Color.White;
 
       chart.Zoom.Active = true;
       chart.Panning.Active = true;
       chart.Touch.Style = Steema.TeeChart.TouchStyle.InChart;
 
-      //Steema.TeeChart.Themes.TeeChartTheme theme = new Steema.TeeChart.Themes.TeeChartTheme(chart.Chart);
-      //theme.Apply();
-      //Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, 18);
-
-      BlackIsBackTheme theme = new BlackIsBackTheme(chart);
-      //ReportTheme theme = new ReportTheme(chart);
+      ReportTheme theme = new ReportTheme(chart);
       Steema.TeeChart.Themes.Theme.ApplyChartTheme(theme, chart);
-      Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, Theme.OnBlackPalette);
-      chart.CurrentTheme = Steema.TeeChart.ThemeType.BlackIsBack;
-      //Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, Theme.SeawashPalette);
+      Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, Theme.SeawashPalette);
+      chart.CurrentTheme = Steema.TeeChart.ThemeType.Report;
 
-      //chart.Panel.Gradient.Visible = false;
-      //chart.Panel.Color = Color.White;
       chart.Header.Font.Size = 14;
       chart.Header.Font.Color = Color.Gray;
       chart.Axes.Bottom.Labels.Font.Size = 12;
