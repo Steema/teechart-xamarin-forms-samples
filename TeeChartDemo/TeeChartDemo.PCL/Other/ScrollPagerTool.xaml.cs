@@ -15,7 +15,7 @@ namespace TeeChartDemo.PCL.Other
 {
     public partial class ScrollPagerTool : ContentPage
     {
-        Chart tChart1 = new Chart();
+        ChartView tChart1 = new ChartView();
         FastLine series;
         private ScrollPager tool;
         private ColorLine colorlinetool;
@@ -24,37 +24,32 @@ namespace TeeChartDemo.PCL.Other
 
         public ScrollPagerTool()
         {
-            ChartView chartView1 = new ChartView
-            {
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                //WidthRequest = 400,
-                //HeightRequest = 
-            };
-
             InitializeChart();
 
-            chartView1.Model = tChart1;
+            tChart1.WidthRequest = 400;
+            tChart1.HeightRequest = 500;
 
             Content = new StackLayout
             {
-                Children = { chartView1 }
+                Children = { tChart1 },
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
             };
         }
 
         private void InitializeChart()
         {
-            tChart1.Header.Text = "Scroll Pager Tool";
-            tChart1.Panning.Active = true;
-            tChart1.Series.Add(series = new FastLine());
-            series.FillSampleValues(1000);     
-                               
-            tChart1.Tools.Add(tool = new ScrollPager());
+            tChart1.Chart.Header.Text = "Scroll Pager Tool";
+            tChart1.Chart.Panning.Active = true;
+            tChart1.Chart.Series.Add(series = new FastLine());
+            series.FillSampleValues(1000);
 
-            for (int i = 0; i < tChart1.Series.Count; i++)
+            tChart1.Chart.Tools.Add(tool = new ScrollPager());
+
+            for (int i = 0; i < tChart1.Chart.Series.Count; i++)
             {
-                if (tChart1.Series[i].Count > 0)
-                    tool.Series = tChart1.Series[i];
+                if (tChart1.Chart.Series[i].Count > 0)
+                    tool.Series = tChart1.Chart.Series[i];
             }
 
             tool.ColorBandTool.StartLine.AllowDrag = true;
@@ -63,15 +58,15 @@ namespace TeeChartDemo.PCL.Other
             tool.ColorBandTool.EndLine.Active = true;
 
 
-            tChart1.Tools.Add(colorlinetool = new ColorLine());
+            tChart1.Chart.Tools.Add(colorlinetool = new ColorLine());
             colorlinetool.Value = 100;
             colorlinetool.AllowDrag = true;
             colorlinetool.Pen.Color = Color.Blue;
 
-            tChart1.ClickBackground += TChart1_ClickBackground;
-            
-            tChart1.Tools.Add(point = new NearestPoint());
-            tChart1.Tools.Add(annotate = new Annotation());
+            tChart1.Chart.ClickBackground += TChart1_ClickBackground;
+
+            tChart1.Chart.Tools.Add(point = new NearestPoint());
+            tChart1.Chart.Tools.Add(annotate = new Annotation());
 
             point.Brush.Color = tool.PointerHighlightColor;
             point.DrawLine = false;
@@ -83,7 +78,7 @@ namespace TeeChartDemo.PCL.Other
             annotate.Position = AnnotationPositions.RightTop;
             annotate.Text = "YValue:";
             annotate.Shape.Shadow.Visible = false;
-            annotate.Shape.Font.Color = tChart1.Header.Font.Color;
+            annotate.Shape.Font.Color = tChart1.Chart.Header.Font.Color;
             annotate.Shape.Color = tool.PointerHighlightColor;
             annotate.Shape.Pen.Visible = false;
             annotate.Shape.Font.Color = Color.White;

@@ -831,7 +831,7 @@ namespace TeeChartForWindowsPhone
 
       foreach (Type t in list)
       {
-        if ((t.Name != "TreeMap") && (t.Name != "Clock"))
+        if ((t.Name != "TreeMap") && (t.Name != "Clock") && (t.Name != "ActivityGauge"))
           Variables.SeriesList.Add(new ElementWrapper(t));
       }
 

@@ -15,25 +15,20 @@ namespace TeeChartDemo.PCL.Other
 {
     public partial class SubChartTool : ContentPage
     {
-        Chart tChart1 = new Chart();        
+        ChartView tChart1 = new ChartView();        
 
         public SubChartTool()
         {
-            ChartView chartView1 = new ChartView
-            {
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                //WidthRequest = 400,
-                //HeightRequest = 
-            };
-
             InitializeChart();
 
-            chartView1.Model = tChart1;
+            tChart1.WidthRequest = 400;
+            tChart1.HeightRequest = 500;
 
             Content = new StackLayout
             {
-                Children = { chartView1 }
+                Children = { tChart1 },
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
             };
         }
 
@@ -42,18 +37,18 @@ namespace TeeChartDemo.PCL.Other
         private Steema.TeeChart.Tools.SubChartTool subChartTool1;
         private void InitializeChart()
         {
-            Chart chart;            
-            tChart1.Series.Add(line1 = new Line());
-            tChart1.Series.Add(line2 = new Line());
+            Chart chart;
+            tChart1.Chart.Series.Add(line1 = new Line());
+            tChart1.Chart.Series.Add(line2 = new Line());
             line1.FillSampleValues();
             line2.FillSampleValues();
 
-            tChart1.Axes.Bottom.Grid.Visible = false;            
-            tChart1.Aspect.View3D = false;
+            tChart1.Chart.Axes.Bottom.Grid.Visible = false;
+            tChart1.Chart.Aspect.View3D = false;
 
-            tChart1.Tools.Add(subChartTool1 = new Steema.TeeChart.Tools.SubChartTool());
+            tChart1.Chart.Tools.Add(subChartTool1 = new Steema.TeeChart.Tools.SubChartTool());
 
-            tChart1.Panning.Active = true;
+            tChart1.Chart.Panning.Active = true;
 
             chart = subChartTool1.Charts.AddChart("Chart0");
             chart.Panel.Color = Color.Transparent;
@@ -77,12 +72,12 @@ namespace TeeChartDemo.PCL.Other
                 }
             }
 
-            tChart1.Axes.Left.Increment = line1.YValues.Maximum / 5;            
-            tChart1.Walls.Visible = false;
-            tChart1.Legend.Alignment = LegendAlignments.Bottom;
-            tChart1.Legend.Transparent = true;
-            tChart1.Title.Text = "Chart with a SubChart Tool";
-            tChart1.Title.Font.Color = Color.Gray;
+            tChart1.Chart.Axes.Left.Increment = line1.YValues.Maximum / 5;
+            tChart1.Chart.Walls.Visible = false;
+            tChart1.Chart.Legend.Alignment = LegendAlignments.Bottom;
+            tChart1.Chart.Legend.Transparent = true;
+            tChart1.Chart.Title.Text = "Chart with a SubChart Tool";
+            tChart1.Chart.Title.Font.Color = Color.Gray;
         }
     }
 }

@@ -96,7 +96,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChartViewRenderer.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -133,14 +132,6 @@
       <Project>{63599fbb-a98a-4cd7-a49f-a0b430f156af}</Project>
       <Name>TeeChartDemo.PCL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="TeeChart.PCL">
-      <HintPath>..\..\..\lib\pcl\TeeChart.PCL.dll</HintPath>
-    </Reference>
-    <Reference Include="TeeChart.PCL.UWP">
-      <HintPath>..\..\..\lib\winuniversal-10.0\TeeChart.PCL.UWP.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

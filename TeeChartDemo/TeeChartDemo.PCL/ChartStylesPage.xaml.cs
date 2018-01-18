@@ -12,84 +12,78 @@ namespace TeeChartDemo.PCL
     protected override void OnDisappearing()
     {
       //Android menu system issue
-      if (chart.Series[0].GetType() == typeof(Steema.TeeChart.Styles.Clock))
+      if (chart.Chart.Series[0].GetType() == typeof(Steema.TeeChart.Styles.Clock))
       {
-        ((Steema.TeeChart.Styles.Clock)(chart.Series[0])).CancelTimer = true;
+        ((Steema.TeeChart.Styles.Clock)(chart.Chart.Series[0])).CancelTimer = true;
       }
 
       base.OnDisappearing();
     }
 
-    Steema.TeeChart.Chart chart = new Steema.TeeChart.Chart();
+    Steema.TeeChart.ChartView chart = new Steema.TeeChart.ChartView();
 
     public ChartStylesPage(Type seriesType)
     {
 
-      chart.Series.Add(Series.NewFromType(seriesType));
+      chart.WidthRequest = 400;
+      chart.HeightRequest = 300;
+      chart.Chart.Series.Add(Series.NewFromType(seriesType));
 
-      chart.Aspect.View3D = false;
+      chart.Chart.Aspect.View3D = false;
 
-      ChartView chartView = new ChartView
-      {
-        VerticalOptions = LayoutOptions.FillAndExpand,
-        HorizontalOptions = LayoutOptions.FillAndExpand,
+      chart.Chart.Panel.Bevel.Inner = BevelStyles.None;
+      chart.Chart.Panel.Bevel.Outer = BevelStyles.None;
+      chart.Chart.Panel.Gradient.Visible = true;
 
-        WidthRequest = 300,
-        HeightRequest = 400
-      };
+      chart.Chart.Zoom.Active = true;
+      chart.Chart.Panning.Active = true;
+      chart.Chart.Touch.Style = Steema.TeeChart.TouchStyle.InChart;
 
-      chart.Panel.Bevel.Inner = BevelStyles.None;
-      chart.Panel.Bevel.Outer = BevelStyles.None;
-      chart.Panel.Gradient.Visible = true;
+      ReportTheme theme = new ReportTheme(chart.Chart);
+      Steema.TeeChart.Themes.Theme.ApplyChartTheme(theme, chart.Chart);
+      Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart.Chart, Theme.SeawashPalette);
+      chart.Chart.CurrentTheme = Steema.TeeChart.ThemeType.Report;
 
-      chart.Zoom.Active = true;
-      chart.Panning.Active = true;
-      chart.Touch.Style = Steema.TeeChart.TouchStyle.InChart;
+      chart.Chart.Header.Font.Size = 14;
+      chart.Chart.Header.Font.Color = Color.Gray;
+      chart.Chart.Axes.Bottom.Labels.Font.Size = 12;
+      chart.Chart.Axes.Left.Labels.Font.Size = 12;
+      chart.Chart.Legend.Font.Size = 10;
+      chart.Chart.Axes.Bottom.AxisPen.Visible = true;
+      chart.Chart.Axes.Left.AxisPen.Visible = true;
+      chart.Chart.Axes.Left.AxisPen.Color = Color.Gray;
+      chart.Chart.Axes.Bottom.AxisPen.Color = Color.Gray;
+      chart.Chart.Axes.Bottom.AxisPen.Width = 1;
+      chart.Chart.Axes.Left.AxisPen.Width = 1;
+      chart.Chart.Legend.Visible = false;
+      chart.Chart.Axes.Left.Labels.Font.Color = Color.Gray;
+      chart.Chart.Axes.Bottom.Labels.Font.Color = Color.Gray;
 
-      ReportTheme theme = new ReportTheme(chart);
-      Steema.TeeChart.Themes.Theme.ApplyChartTheme(theme, chart);
-      Steema.TeeChart.Themes.ColorPalettes.ApplyPalette(chart, Theme.SeawashPalette);
-      chart.CurrentTheme = Steema.TeeChart.ThemeType.Report;
-
-      chart.Header.Font.Size = 14;
-      chart.Header.Font.Color = Color.Gray;
-      chart.Axes.Bottom.Labels.Font.Size = 12;
-      chart.Axes.Left.Labels.Font.Size = 12;
-      chart.Legend.Font.Size = 10;
-      chart.Axes.Bottom.AxisPen.Visible = true;
-      chart.Axes.Left.AxisPen.Visible = true;
-      chart.Axes.Left.AxisPen.Color = Color.Gray;
-      chart.Axes.Bottom.AxisPen.Color = Color.Gray;
-      chart.Axes.Bottom.AxisPen.Width = 1;
-      chart.Axes.Left.AxisPen.Width = 1;
-      chart.Legend.Visible = false;
-      chart.Axes.Left.Labels.Font.Color = Color.Gray;
-      chart.Axes.Bottom.Labels.Font.Color = Color.Gray;
-
-      foreach (var item in chart.Series)
+      foreach (var item in chart.Chart.Series)
       {
         item.FillSampleValues();
       }
 
-      chart.Header.Text = chart[0].Description;
+      chart.Chart.Header.Text = chart.Chart[0].Description;
 
       if (seriesType != null && seriesType.GetTypeInfo().IsSubclassOf(typeof(Custom3D)) && seriesType != typeof(TagCloud)
       && seriesType != typeof(Ternary) && seriesType != typeof(World))
       {
-        chart.Aspect.View3D = true;
-        chart.Axes.Left.Grid.Visible = false;
-        chart.Axes.Bottom.Grid.Visible = false;
-        chart.Aspect.Chart3DPercent = 30;
+        chart.Chart.Aspect.View3D = true;
+        chart.Chart.Axes.Left.Grid.Visible = false;
+        chart.Chart.Axes.Bottom.Grid.Visible = false;
+        chart.Chart.Aspect.Chart3DPercent = 30;
       }
 
-      Variables.ModifySeries(chart, Color.White);
-      chartView.Model = chart;
+      Variables.ModifySeries(chart.Chart, Color.White);      
 
       Content = new StackLayout
       {
         Children = {
-                      chartView,
-                  }
+                      chart,
+                  },
+          VerticalOptions = LayoutOptions.CenterAndExpand,
+          HorizontalOptions = LayoutOptions.CenterAndExpand,
       };
     }
   }

@@ -10,77 +10,53 @@ namespace TeeChartDemo.PCL
   {
     public ChartDashPage(string dash)
     {
+      ChartView chart1 = new ChartView();
+      ChartView chart2 = new ChartView();
+      ChartView chart3 = new ChartView();
 
-      Steema.TeeChart.Chart chart1 = new Steema.TeeChart.Chart();
-      Steema.TeeChart.Chart chart2 = new Steema.TeeChart.Chart();
+      chart1.WidthRequest = 400;
+      chart1.HeightRequest = dash.Equals(AppResources.DashDigital) ? 150 : 250;
 
-      ChartView chartView1 = new ChartView
-      {
-        VerticalOptions = LayoutOptions.FillAndExpand,
-        HorizontalOptions = LayoutOptions.FillAndExpand,
-        WidthRequest = 400,
-        HeightRequest = dash.Equals(AppResources.DashDigital) ? 150 : 250
-      };
+      chart2.WidthRequest = 400;
+      chart2.HeightRequest = dash.Equals(AppResources.DashDigital) ? 200 : 250;
 
-      ChartView chartView2 = new ChartView
-      {
-        VerticalOptions = LayoutOptions.FillAndExpand,
-        HorizontalOptions = LayoutOptions.FillAndExpand,
+      chart3.WidthRequest = 400;
+      chart3.HeightRequest = 150;
 
-        WidthRequest = 400,
-        HeightRequest = dash.Equals(AppResources.DashDigital) ? 200 : 250
-      };
-
-      ChartView chartView3 = new ChartView
-      {
-        VerticalOptions = LayoutOptions.FillAndExpand,
-        HorizontalOptions = LayoutOptions.FillAndExpand,
-
-        WidthRequest = 400,
-        HeightRequest = 150
-      };
-
-
-      InitializeChart(chart1);
-      InitializeChart(chart2);
+      InitializeChart(chart1.Chart);
+      InitializeChart(chart2.Chart);
 
       if (dash.Equals(AppResources.DashGeographic))
       {
-        DoDashGeographic(chart1, chart2, Color.Black);
+        DoDashGeographic(chart1.Chart, chart2.Chart, Color.Black);
       }
       else if (dash.Equals(AppResources.DashDigital))
       {
-        Steema.TeeChart.Chart chart3 = new Steema.TeeChart.Chart();
-        InitializeChart(chart3);
+        InitializeChart(chart3.Chart);
 
-        DoDashDigital(chart1, chart2, chart3, Color.Black);
-
-        chartView3.Model = chart3;
+        DoDashDigital(chart1.Chart, chart2.Chart, chart3.Chart, Color.Black);
       }
       else if (dash.Equals(AppResources.DashExposure))
       {
-        DoDashExposure(chart1, chart2, Color.Black);
+        DoDashExposure(chart1.Chart, chart2.Chart, Color.Black);
       }
       else if (dash.Equals(AppResources.DashTrend))
       {
-        DoDashTrend(chart1, chart2);
+        DoDashTrend(chart1.Chart, chart2.Chart);
       }
-
-      chartView1.Model = chart1;
-      chartView2.Model = chart2;
 
       if (dash.Equals(AppResources.DashDigital))
       {
         Content = new StackLayout
         {
-          Children = { chartView1, chartView3, chartView2 }
+          Children = { chart1, chart3, chart2 }
         };
       }
       else
       {
         Content = new StackLayout
         {
-          Children = { chartView1, chartView2 }
+          Children = { chart1, chart2 }
         };
       }
     }
