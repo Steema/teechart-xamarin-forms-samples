@@ -2,7 +2,7 @@
 <img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
 </a>
 
-TeeChart .NET for Xamarin.Forms - Gauge Speed example
+Gauge Speed example
 ===================
 Demo showing how to use TeeChart .NET CSharp with Xamarin.Forms.
 
