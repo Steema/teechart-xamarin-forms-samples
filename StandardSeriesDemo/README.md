@@ -1,3 +1,7 @@
+<a href="https://www.steema.com/product/forms">
+<img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
+</a>
+
 StandardSeriesDemo
 ==================
 
@@ -15,7 +19,7 @@ http://steema.com/wp/blog/2015/06/18/check-out-the-new-standardseriesdemo-exampl
 
 ## Sample Requirements
 
-You'll need TeeChart for Xamarin.Forms evaluation or registered version to run the example on this repository. Fully functional evaluation version can be obtained at https://www.steema.com/downloads/forms
+You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/forms) evaluation or registered version to run the example on this repository. Fully functional evaluation version can be obtained at https://www.steema.com/downloads/forms
 
 ---
 ### Author
