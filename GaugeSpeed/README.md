@@ -1,3 +1,7 @@
+<a href="https://www.steema.com/product/forms">
+<img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
+</a>
+
 # TeeChart .NET for Xamarin.Forms
 ## Gauge Speed example
 Demo showing how to use TeeChart .NET CSharp with Xamarin.Forms.
@@ -11,7 +15,7 @@ It shows how to create an Speed Gauge for iOS and Android, and animate it.
 
 ## Sample Requirements
 
-You'll need TeeChart for .NET  Xamarin.Forms (Standard or Pro) version to run the example on this repository. 
+You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/forms) (Standard or Pro) version to run the example on this repository. 
 
 ---
 ### Author
