@@ -124,6 +124,12 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="TeeChart.StandardPCL, Version=4.1.2018.1150, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Steema.TeeChart.NET.STD.Xamarin.Forms.4.1.2018.1150\lib\Xamarin.iOS10\TeeChart.StandardPCL.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.StandardPCL.iOS, Version=4.1.2018.1150, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Steema.TeeChart.NET.STD.Xamarin.Forms.4.1.2018.1150\lib\Xamarin.iOS10\TeeChart.StandardPCL.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.91020\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>

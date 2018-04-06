@@ -54,6 +54,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="TeeChart.StandardPCL, Version=4.1.2018.1150, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Steema.TeeChart.NET.STD.Xamarin.Forms.4.1.2018.1150\lib\portable-win+net45+wp80+win81+wpa81\TeeChart.StandardPCL.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.91020\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
