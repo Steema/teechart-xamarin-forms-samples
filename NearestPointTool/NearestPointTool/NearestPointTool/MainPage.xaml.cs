@@ -35,7 +35,10 @@ namespace NearestPointTool
 			bBack.Clicked += OnBackButtonClicked;
 			bFwd.Clicked += OnFwdButtonClicked;
 
+			LineChart.Chart.BeforeDraw += ChartBeforeDraw;
 			LineChart.Chart.AfterDraw += ChartAfterDraw;
+
+			LineChart.Chart.AutoRepaint = true;
 
 			LineChart.WidthRequest = 400;
 			LineChart.HeightRequest = 300;
@@ -89,9 +92,10 @@ namespace NearestPointTool
 
 			LineChart.Chart.Panning.Allow = ScrollModes.None;
 
-
 			if (Device.OS == TargetPlatform.Windows)
 			{
+				LineChart.Chart.Touch.Style = TouchStyle.FullChart; //currently required for UWP. Will be replaced.
+
 				LineChart.Chart.Title.Text = "";
 				LineChart.Chart.Walls.Back.Gradient.Visible = false;
 				LineChart.Chart.Walls.Back.Color = Color.White;
@@ -119,6 +123,7 @@ namespace NearestPointTool
 				pBrush.Transparency = 75;
 
 				LineChart.Chart.Invalidate();
+
 			}
 		}
 
@@ -135,29 +140,32 @@ namespace NearestPointTool
 			}
 		}
 
+		void ChartBeforeDraw(object sender, Steema.TeeChart.Drawing.Graphics3D g)
+		{
+			//debug
+			/*
+			g.Font.Size = 8;
+			g.TextOut(10, 10, "repaint count: " + bCounter++.ToString());
+			*/
+		}
+
+		int bCounter = 0;
+
 		void ChartAfterDraw(object sender, Steema.TeeChart.Drawing.Graphics3D g)
 		{
 			if (currentIndex != -1)
-			{ 
-			  double xCenter = LineChart.Chart.Series[0].CalcXPos(currentIndex);
-			  double yCenter = LineChart.Chart.Series[0].CalcYPos(currentIndex);
+			{
+				double xCenter = LineChart.Chart.Series[0].CalcXPos(currentIndex);
+				double yCenter = LineChart.Chart.Series[0].CalcYPos(currentIndex);
 
 				g.Font.Size = g.Font.Size * 1.5;
 				double offSet = 0;
 
 				g.TextOut(xCenter - offSet, yCenter - (g.Font.Size * 4), " Value: " + LineChart.Chart.Series[0].YValues[currentIndex].ToString());
 
-				Rectangle r = new Rectangle(xCenter-25, yCenter-25, 50,50);
+				Rectangle r = new Rectangle(xCenter - 25, yCenter - 25, 50, 50);
 
-				Steema.TeeChart.Utils.UseCaches = false;
-
-				Steema.TeeChart.Drawing.ChartBrush brush = new Steema.TeeChart.Drawing.ChartBrush();
-				brush.Color = new Color(128, 64, 64);
-				brush.ForegroundColor = new Color(128, 64, 64);
-
-				// g.Brush = pBrush;
-
-				g.Brush = brush;
+				g.Brush = pBrush;
 				g.Pen.Width = 4;
 				g.Ellipse(r);
 			}
