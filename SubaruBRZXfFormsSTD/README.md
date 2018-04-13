@@ -1,3 +1,7 @@
+<a href="https://www.steema.com/product/forms">
+<img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
+</a>
+
 # TeeChart for Xamarin Forms Gauge demo - Subaru BRZ acceleration simulation
 
 This demo has been written using the Xamarin Forms API which allows you to build native apps for iOS, Android and Windows in CSharp.

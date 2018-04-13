@@ -1,3 +1,7 @@
+<a href="https://www.steema.com/product/forms">
+<img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
+</a>
+
 TeeChartDashBoards
 ==================
 

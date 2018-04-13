@@ -1,3 +1,7 @@
+<a href="https://www.steema.com/product/forms">
+<img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
+</a>
+
 # TeeChart Standard for .NET CSharp samples
 ## Standard Series Demo
 Demo showing how to use TeeChart Standard for .NET CSharp with Xamarin.Forms.

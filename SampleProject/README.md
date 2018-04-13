@@ -1,4 +1,8 @@
-﻿SampleProject
+﻿<a href="https://www.steema.com/product/forms">
+<img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
+</a>
+
+SampleProject
 =============
 
 This is the basic structure of an application with TeeChart for Xamarin.Forms. It contains the basic elements to develop your Xamarin.Forms charting applications with TeeChart. It is recommended to use it as a reference for your apps.
