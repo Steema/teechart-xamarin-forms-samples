@@ -11,6 +11,8 @@ It demonstrates how to create a simple Pie Series to output the value when the p
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChartSTD/screenshots/android.gif?raw=true "TeeChart for Xamarin.Forms")
 
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChartSTD/screenshots/ios.gif?raw=true "TeeChart for Xamarin.Forms")
+
 ## Sample Requirements
 
 You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/forms) (Standard or Pro) version to run the example on this repository. 
