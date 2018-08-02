@@ -100,19 +100,19 @@ namespace TeeChartDashBoards
             };
 
             // Añadimos botones a la Grid
-            grid.Children.Add(dashchart0.DashView0, 0, 2, 0, 1);
+            grid.Children.Add(dashchart0.dashBoard0, 0, 2, 0, 1);
             grid.Children.Add(button0, 0, 2, 0, 1);
-            grid.Children.Add(dashchart1.DashView1, 2, 4, 0, 1);
+            grid.Children.Add(dashchart1.dashBoard1, 2, 4, 0, 1);
             grid.Children.Add(button1, 2, 4, 0, 1);
-            grid.Children.Add(dashchart2.DashView2, 0, 1);
+            grid.Children.Add(dashchart2.dashChart, 0, 1);
             grid.Children.Add(button2, 0, 1);
-            grid.Children.Add(dashchart3.DashView3, 1, 3, 1, 2);
+            grid.Children.Add(dashchart3.dashChart, 1, 3, 1, 2);
             grid.Children.Add(button3, 1, 3, 1, 2);
-            grid.Children.Add(dashchart4.DashView4, 3, 4, 1, 3);
+            grid.Children.Add(dashchart4.dashChart, 3, 4, 1, 3);
             grid.Children.Add(button4, 3, 4, 1, 3);
-            grid.Children.Add(dashchart5.DashView5, 0, 2, 2, 3);
+            grid.Children.Add(dashchart5.dashChart, 0, 2, 2, 3);
             grid.Children.Add(button5, 0, 2, 2, 3);
-            grid.Children.Add(dashchart6.DashView6, 2, 2);
+            grid.Children.Add(dashchart6.dashChart, 2, 2);
             grid.Children.Add(button6, 2, 2);
 
             Content = grid;

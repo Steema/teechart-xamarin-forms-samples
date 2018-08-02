@@ -11,16 +11,16 @@ namespace TeeChartDashBoards.DashBoards
 {
     public class Page5 : ContentPage
     {
-        Chart dashChart;
-        public ChartView DashView4;
+        public ChartView dashChart;
         public Page5()
-        {
-            // NavigationPage.SetHasNavigationBar(this, false);            
+        {            
+            dashChart = new ChartView();
+						dashChart.WidthRequest = 400;
+						dashChart.HeightRequest = 300;
 
-            dashChart = new Chart();
-            dashChart.Aspect.View3D = false;
+						dashChart.Chart.Aspect.View3D = false;
             Steema.TeeChart.Styles.Pie pie1 = new Steema.TeeChart.Styles.Pie();
-            dashChart.Series.Add(pie1);
+						dashChart.Chart.Series.Add(pie1);
 
             //pie
             pie1.Circled = true;
@@ -36,30 +36,26 @@ namespace TeeChartDashBoards.DashBoards
             pie1.Marks.ArrowLength = -25;
             pie1.Marks.Font.Color = Color.FromRgb(255, 105, 180);
 
-            // Pie and Donut chart
-            dashChart.Panel.Color = Color.FromRgb(255,105,180);
-            dashChart.Panel.Gradient.Visible = false;
-            dashChart.Title.Text = "Pies and Donuts";
-            dashChart.Title.Alignment = TextAlignment.Center;
-            dashChart.Title.Font.Size = 12;
-            dashChart.Title.Font.Color = Color.White;
-            dashChart.Title.Height = 30;
-            //dashBoard0.Title.Font.Name = "";
-            dashChart.Legend.Visible = false;
+						// Pie and Donut chart
+						dashChart.Chart.Panel.Color = Color.FromRgb(255,105,180);
+						dashChart.Chart.Panel.Gradient.Visible = false;
+						dashChart.Chart.Title.Text = "Pies and Donuts";
+						dashChart.Chart.Title.Alignment = TextAlignment.Center;
+						dashChart.Chart.Title.Font.Size = 12;
+						dashChart.Chart.Title.Font.Color = Color.White;
+						dashChart.Chart.Title.Height = 30;
+						//dashBoard0.Title.Font.Name = "";
+						dashChart.Chart.Legend.Visible = false;
 
-            DashView4 = new ChartView
-            {
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
-            DashView4.Model = dashChart;
 
             Content = new StackLayout
             {
-                Children = {
-					DashView4
-				}
-            };
+							Children = {
+								dashChart
+							},
+							VerticalOptions = LayoutOptions.CenterAndExpand,
+							HorizontalOptions = LayoutOptions.CenterAndExpand,
+						};
         }
     }
 }

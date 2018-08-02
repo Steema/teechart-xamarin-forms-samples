@@ -11,18 +11,18 @@ namespace TeeChartDashBoards.DashBoards
 {
     public class Page6 : ContentPage
     {
-        Chart dashChart;
-        public ChartView DashView5;
+        public ChartView dashChart;        
         public Page6()
         {
-            // NavigationPage.SetHasNavigationBar(this, false);            
+            dashChart = new ChartView();
+						dashChart.WidthRequest = 400;
+						dashChart.HeightRequest = 300;
 
-            dashChart = new Chart();
-            dashChart.Aspect.View3D = false;
+						dashChart.Chart.Aspect.View3D = false;
             Steema.TeeChart.Styles.Area area1 = new Steema.TeeChart.Styles.Area();
             Steema.TeeChart.Styles.Area area2 = new Steema.TeeChart.Styles.Area();
-            dashChart.Series.Add(area1);
-            dashChart.Series.Add(area2);
+						dashChart.Chart.Series.Add(area1);
+						dashChart.Chart.Series.Add(area2);
 
             area2.Transparency = 50;
             area1.Gradient.Visible = true;
@@ -38,9 +38,9 @@ namespace TeeChartDashBoards.DashBoards
             area2.Gradient.StartColor = Color.FromRgb(255, 255, 255);
             area2.Gradient.EndColor = Color.FromRgb(186, 85, 211);
 
-            dashChart.Axes.Left.Visible = false;
-            dashChart.Axes.Bottom.AxisPen.Color = Color.White;
-            dashChart.Axes.Bottom.Labels.Font.Color = Color.White;
+						dashChart.Chart.Axes.Left.Visible = false;
+						dashChart.Chart.Axes.Bottom.AxisPen.Color = Color.White;
+						dashChart.Chart.Axes.Bottom.Labels.Font.Color = Color.White;
 
             Random rnd1 = new Random();
             for (int i = 0; i < 40; i++)
@@ -52,33 +52,27 @@ namespace TeeChartDashBoards.DashBoards
             area1.Smoothed = true;
             area2.Smoothed = true;
 
-            dashChart.Axes.Bottom.SetMinMax(10, 30);
+						dashChart.Chart.Axes.Bottom.SetMinMax(10, 30);
 
-            // Areas and Points
-            dashChart.Panel.Color = Color.FromRgb(186, 85, 211);
-            dashChart.Panel.Gradient.Visible = false;
-            dashChart.Title.Text = "Areas and Points";
-            dashChart.Title.Alignment = TextAlignment.End;
-            dashChart.Title.Font.Size = 12;
-            dashChart.Title.Font.Color = Color.White;
-            //dashBoard0.Title.Font.Name = "";
-            dashChart.Legend.Visible = false;
-            dashChart.Walls.Back.Visible = false;
-
-
-            DashView5 = new ChartView
-            {
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
-            DashView5.Model = dashChart;
+						// Areas and Points
+						dashChart.Chart.Panel.Color = Color.FromRgb(186, 85, 211);
+						dashChart.Chart.Panel.Gradient.Visible = false;
+						dashChart.Chart.Title.Text = "Areas and Points";
+						dashChart.Chart.Title.Alignment = TextAlignment.End;
+						dashChart.Chart.Title.Font.Size = 12;
+						dashChart.Chart.Title.Font.Color = Color.White;
+						//dashBoard0.Title.Font.Name = "";
+						dashChart.Chart.Legend.Visible = false;
+						dashChart.Chart.Walls.Back.Visible = false;
 
             Content = new StackLayout
             {
-                Children = {
-					DashView5
-				}
-            };
+							Children = {
+								dashChart
+							},
+							VerticalOptions = LayoutOptions.CenterAndExpand,
+							HorizontalOptions = LayoutOptions.CenterAndExpand,
+						};
         }
     }
 }

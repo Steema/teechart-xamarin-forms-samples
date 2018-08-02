@@ -11,35 +11,34 @@ namespace TeeChartDashBoards.DashBoards
 {
     public class Page3 : ContentPage
     {
-        Chart dashChart;
-        public ChartView DashView2;
+        public ChartView dashChart;        
         public Page3()
         {
-            // NavigationPage.SetHasNavigationBar(this, false);            
-
-            dashChart = new Chart();
-            dashChart.Aspect.View3D = false;
-            Steema.TeeChart.Styles.CircularGauge series = new Steema.TeeChart.Styles.CircularGauge();            
-            dashChart.Series.Add(series);
+            dashChart = new ChartView();
+						dashChart.WidthRequest = 400;
+						dashChart.HeightRequest = 300;
+						dashChart.Chart.Aspect.View3D = false;
+            Steema.TeeChart.Styles.CircularGauge series = new Steema.TeeChart.Styles.CircularGauge();
+						dashChart.Chart.Series.Add(series);
             series.FillSampleValues();
 
-            //Gauges chart
-            dashChart.Panel.Color = Color.FromRgb(220,20,60);
-            dashChart.Panel.Gradient.Visible = false;
-            dashChart.Walls.Back.Visible = false;
-            dashChart.Footer.Text = "Gauges";
-            dashChart.Footer.Alignment = TextAlignment.Center;
-            dashChart.Footer.Visible = true;
-            dashChart.Header.Visible = false;
-            dashChart.Footer.Font.Size = 12;
-            dashChart.Footer.Font.Color = Color.White;
-            dashChart.Legend.Visible = false;
+						//Gauges chart
+						dashChart.Chart.Panel.Color = Color.FromRgb(220,20,60);
+						dashChart.Chart.Panel.Gradient.Visible = false;
+						dashChart.Chart.Walls.Back.Visible = false;
+						dashChart.Chart.Footer.Text = "Gauges";
+						dashChart.Chart.Footer.Alignment = TextAlignment.Center;
+						dashChart.Chart.Footer.Visible = true;
+						dashChart.Chart.Header.Visible = false;
+						dashChart.Chart.Footer.Font.Size = 12;
+						dashChart.Chart.Footer.Font.Color = Color.White;
+						dashChart.Chart.Legend.Visible = false;
 
-            dashChart.Axes.Left.Visible = true;
-            dashChart.Axes.Left.Labels.Visible = false;
-            dashChart.Axes.Left.Ticks.Visible = false;
-            dashChart.Axes.Left.TicksInner.Visible = false;
-            dashChart.Axes.Left.Labels.Font.Color = Color.White;
+						dashChart.Chart.Axes.Left.Visible = true;
+						dashChart.Chart.Axes.Left.Labels.Visible = false;
+						dashChart.Chart.Axes.Left.Ticks.Visible = false;
+						dashChart.Chart.Axes.Left.TicksInner.Visible = false;
+						dashChart.Chart.Axes.Left.Labels.Font.Color = Color.White;
             series.Axis.TicksInner.Visible = false;
             series.Axis.Ticks.Visible = false;
             series.Axis.Labels.Visible = false;
@@ -57,19 +56,14 @@ namespace TeeChartDashBoards.DashBoards
             series.Center.Color = Color.White;
             series.Value = 50;
 
-            DashView2 = new ChartView
-            {
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
-            DashView2.Model = dashChart;
-
             Content = new StackLayout
             {
-                Children = {
-					DashView2
-				}
-            };
+							Children = {
+										dashChart
+							},
+							VerticalOptions = LayoutOptions.CenterAndExpand,
+							HorizontalOptions = LayoutOptions.CenterAndExpand,
+						};
         }
     }
 }

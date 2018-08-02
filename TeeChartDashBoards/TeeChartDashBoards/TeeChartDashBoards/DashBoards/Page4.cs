@@ -11,57 +11,52 @@ namespace TeeChartDashBoards.DashBoards
 {
     public class Page4 : ContentPage
     {
-        Chart dashChart;
-        public ChartView DashView3;
+        public ChartView dashChart;        
         public Page4()
         {
-            // NavigationPage.SetHasNavigationBar(this, false);            
+            dashChart = new ChartView();
+						dashChart.WidthRequest = 400;
+						dashChart.HeightRequest = 300;
 
-            dashChart = new Chart();
-            dashChart.Aspect.View3D = false;
+						dashChart.Chart.Aspect.View3D = false;
             Steema.TeeChart.Styles.Bubble series = new Steema.TeeChart.Styles.Bubble();
-            dashChart.Series.Add(series);
+						dashChart.Chart.Series.Add(series);
             series.FillSampleValues(6);
             series.Pointer.Gradient.Visible = true;
             series.ColorEach = false;
             series.Pointer.Pen.Visible = false;
             series.Color = Color.White;
             series.Pointer.Gradient.StartColor = Color.White;
-            series.Pointer.Gradient.EndColor = Color.FromRgb(255, 165, 0);           
+            series.Pointer.Gradient.EndColor = Color.FromRgb(255, 165, 0);
 
-            //Bubble chart
-            dashChart.Panel.Color = Color.FromRgb(255,165,0);
-            dashChart.Panel.Gradient.Visible = false;
-            dashChart.Walls.Back.Visible = false;
-            dashChart.Title.Text = "Bubbles";
-            dashChart.Title.Alignment = TextAlignment.Start;
-            dashChart.Title.Font.Size = 12;
-            dashChart.Title.Font.Color = Color.White;
-            dashChart.Legend.Visible = false;
-            dashChart.Axes.Left.AxisPen.Visible = false;
-            dashChart.Axes.Left.Labels.Color = Color.FromRgb(255, 165, 0); 
-            dashChart.Axes.Bottom.AxisPen.Visible = false;
-            dashChart.Axes.Left.Grid.Color = Color.White;
-            dashChart.Axes.Left.Increment = 25;
-            dashChart.Axes.Bottom.Grid.Color = Color.White;
-            dashChart.Axes.Left.Grid.Fill.Gradient.Visible = true;
+						//Bubble chart
+						dashChart.Chart.Panel.Color = Color.FromRgb(255,165,0);
+						dashChart.Chart.Panel.Gradient.Visible = false;
+						dashChart.Chart.Walls.Back.Visible = false;
+						dashChart.Chart.Title.Text = "Bubbles";
+						dashChart.Chart.Title.Alignment = TextAlignment.Start;
+						dashChart.Chart.Title.Font.Size = 12;
+						dashChart.Chart.Title.Font.Color = Color.White;
+						dashChart.Chart.Legend.Visible = false;
+						dashChart.Chart.Axes.Left.AxisPen.Visible = false;
+						dashChart.Chart.Axes.Left.Labels.Color = Color.FromRgb(255, 165, 0);
+						dashChart.Chart.Axes.Bottom.AxisPen.Visible = false;
+						dashChart.Chart.Axes.Left.Grid.Color = Color.White;
+						dashChart.Chart.Axes.Left.Increment = 25;
+						dashChart.Chart.Axes.Bottom.Grid.Color = Color.White;
+						dashChart.Chart.Axes.Left.Grid.Fill.Gradient.Visible = true;
 
-            dashChart.Axes.Bottom.Labels.Font.Color = Color.FromRgb(255, 165, 0);
-            dashChart.Axes.Left.Labels.Font.Color = Color.FromRgb(255, 165, 0);
-
-            DashView3 = new ChartView
-            {
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
-            DashView3.Model = dashChart;
+						dashChart.Chart.Axes.Bottom.Labels.Font.Color = Color.FromRgb(255, 165, 0);
+						dashChart.Chart.Axes.Left.Labels.Font.Color = Color.FromRgb(255, 165, 0);
 
             Content = new StackLayout
             {
-                Children = {
-					DashView3
-				}
-            };
+							Children = {
+								dashChart
+							},
+							VerticalOptions = LayoutOptions.CenterAndExpand,
+							HorizontalOptions = LayoutOptions.CenterAndExpand,
+						};
         }
     }
 }
