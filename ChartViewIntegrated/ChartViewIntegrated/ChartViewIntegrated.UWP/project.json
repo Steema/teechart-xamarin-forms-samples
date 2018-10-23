@@ -1,8 +1,9 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
+    "Steema.TeeChart.NET.STD.Xamarin.Forms": "4.2018.4.26",
     "Windows.UI.Interactivity": "1.3.0",
-    "Xamarin.Forms": "2.4.0.91020"
+    "Xamarin.Forms": "2.5.1.444934"
   },
   "frameworks": {
     "uap10.0.14393": {}

@@ -348,6 +348,17 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Steema.TeeChart.NET.STD.Xamarin.Forms/4.2018.4.26": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        }
+      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -2212,7 +2223,7 @@
           "lib/win8/Windows.UI.Interactivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.4.0.91020": {
+      "Xamarin.Forms/2.5.1.444934": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -2834,6 +2845,17 @@
         "type": "package",
         "native": {
           "runtimes/win8-arm/native/clrcompression.dll": {}
+        }
+      },
+      "Steema.TeeChart.NET.STD.Xamarin.Forms/4.2018.4.26": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -4529,7 +4551,7 @@
           "lib/win8/Windows.UI.Interactivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.4.0.91020": {
+      "Xamarin.Forms/2.5.1.444934": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -5187,6 +5209,17 @@
         },
         "native": {
           "runtimes/win8-arm-aot/native/_._": {}
+        }
+      },
+      "Steema.TeeChart.NET.STD.Xamarin.Forms/4.2018.4.26": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -6882,7 +6915,7 @@
           "lib/win8/Windows.UI.Interactivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.4.0.91020": {
+      "Xamarin.Forms/2.5.1.444934": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -7513,6 +7546,17 @@
         },
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "Steema.TeeChart.NET.STD.Xamarin.Forms/4.2018.4.26": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -9208,7 +9252,7 @@
           "lib/win8/Windows.UI.Interactivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.4.0.91020": {
+      "Xamarin.Forms/2.5.1.444934": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -9877,6 +9921,17 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Steema.TeeChart.NET.STD.Xamarin.Forms/4.2018.4.26": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        }
+      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -11570,7 +11625,7 @@
           "lib/win8/Windows.UI.Interactivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.4.0.91020": {
+      "Xamarin.Forms/2.5.1.444934": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -12201,6 +12256,17 @@
         },
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "Steema.TeeChart.NET.STD.Xamarin.Forms/4.2018.4.26": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -13896,7 +13962,7 @@
           "lib/win8/Windows.UI.Interactivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.4.0.91020": {
+      "Xamarin.Forms/2.5.1.444934": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -14563,6 +14629,17 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "Steema.TeeChart.NET.STD.Xamarin.Forms/4.2018.4.26": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/TeeChart.StandardPCL.UWP.dll": {},
+          "lib/uap10.0/TeeChart.StandardPCL.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -16258,7 +16335,7 @@
           "lib/win8/Windows.UI.Interactivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.4.0.91020": {
+      "Xamarin.Forms/2.5.1.444934": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -19637,6 +19714,28 @@
         "runtime.win8-arm.runtime.native.System.IO.Compression.4.0.1.nupkg.sha512",
         "runtime.win8-arm.runtime.native.System.IO.Compression.nuspec",
         "runtimes/win8-arm/native/clrcompression.dll"
+      ]
+    },
+    "Steema.TeeChart.NET.STD.Xamarin.Forms/4.2018.4.26": {
+      "sha512": "sLJ3yzouqxyFcDfpuW2vENxwczOSGhJxT+JSt1YNqfm9XVCB8qkz0n/RDIY4poL1Dat+w2wqHJe7n5eAJgf9XA==",
+      "type": "package",
+      "path": "steema.teechart.net.std.xamarin.forms/4.2018.4.26",
+      "files": [
+        "License.txt",
+        "Support.txt",
+        "TeeChart_Pro_Net_Tutorials.chm",
+        "lib/MonoAndroid10/TeeChart.StandardPCL.Android.dll",
+        "lib/MonoAndroid10/TeeChart.StandardPCL.dll",
+        "lib/Xamarin.iOS10/TeeChart.StandardPCL.dll",
+        "lib/Xamarin.iOS10/TeeChart.StandardPCL.iOS.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/TeeChart.StandardPCL.dll",
+        "lib/uap10.0/TeeChart.StandardPCL.UWP.dll",
+        "lib/uap10.0/TeeChart.StandardPCL.UWP.pri",
+        "lib/uap10.0/TeeChart.StandardPCL.UWP/TeeChart.StandardPCL.UWP.xr.xml",
+        "lib/uap10.0/TeeChart.StandardPCL.dll",
+        "readme.txt",
+        "steema.teechart.net.std.xamarin.forms.4.2018.4.26.nupkg.sha512",
+        "steema.teechart.net.std.xamarin.forms.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -24553,10 +24652,10 @@
         "lib/win8/Windows.UI.Interactivity.xml"
       ]
     },
-    "Xamarin.Forms/2.4.0.91020": {
-      "sha512": "nVuz6UCs0VVOokM5a4HB5TMy4wgiJvR34qqevvdlH6NNAqc4Xj6FohflyBCAeRHxsVB74DE0JN+RmHxJss/pAg==",
+    "Xamarin.Forms/2.5.1.444934": {
+      "sha512": "zDbZeFhh62l6cMG9dXrQ/CSbk+NxKAykeL+JcVxLn//Rx678sCa961F+ib0gqzNHkTmT1K3TPLlJZp5WjvnKVA==",
       "type": "package",
-      "path": "xamarin.forms/2.4.0.91020",
+      "path": "xamarin.forms/2.5.1.444934",
       "files": [
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
@@ -24682,10 +24781,10 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControl.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
@@ -24707,7 +24806,6 @@
         "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/Xamarin.Forms.Platform.WinRT.Tablet.xr.xml",
         "lib/win81/Xamarin.Forms.Platform.WinRT.dll",
         "lib/win81/Xamarin.Forms.Platform.WinRT.pri",
-        "lib/win81/Xamarin.Forms.Platform.WinRT/PageControl.xbf",
         "lib/win81/Xamarin.Forms.Platform.WinRT/StepperControl.xbf",
         "lib/win81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
         "lib/win81/Xamarin.Forms.Platform.dll",
@@ -24727,13 +24825,12 @@
         "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/Xamarin.Forms.Platform.WinRT.Phone.xr.xml",
         "lib/wpa81/Xamarin.Forms.Platform.WinRT.dll",
         "lib/wpa81/Xamarin.Forms.Platform.WinRT.pri",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT/PageControl.xbf",
         "lib/wpa81/Xamarin.Forms.Platform.WinRT/StepperControl.xbf",
         "lib/wpa81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
         "lib/wpa81/Xamarin.Forms.Platform.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.2.4.0.91020.nupkg.sha512",
+        "xamarin.forms.2.5.1.444934.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -24746,8 +24843,9 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.4.0",
+      "Steema.TeeChart.NET.STD.Xamarin.Forms >= 4.2018.4.26",
       "Windows.UI.Interactivity >= 1.3.0",
-      "Xamarin.Forms >= 2.4.0.91020"
+      "Xamarin.Forms >= 2.5.1.444934"
     ],
     "UAP,Version=v10.0.14393": []
   },
@@ -24757,12 +24855,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\Tests\\Xamarin\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.UWP\\ChartViewIntegrated.UWP.csproj",
+      "projectUniqueName": "D:\\steema\\root\\TeeChartForNET\\Version 4\\Demos\\Xamarin.Forms\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.UWP\\ChartViewIntegrated.UWP.csproj",
       "projectName": "ChartViewIntegrated.UWP",
-      "projectPath": "D:\\Tests\\Xamarin\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.UWP\\ChartViewIntegrated.UWP.csproj",
-      "projectJsonPath": "D:\\Tests\\Xamarin\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.UWP\\project.json",
+      "projectPath": "D:\\steema\\root\\TeeChartForNET\\Version 4\\Demos\\Xamarin.Forms\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.UWP\\ChartViewIntegrated.UWP.csproj",
+      "projectJsonPath": "D:\\steema\\root\\TeeChartForNET\\Version 4\\Demos\\Xamarin.Forms\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.UWP\\project.json",
       "packagesPath": "C:\\Users\\Pep\\.nuget\\packages\\",
-      "outputPath": "D:\\Tests\\Xamarin\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.UWP\\obj\\",
+      "outputPath": "D:\\steema\\root\\TeeChartForNET\\Version 4\\Demos\\Xamarin.Forms\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
@@ -24780,8 +24878,8 @@
       "frameworks": {
         "uap10.0.14393": {
           "projectReferences": {
-            "D:\\Tests\\Xamarin\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.csproj": {
-              "projectPath": "D:\\Tests\\Xamarin\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.csproj"
+            "D:\\steema\\root\\TeeChartForNET\\Version 4\\Demos\\Xamarin.Forms\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.csproj": {
+              "projectPath": "D:\\steema\\root\\TeeChartForNET\\Version 4\\Demos\\Xamarin.Forms\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated\\ChartViewIntegrated.csproj"
             }
           }
         }
@@ -24789,8 +24887,9 @@
     },
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "[5.4.0, )",
+      "Steema.TeeChart.NET.STD.Xamarin.Forms": "[4.2018.4.26, )",
       "Windows.UI.Interactivity": "[1.3.0, )",
-      "Xamarin.Forms": "[2.4.0.91020, )"
+      "Xamarin.Forms": "[2.5.1.444934, )"
     },
     "frameworks": {
       "uap10.0.14393": {}
