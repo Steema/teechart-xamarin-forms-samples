@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AccelerometerTest"
+             xmlns:tee="clr-namespace:Steema.TeeChart;assembly=TeeChart.StandardPCL"
+            xmlns:teeStyles="clr-namespace:Steema.TeeChart.Styles;assembly=TeeChart.StandardPCL"
+             x:Class="AccelerometerTest.MainPage" NavigationPage.HasNavigationBar="True"
+            Title="Accelerometer" CurrentPageChanged="TabbedPage_CurrentPageChanged">
+
+    <ContentPage x:Name="xContentPage" Title="X">
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                     BackgroundColor="White">
+
+            <tee:ChartView x:Name="ChartX"/>
+
+        </StackLayout>
+
+    </ContentPage>
+
+    <ContentPage x:Name="yContentPage" Title="Y">
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                     BackgroundColor="White">
+
+            <tee:ChartView x:Name="ChartY"/>
+
+        </StackLayout>
+
+    </ContentPage>
+
+    <ContentPage x:Name="zContentPage" Title="Z">
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                     BackgroundColor="White">
+
+            <tee:ChartView x:Name="ChartZ"/>
+
+        </StackLayout>
+
+    </ContentPage>
+
+</TabbedPage>
