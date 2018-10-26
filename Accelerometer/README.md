@@ -2,7 +2,7 @@
 <img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
 </a>
 
-AreaLine with Pointer
+Accelerometer Circular Gauge
 ===================
 Demo showing how to use TeeChart .NET CSharp with Xamarin.Forms.
 
