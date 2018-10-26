@@ -13,7 +13,7 @@ It shows how to create an Accelerometer based on a Circular Gauge, for iOS, Andr
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/android50%25.jpg?raw=true "TeeChart for Xamarin.Forms")
 
-Click [here]((https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/android_video.mp4) to download a short video of the Accelerometer.
+Click [here](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/android_video.mp4) to download a short video of the Accelerometer.
 
 ## Sample Requirements
 
