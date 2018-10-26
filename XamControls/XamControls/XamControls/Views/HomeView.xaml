@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamControls.Views.HomeView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="false"
+             Title="">
+	
+	<AbsoluteLayout Padding="0,10">
+
+		<ListView x:Name="MediaList" 
+              AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+              AbsoluteLayout.LayoutFlags="SizeProportional"
+              SeparatorVisibility="None"
+              BackgroundColor="Transparent"
+              >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Spacing="0" Margin="0,0,0,10"> 
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+    </AbsoluteLayout>
+</ContentPage>

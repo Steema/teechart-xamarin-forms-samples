@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamControls.Views.MasterView"
+             MasterBehavior="Popover"
+             xmlns:pages="clr-namespace:XamControls.Views">
+	<MasterDetailPage.Master>
+    <pages:MenuView x:Name="Menu" />
+  </MasterDetailPage.Master>
+	<!--<MasterDetailPage.Detail>
+		<pages:CustomNavigationPage>
+			<x:Arguments>
+				<pages:HomeView/>
+			</x:Arguments>
+		</pages:CustomNavigationPage>
+	</MasterDetailPage.Detail>-->
+</MasterDetailPage>

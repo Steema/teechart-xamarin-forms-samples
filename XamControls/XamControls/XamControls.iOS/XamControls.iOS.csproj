@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD77C0E3-8FA7-48A2-B5B9-B9F96430C24A}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XamControls.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>XamControls.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignProvision />
+    <MtouchSdkVersion>11.4</MtouchSdkVersion>
+    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignProvision />
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <CodesignEntitlements />
+    <MtouchSdkVersion>11.4</MtouchSdkVersion>
+    <MtouchDebug>false</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="SearchPageRenderer.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\pspbrwse.jbf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-app-x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-app-x3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-notification-x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-notification-x3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-x3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight5_6-x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight7_11-x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight7_11-x21.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight7_11-x3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\steema_app_store.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\ipad-vertical-x1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\ipad-vertical-x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\iphone-vertical-retina4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\iphone-vertical-x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.1.4.168</Version>
+    </PackageReference>
+    <PackageReference Include="Steema.TeeChart.NET.Xamarin.Forms">
+      <Version>4.2018.10.17</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>0.10.0-preview</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.637273" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\XamControls\XamControls.csproj">
+      <Project>{1D2AB3EF-6A51-487D-89A1-29890FB9BE1D}</Project>
+      <Name>XamControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\radar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\renko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\roundbutton.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\smith.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Surface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tagcloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ternary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\twt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\vector3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\vertgauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\volumepipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\waterfall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\windrose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\area.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bar3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\barjoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bezier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bubbles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\candle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\circulargauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\colorgrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\contour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\darvas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\donut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\errorbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\errorpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fastline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fcb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\funnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gantt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ggp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\highlow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\histogram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\horizarea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\horizbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\horizbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\horizhistogram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\horizline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_build_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_build_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_filter_list_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_filter_list_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_help_outline_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_lightbulb_outline_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_menu_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_share_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconGithub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconSteema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconSteemaSPLASH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconSteemaSPLASH10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\isosurface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\kagi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\knobgauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lineargauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lineIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\linepoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\numericgauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\org.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\point3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pointnfigure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Points.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\polar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\polarbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PolarGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pyramid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\ic_arrow_back_black_24dp.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\ic_settings_black_36dp.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hamburgTitlePhoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_lightbulb_outline_white_24dp_ios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mic_lightbulb_outline_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mic_home_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_chat_bubble_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_web_asset_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_web_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_radio_button_unchecked_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_radio_button_checked_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconSteema_day.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_info_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_steema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_home_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_help_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_search_white_18pt_2x.png" />
+  </ItemGroup>
+</Project>

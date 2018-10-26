@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true" 
+             Title="Settings"
+             x:Class="XamControls.Views.SettingsView">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column"  Margin="15,0"
+                    JustifyContent="Start">
+            
+            <Button
+                x:Name="closeButton"
+                Text="&#xE894;"
+                FontSize="18"
+                Style="{StaticResource IconFontButton}"
+                Clicked="Handle_CloseClickedAsync"
+                FlexLayout.AlignSelf="Start"
+                FlexLayout.Shrink="0">
+                <Button.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double" Default="-1">
+                        <On Platform="Android" Value="40"/>
+                    </OnPlatform>
+                </Button.WidthRequest>
+            </Button>
+
+            <StackLayout Margin="15">
+                <Label Text="Vision API Key" />
+                <Entry Placeholder="Custom Key" />
+                <Button Text="Export Data" Style="{StaticResource OutlineButton}"/>
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamControls.Views.MenuView"
+             BackgroundColor="White"
+             Icon="menu.png"
+             Title="Master">
+<!--
+
+	<FlexLayout Direction="Column">
+		<StackLayout BackgroundColor="#4da6ff" HorizontalOptions="FillAndExpand" MinimumHeightRequest="160">
+			<Image Source="https://www.steema.com/img/content/teechart-title-menu.png" HeightRequest="60" MinimumHeightRequest="40" WidthRequest="300" Margin="0,20,0,20"/>
+            <Label HeightRequest="120" MinimumHeightRequest="120" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="Esta es una DEMO de TeeChart la cual ofrece una série de componentes para distintos gráficos orientados a mundos como el financiero, estadístico y financieros..." TextColor="White" Margin="20,0,20,10"/>
+
+        </StackLayout>
+		<StackLayout BackgroundColor="White" HeightRequest="330" Padding="0,10,0,0">
+
+            <ListView x:Name="menuItemsListView"
+              SeparatorVisibility="None"
+              FlexLayout.Shrink="0"
+              ItemsSource="{Binding MenuItems}">
+                <ListView.ItemTemplate>
+                    
+                    <DataTemplate>
+
+                        <ViewCell> -->
+                            
+                            <!--<StackLayout Padding="30,20,0,10" HorizontalOptions="FillAndExpand" BackgroundColor="White"> -->
+
+                   <!--         <Grid Padding="15,10,0,10" BackgroundColor="{Binding BackgroundColor}">
+                                <Grid.ColumnDefinitions>
+									<ColumnDefinition Width="50"/>
+									<ColumnDefinition Width="*" />
+								</Grid.ColumnDefinitions>
+								<Image Source="{Binding ImageSource}" />
+								<Label Grid.Column="1" TextColor="Black"
+										 FontAttributes="Bold" FontSize="14" Text="{Binding Title}" />
+							</Grid> -->
+							<!--<Image Source="{Binding ImageSource}"/>
+								<Label VerticalOptions="FillAndExpand" 
+                    VerticalTextAlignment="Center"
+                    Text="{Binding Title}"
+                    TextColor="Black"
+										 FontAttributes="Bold"
+                    />
+								
+								-->
+
+							<!-- </StackLayout> -->
+							<!--
+							<StackLayout HeightRequest="400" MinimumHeightRequest="200" BackgroundColor="#4da6ff" Padding="0,20,0,70">
+							<Label VerticalOptions="FillAndExpand" 
+											VerticalTextAlignment="Center"
+											Text="____________________________"
+											TextColor="Gray"
+											 FontSize="20"/>
+						</StackLayout>
+												
+						</StackLayout>
+						
+						--> <!--
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+
+		</StackLayout>
+
+	</FlexLayout> -->
+
+</ContentPage>

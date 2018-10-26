@@ -1,4 +1,3 @@
-*.sln
 **/obj*/
 **/bin*/
 *.orig
@@ -6,3 +5,5 @@
 *.userprefs
 *.apk
 *.suo
+StandardSeriesDemoXFormsSTD/.vs/
+XamControls/.vs/

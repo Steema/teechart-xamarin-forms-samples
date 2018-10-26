@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamControls.Views.AboutPage"
+             xmlns:vm="clr-namespace:XamControls.ViewModels"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player -->
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Spacing="0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS">
+                            <On.Value>0, 40, 0, 0</On.Value>                    
+                        </On>
+                    </OnPlatform>
+                </StackLayout.Padding>
+                <ContentView Padding="0,20,0,20" VerticalOptions="FillAndExpand">
+					<Image Source="logo_steema.png" HeightRequest="80" MinimumHeightRequest="60" HorizontalOptions="Start" WidthRequest="170" Margin="5,20,0,10"/>
+
+				</ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1" BackgroundColor="White">
+            <StackLayout Orientation="Vertical" Padding="16,20,16,30" Spacing="5">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="DEMO TeeChart Xamarin.Forms" FontAttributes="Bold" FontSize="22" />
+                                <Span Text=" " />
+                                <Span Text="1.1" ForegroundColor="{StaticResource LightTextColor}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+				<Label>
+					<Label.FormattedText>
+						<FormattedString>
+							<FormattedString.Spans>
+								<Span Text="Steema Software has been providing developers with tools for charting since 1995. The TeeChart for Android Library forms part of ongoing development to make available for Android application development all of the carthing features thjat form part of the charting features that form part of the TeeChart Libraries. This preview application shows a few of possibilities available to developers. The Pie style shows values displayed as slices of a cheese or pie. Options include 2D and 3D, mobing the slices, marks, patterns, ellipse shape, border, shadow, grouping of small values, partial pies, multiple pies, etc." />
+							</FormattedString.Spans>
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Button Margin="0,10,0,0" Text="Learn more about us" Command="{Binding OpenWebCommand}" BackgroundColor="{StaticResource Primary}" TextColor="White" />
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="0.25*"></ColumnDefinition>
+						<ColumnDefinition Width="0.25*"></ColumnDefinition>
+						<ColumnDefinition Width="0.25*"></ColumnDefinition>
+						<ColumnDefinition Width="0.25*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+                    <Grid.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS">
+                                <On.Value>0, 20, 0, 0</On.Value>
+                            </On>
+                        </OnPlatform>
+                    </Grid.Padding>
+                    <Button Image="fcb.png" BackgroundColor="White" BorderColor="#2196F3" Command="{Binding FacebookCommand}" Grid.Row="0" Grid.Column="0"/>
+                    <Button Image="twt.png" BackgroundColor="White" BorderColor="#2196F3" Command="{Binding TwitterCommand}" Grid.Row="0" Grid.Column="1"/>
+                    <Button Image="ggp.png" BackgroundColor="White" BorderColor="#2196F3" Command="{Binding GoogPlusCommand}" Grid.Row="0" Grid.Column="2"/>
+                    <Button Image="lin.png" BackgroundColor="White" BorderColor="#2196F3" Command="{Binding LinkCommand}" Grid.Row="0" Grid.Column="3"/>
+				</Grid>
+			</StackLayout>
+     </ScrollView>
+   </Grid>
+</ContentPage>
