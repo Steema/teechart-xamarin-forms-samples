@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.ErrorPage"
+             BackgroundColor="#A8C8FF" Title="Error">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+            <Image x:Name="imageError" WidthRequest="200" HeightRequest="300">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="Android, iOS" Value="ic_warning_white_96dp.png"/>
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
+            <Label x:Name="lblError">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS">
+                            16
+                        </On>
+                        <On Platform="UWP">
+                            20
+                        </On>
+                    </OnPlatform>
+                </Label.FontSize>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

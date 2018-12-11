@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" Orientation="Vertical" Margin="0" Padding="0"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WeatherApp.View.CardView"
+             xmlns:effect="clr-namespace:WeatherApp.Effects"
+             xmlns:render="clr-namespace:WeatherApp.Renders" HorizontalOptions="FillAndExpand">
+    <render:ExtendedFrame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Elevation="1" IsClippedToBounds="True" Margin="0" Padding="0" BorderColor="White">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True" Margin="0" Padding="0" Orientation="Vertical">
+            <StackLayout HorizontalOptions="FillAndExpand" Margin="0" Padding="0" IsClippedToBounds="False">
+                <Image x:Name="imageCard" Source="{Binding CIcon}" HorizontalOptions="FillAndExpand">
+                    <Image.Aspect>
+                        <OnPlatform x:TypeArguments="Aspect">
+                            <On Platform="Android, iOS" Value="AspectFit"/>
+                            <On Platform="UWP" Value="AspectFill"/>
+                        </OnPlatform>
+                    </Image.Aspect>
+                </Image>
+                <StackLayout.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS" Value="100"/>
+                        <On Platform="UWP" Value="200"/>
+                    </OnPlatform>
+                </StackLayout.HeightRequest>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Padding="0, 0, 0, 10">
+                <Label x:Name="titleCard" Text="{Binding Date}" Margin="10, 5, 0, 0">
+                    <Label.Effects>
+                        <effect:LabelShadowEffect Radius="1" DistanceX="1" DistanceY="1">
+                            <effect:LabelShadowEffect.Color>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS" Value="Black" />
+                                    <On Platform="Android" Value="Black" />
+                                    <On Platform="UWP" Value="Black" />
+                                </OnPlatform>
+                            </effect:LabelShadowEffect.Color>
+                        </effect:LabelShadowEffect>
+                    </Label.Effects>
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android, iOS" Value="16"/>
+                            <On Platform="UWP" Value="28"/>
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
+                <Label x:Name="descriptionCard" Text="{Binding Weather}" Margin="10, 5, 0, 0" HorizontalOptions="FillAndExpand">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android, iOS" Value="13"/>
+                            <On Platform="UWP" Value="20"/>
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
+                <StackLayout.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS" Value="65"/>
+                        <On Platform="UWP" Value="75"/>
+                    </OnPlatform>
+                </StackLayout.HeightRequest>
+                <StackLayout.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android, iOS" Value="White"/>
+                    </OnPlatform>
+                </StackLayout.BackgroundColor>
+            </StackLayout>
+            <StackLayout.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="UWP" Value="White"/>
+                </OnPlatform>
+            </StackLayout.BackgroundColor>
+        </StackLayout>
+    </render:ExtendedFrame>
+</StackLayout>

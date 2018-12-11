@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="WeatherApp.WeatherPage"
+       BackgroundColor="White">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout BackgroundColor="Black">
+        <Grid BackgroundColor="#79C1F1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Label x:Name="regionCodeLabel" Text="Enter a city"  FontAttributes="Bold"  Margin="10,0,0,0" TextColor="#374D60"
+                   Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+          <Label  Text="Coordenates Lat,Lon"  FontAttributes="Bold" TextColor="#374D60"
+                   Grid.Row="3" Grid.Column="2" />
+          <Switch x:Name="swChange" Grid.Row="3" Grid.Column="3" Margin="0,0,10,0" IsToggled="False" />
+          <Entry x:Name="regionCodeEntry" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="10,0,0,0"
+                   Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+          <Button x:Name="getWeatherBtn" Text="Get weather" WidthRequest="185" BorderWidth="1"  Margin="0,0,10,0"
+                         Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" IsEnabled="true"/>
+
+          <Picker x:Name="TempSelect" HorizontalOptions="FillAndExpand" Title="Select temp scale" Grid.Column="2" Grid.ColumnSpan="2" >
+            <Picker.Items>
+              <x:String>Celsius</x:String>
+              <x:String>Fahrenheit</x:String>
+            </Picker.Items>
+          </Picker>
+
+          <!--<Picker x:Name="TempSelect" Header="Temp scale" Height="44" Width="296" ItemsSource="{x:Bind tempOps}" DisplayMemberPath="Source"
+                        Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" IsEnabled="true"/>-->
+        </Grid>
+        <Label x:Name ="lblError" IsVisible="false" TextColor= "White" FontSize="50" />
+        <Grid IsVisible="false" x:Name="grdMain" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto"  />
+            <ColumnDefinition Width="Auto"  />
+          </Grid.ColumnDefinitions>
+          <Image x:Name="imgLogo" WidthRequest = "80"  HeightRequest = "80" Grid.Row="2" Margin = "20,0,5,0"/>
+          <Label x:Name="lblLocale" FontSize="30" Grid.ColumnSpan="3" Grid.Row="3" FontAttributes="Bold"
+                 Margin = "20,0,5,0" TextColor= "White"/>
+          <Label x:Name = "lblWeather" FontSize="30" Grid.ColumnSpan="3" Grid.Row="4" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label  Text="Temperature: " FontSize="20" FontAttributes="Bold"  Grid.Column="0" Grid.Row="5" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label x:Name= "lblTemp"  FontSize="20" Grid.Column="1" Grid.Row="5" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label Text="Pressure: "  FontSize="20" FontAttributes="Bold"  Grid.Column="0" Grid.Row="6" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label x:Name= "lblPressure" FontSize="20" Grid.Column="1" Grid.Row="6" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label Text="Humidity: " FontSize="20" FontAttributes="Bold"  Grid.Column="0" Grid.Row="7" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label x:Name= "lblHumidity" FontSize="20" Grid.Column="1" Grid.Row="7" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label Text="Sea Level: "  FontSize="20" FontAttributes="Bold"  Grid.Column="0" Grid.Row="8" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label x:Name= "lblSea" FontSize="20" Grid.Column="1" Grid.Row="8" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label Text="Ground Level: "  FontSize="20" FontAttributes="Bold"  Grid.Column="0" Grid.Row="9" Margin = "20,0,10,0" TextColor= "White"/>
+          <Label x:Name= "lblGround" FontSize="20" Grid.Column="1" Grid.Row="9" Margin = "20,0,10,0" TextColor= "White"/>
+        </Grid>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>  

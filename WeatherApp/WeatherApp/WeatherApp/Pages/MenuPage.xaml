@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customViewCell="clr-namespace:WeatherApp.Renders"
+             xmlns:resources="WeatherApp.Resources"
+             x:Class="WeatherApp.Pages.MenuPage" Title="WeatherApp">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout Orientation="Horizontal" IsVisible="True">
+            <Image x:Name="imgLogo" Source="steema_weather.png" WidthRequest="170" HeightRequest="50" HorizontalOptions="Start"/>
+            <StackLayout.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android, iOS">11,8,0,0</On>
+                </OnPlatform>
+            </StackLayout.Margin>
+            <StackLayout.IsVisible>
+                <OnPlatform x:TypeArguments="x:Boolean">
+                    <On Platform="UWP" Value="False"/>
+                    <On Platform="Android, iOS" Value="True"/>
+                </OnPlatform>
+            </StackLayout.IsVisible>
+        </StackLayout>
+        <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Default" HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand">
+            <ListView ItemsSource="{Binding ListViewItems}" x:Name="lvOptions" WidthRequest="100" HeightRequest="100" HorizontalOptions="FillAndExpand"
+                      SeparatorVisibility="None" VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid VerticalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.8*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Image Grid.Column="0" Grid.Row="0" Source="{Binding Icon}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Grid.Column="1" Grid.Row="0" FontAttributes="Bold" Text = "{Binding Name}" FontSize="14"  TextColor="Black" 
+                                        VerticalTextAlignment ="Center" HorizontalTextAlignment="Start" Margin = "0,0,0,0.5">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android">Relish Pro Medium.ttf#RelishPro 6</On>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Grid.Padding>
+                                    <OnPlatform x:TypeArguments="Thickness">
+                                        <On Platform="UWP" Value="0, 10, 0, 10"/>
+                                    </OnPlatform>
+                                </Grid.Padding>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android, iOS">0,5,0,0</On>
+                    </OnPlatform>
+                </ListView.Margin>
+            </ListView>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

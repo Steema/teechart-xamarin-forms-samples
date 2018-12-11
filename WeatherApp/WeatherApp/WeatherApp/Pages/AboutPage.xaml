@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.AboutPage" Title="About Steema">
+    <ContentPage.Content>
+        <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Default" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ListView x:Name="listView" ItemSelected="listView_ItemSelected">
+                    <ListView.Header>
+                        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#169eed" Padding="10,10,10,10">
+                            <StackLayout HeightRequest="100" Orientation="Horizontal" HorizontalOptions="Center">
+                                <Image WidthRequest="200" HeightRequest="100">
+                                    <Image.Source>
+                                        <OnPlatform x:TypeArguments="FileImageSource">
+                                            <On Platform="Android, iOS">steema_logo.png</On>
+                                            <On Platform="UWP">Assets/steema_logo.png</On>
+                                        </OnPlatform>
+                                    </Image.Source>
+                                </Image>
+                                <Label Text="Weather" FontSize="22" Margin="5,10,0,0" TextColor="White" VerticalOptions="Center"/>
+                            </StackLayout>
+                            
+                            <Label Text="Version 1.0" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="5,10,5,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition Width="0.8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition>
+                                            <RowDefinition.Height>
+                                                <OnPlatform x:TypeArguments="GridLength">
+                                                    <On Platform="Android, iOS">*</On>
+                                                    <On Platform="UWP">50</On>
+                                                </OnPlatform>
+                                            </RowDefinition.Height>
+                                        </RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Grid.Column="0" Source="{Binding Icon}" VerticalOptions="FillAndExpand"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Text}" VerticalTextAlignment="Center">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="Android, iOS">18</On>
+                                                <On Platform="UWP">25</On>
+                                            </OnPlatform>
+                                        </Label.FontSize>
+                                    </Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Footer>
+                        <StackLayout x:Name="stkInfo" VerticalOptions="Start" HorizontalOptions="FillAndExpand" IsVisible="True" Margin="10">
+                            <Label FontSize="16">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Steema Software has been providing developers with tools for charting since 1995. The TeeChart for Android Library forms part of ongoing development to make available for Android application development all of the carthing features thjat form part of the charting features that form part of the TeeChart Libraries. This preview application shows a few of possibilities available to developers. The Pie style shows values displayed as slices of a cheese or pie. Options include 2D and 3D, mobing the slices, marks, patterns, ellipse shape, border, shadow, grouping of small values, partial pies, multiple pies, etc." />
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </ListView.Footer>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
