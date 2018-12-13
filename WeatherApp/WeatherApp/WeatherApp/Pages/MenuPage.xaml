@@ -9,7 +9,8 @@
             <Image x:Name="imgLogo" Source="steema_weather.png" WidthRequest="170" HeightRequest="50" HorizontalOptions="Start"/>
             <StackLayout.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="Android, iOS">11,8,0,0</On>
+                    <On Platform="Android">11,8,0,0</On>
+                    <On Platform="iOS">11,30,0,0</On>
                 </OnPlatform>
             </StackLayout.Margin>
             <StackLayout.IsVisible>
@@ -34,7 +35,13 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Column="0" Grid.Row="0" Source="{Binding Icon}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Image Grid.Column="0" Grid.Row="0" Source="{Binding Icon}" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image.Margin>
+                                        <OnPlatform x:TypeArguments="Thickness">
+                                            <On Platform="iOS">8,8,8,8</On>
+                                        </OnPlatform>
+                                    </Image.Margin>
+                                </Image>
                                 <Label Grid.Column="1" Grid.Row="0" FontAttributes="Bold" Text = "{Binding Name}" FontSize="14"  TextColor="Black" 
                                         VerticalTextAlignment ="Center" HorizontalTextAlignment="Start" Margin = "0,0,0,0.5">
                                     <Label.FontFamily>
@@ -60,4 +67,9 @@
             </ListView>
         </ScrollView>
     </StackLayout>
+    <ContentPage.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource">
+            <On Platform="iOS">menu_ios.png</On>
+        </OnPlatform>
+    </ContentPage.Icon>
 </ContentPage>

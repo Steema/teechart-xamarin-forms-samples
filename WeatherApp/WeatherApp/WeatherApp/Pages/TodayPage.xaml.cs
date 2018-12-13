@@ -310,6 +310,7 @@ namespace WeatherApp.Pages
                     break;
 
                 case Device.iOS:
+                    GetPermissionsIos();
                     break;
 
                 case Device.UWP:
@@ -318,6 +319,28 @@ namespace WeatherApp.Pages
 
             }            
 
+        }
+
+        private async void GetPermissionsIos()
+        {
+            Xamarin.Essentials.Location location = await InternalGetLocation();
+            if (location != null)
+            {
+                if (requestLocationItem != null)
+                {
+                    ToolbarItems.Remove(requestLocationItem);
+                    (mainGrid.Children[0] as StackLayout).Children.Remove(lblLocError);
+                    IsBusy = true;
+                    LoadingFragment();
+            
+                }
+                App.Latitude = location.Latitude;
+                App.Longitude = location.Longitude;
+                ShowInfo();
+        
+            }
+            else ReqLocationToolbarItem();
+    
         }
 
         private bool isDenied = false;

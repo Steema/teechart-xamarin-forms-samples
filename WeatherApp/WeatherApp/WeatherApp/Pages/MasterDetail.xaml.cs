@@ -27,6 +27,8 @@ namespace WeatherApp
             statusPermissions = new Utils.StatusPermissions();
             MasterBehavior = MasterBehavior.Popover;
 
+            
+
             if (!statusPermissions.CheckConnection()) NavigateFromMenu(0);
             else { NavigateFromMenu(1); }
 

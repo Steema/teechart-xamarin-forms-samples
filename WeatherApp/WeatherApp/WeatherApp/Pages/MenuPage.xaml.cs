@@ -22,7 +22,7 @@ namespace WeatherApp.Pages
 
             InitializeComponent();
 
-            if(Device.RuntimePlatform == Device.Android ||Device.RuntimePlatform == Device.iOS)
+            if(Device.RuntimePlatform == Device.Android)
 
                 ListViewItems = new ObservableCollection<MasterListItems>()
                 {
@@ -38,6 +38,26 @@ namespace WeatherApp.Pages
                     new MasterListItems(MenuItemType.About, "About us", "ic_info_outline_grey_24dp.xml"),
 
                 };
+
+            else if(Device.RuntimePlatform == Device.iOS)
+            {
+
+                ListViewItems = new ObservableCollection<MasterListItems>()
+                {
+
+                    new MasterListItems(MenuItemType.Home, "Home", "home_ios.png"),
+                    new MasterListItems(MenuItemType.Temperature, "Temperature", "etiqueta_ios.png"),
+                    new MasterListItems(MenuItemType.MinMaxTemperature, "Min Temperature", "etiqueta_ios.png"),
+                    new MasterListItems(MenuItemType.MinMaxTemperatureHistogram, "Min/Max Temperature", "etiqueta_ios.png"),
+                    new MasterListItems(MenuItemType.Humidity, "Humidity", "etiqueta_ios.png"),
+                    new MasterListItems(MenuItemType.WindSpeed, "Wind Speed", "etiqueta_ios.png"),
+                    new MasterListItems(MenuItemType.SeaLevel, "Sea Level", "etiqueta_ios.png"),
+                    //new MasterListItems(MenuItemType.GroundLevel, "Ground Level", "ic_label_outline_grey_24dp.xml"),
+                    new MasterListItems(MenuItemType.About, "About us", "info_ios.png"),
+
+                };
+
+            }
 
             else {
 

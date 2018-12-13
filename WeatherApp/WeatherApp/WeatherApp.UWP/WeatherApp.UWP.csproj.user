@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>D:\Imagenes\iOS\Icon\iphone\iphone-spotlight7_11-x2.png</Source>
+    <SmallTileSource>D:\Imagenes\iOS\Icon\iphone\iphone-spotlight7_11-x2.png</SmallTileSource>
+    <MediumTileSource>D:\Imagenes\iOS\Icon\iphone\iphone-spotlight7_11-x2.png</MediumTileSource>
+    <WideTileSource>D:\Imagenes\iOS\Icon\iphone\iphone-spotlight7_11-x2.png</WideTileSource>
+    <LargeTileSource>D:\Imagenes\iOS\Icon\iphone\iphone-spotlight7_11-x2.png</LargeTileSource>
+    <AppIconSource>D:\Imagenes\iOS\Icon\iphone\iphone-spotlight7_11-x2.png</AppIconSource>
+    <SplashScreenSource>D:\Imagenes\iOS\Icon\iphone\iphone-spotlight7_11-x2.png</SplashScreenSource>
+    <PackageLogoSource>D:\Imagenes\iOS\Icon\iphone\iphone-spotlight7_11-x2.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>
