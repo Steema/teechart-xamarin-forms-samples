@@ -41,7 +41,12 @@ namespace XamControls.Models
 			{
 
 					if (this.a_tipus == "PRO") { this.a_color = Color.FromRgb(225, 225, 225); }
-					else { this.a_color = Color.White; }
+					else {
+
+                        if (Xamarin.Forms.Device.RuntimePlatform == Device.Android) this.a_color = Color.White;
+                        else this.a_color = Color.FromRgb(245, 245, 245);
+
+                    }
 
 			}
 

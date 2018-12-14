@@ -11,7 +11,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -25,20 +25,16 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.steema.xamcontrols</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>2.1</string>
 	<key>UILaunchStoryboardName</key>
-	<string>(not set)</string>
+	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>XamControls</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>MinimumOSVersion</key>
-	<string>11.2</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
-	<key>XSLaunchImageAssets</key>
-	<string>Assets.xcassets/LaunchImages.launchimage</string>
+	<string>2.1</string>
 </dict>
 </plist>

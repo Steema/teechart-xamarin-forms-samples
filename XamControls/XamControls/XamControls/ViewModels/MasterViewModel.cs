@@ -67,7 +67,7 @@ namespace XamControls.ViewModels
                     else if (Device.RuntimePlatform == Device.iOS)
                     {
 
-                        sources = new string[7] { "ic_home_black_24dp.png", "iconSteema_day.png", "iconGithub.png", "ic_help_black_36dp.png", "ic_settings_black_36dp.png", "ic_info_black_24dp.png", "ic_chat_bubble_black_36dp.png" };
+                        sources = new string[7] { "ic_home_black_24dp.png", "iconSteema_day.png", "iconGithub.png", "ic_help_black_36dp.png", "ic_settings_black_24dp.png", "ic_info_black_24dp.png", "ic_chat_bubble_black_36dp.png" };
                         for (int i = 0; i < iconSources.Length; i++)
                         {
 

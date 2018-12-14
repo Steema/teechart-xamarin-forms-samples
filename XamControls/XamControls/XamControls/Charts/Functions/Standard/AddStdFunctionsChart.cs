@@ -9,7 +9,7 @@ using XamControls.Styles;
 
 namespace XamControls.Charts.Functions.Standard
 {
-    public class AddStdFunctionsChart
+    public class AddStdFunctionsChart : SeriesModel
     {
 
 		private Steema.TeeChart.Functions.Add addFunction;
@@ -56,6 +56,8 @@ namespace XamControls.Charts.Functions.Standard
 			theAddLine.Marks.Visible = true;
 			theAddLine.Marks.Width += 40;
 			theAddLine.Marks.DrawEvery = 2;
+
+            ImplementiOSMarks(BaseChart.Chart);
 
 		}
 

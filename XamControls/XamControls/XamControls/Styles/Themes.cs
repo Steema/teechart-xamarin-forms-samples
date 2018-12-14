@@ -193,7 +193,14 @@ namespace XamControls.Styles
 
 			Themes.BasicAxes(BaseChart.Chart.Axes.Left, BaseChart.Chart.Axes.Right);
 
-		}
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.iOS)
+            {
+
+                for (int i = 0; i < BaseChart.Chart.Series.Count; i++) BaseChart.Chart.Series[i].Marks.AutoSize = true;
+
+            }
+
+        }
 
 		public static void AplicarMarksTheme1(ChartView BaseChart)
 		{
@@ -227,7 +234,14 @@ namespace XamControls.Styles
 				series.Marks.Pen.Width = 1;
 				series.Marks.Pen.Color = series[i].Color.AddLuminosity(-0.3);
 
-			}
+                if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.iOS)
+                {
+
+                    series.Marks.AutoSize = true;
+
+                }
+
+            }
 
 		}
 

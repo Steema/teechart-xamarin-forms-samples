@@ -87,5 +87,17 @@ namespace XamControls.Charts
 
         public bool IsRepainted { get { return _isRepainted; } set { _isRepainted = value; } }
 
+        public virtual void ImplementiOSMarks(Steema.TeeChart.Chart chart)
+        {
+
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.iOS)
+            {
+
+                for (int i = 0; i < chart.Series.Count; i++) chart.Series[i].Marks.AutoSize = true;
+
+            }
+
+        }
+
     }
 }

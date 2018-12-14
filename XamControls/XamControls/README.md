@@ -1,1 +1,0 @@
-# TeeChart XF .NET DEMO

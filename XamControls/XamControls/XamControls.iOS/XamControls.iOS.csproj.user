@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>Device</SelectedDevice>
+    <SelectedDevice>Steema iPad Air</SelectedDevice>
     <DeveloperId />
     <DevelopmentTeamId />
-    <DefaultDevice>iPhone XR iOS 12.0</DefaultDevice>
+    <DefaultDevice>iPhone 6 iOS 11.1</DefaultDevice>
     <TargetiOSDevice>&lt;%3fxml version="1.0" encoding="UTF-8"%3f&gt;
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;
@@ -14,9 +14,9 @@
 		&lt;key&gt;architecture&lt;/key&gt;
 		&lt;string&gt;ARMv6, ARMv7, ARMv7s, ARM64&lt;/string&gt;
 		&lt;key&gt;model&lt;/key&gt;
-		&lt;string&gt;iPhone7,2&lt;/string&gt;
+		&lt;string&gt;iPad4,2&lt;/string&gt;
 		&lt;key&gt;os-version&lt;/key&gt;
-		&lt;string&gt;11.4.1&lt;/string&gt;
+		&lt;string&gt;12.1&lt;/string&gt;
 		&lt;key&gt;os&lt;/key&gt;
 		&lt;string&gt;iOS&lt;/string&gt;
 	&lt;/dict&gt;

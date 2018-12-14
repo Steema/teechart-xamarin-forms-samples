@@ -119,22 +119,25 @@
     <BundleResource Include="Resources\pspbrwse.jbf" />
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-notification-x1.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-pro-app-2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-settings-1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-spotlight-1x.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-app-x2.png">
@@ -406,12 +409,6 @@
     <BundleResource Include="Resources\iconSteema.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\iconSteemaSPLASH.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\iconSteemaSPLASH10.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\info.png" />
   </ItemGroup>
   <ItemGroup>
@@ -484,12 +481,6 @@
     <BundleResource Include="Resources\home_black_36dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\ic_settings_black_36dp.png">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\hamburgTitlePhoto.png" />
   </ItemGroup>
   <ItemGroup>
@@ -533,5 +524,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_search_white_18pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_settings_black_24dp.png" />
   </ItemGroup>
 </Project>

@@ -237,7 +237,7 @@
     <PackageReference Include="Rg.Plugins.Popup">
       <Version>1.1.4.168</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.9" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
     <PackageReference Include="Steema.TeeChart.NET.Xamarin.Forms">
       <Version>4.2018.10.17</Version>
     </PackageReference>

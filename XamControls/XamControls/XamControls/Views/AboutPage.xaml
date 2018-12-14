@@ -43,7 +43,7 @@
                             <FormattedString.Spans>
                                 <Span Text="DEMO TeeChart Xamarin.Forms" FontAttributes="Bold" FontSize="22" />
                                 <Span Text=" " />
-                                <Span Text="1.1" ForegroundColor="{StaticResource LightTextColor}" />
+                                <Span Text="2.1" ForegroundColor="{StaticResource LightTextColor}" />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>

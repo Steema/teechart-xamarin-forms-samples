@@ -190,6 +190,7 @@ namespace XamControls.Views
                                 label.FontAttributes = FontAttributes.Bold;
                                 label.FontSize = 14;
                                 label.SetBinding(Label.TextProperty, "Title");
+                                if (Device.RuntimePlatform == Device.iOS) label.Margin = new Thickness(0, 4, 0, 0);
 
                                 grid.Children.Add(image, 0, 0);
                                 grid.Children.Add(label, 1, 0);

@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace XamControls.Charts.Functions.Standard
 {
-    public class MedianStdFunctionsChart
+    public class MedianStdFunctionsChart : SeriesModel
     {
 
 		private Steema.TeeChart.Functions.MedianFunction medianFunction;
@@ -64,8 +64,9 @@ namespace XamControls.Charts.Functions.Standard
 			BaseChart.Chart.Series[1].Marks.TailStyle = MarksTail.None;
 			BaseChart.Chart.Panel.MarginLeft = 5;
 
+            ImplementiOSMarks(BaseChart.Chart);
 
-		}
+        }
 		
     }
 }

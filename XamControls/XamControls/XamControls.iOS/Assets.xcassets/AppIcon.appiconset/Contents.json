@@ -49,34 +49,10 @@
       "filename": "iphone-app-x3.png"
     },
     {
-      "scale": "1x",
-      "size": "20x20",
-      "idiom": "ipad",
-      "filename": "Icon20.png"
-    },
-    {
-      "scale": "2x",
-      "size": "20x20",
-      "idiom": "ipad",
-      "filename": "Icon40.png"
-    },
-    {
-      "scale": "1x",
-      "size": "29x29",
-      "idiom": "ipad",
-      "filename": "Icon29.png"
-    },
-    {
       "scale": "2x",
       "size": "29x29",
       "idiom": "ipad",
       "filename": "iphone-spotlight5_6-x2.png"
-    },
-    {
-      "scale": "1x",
-      "size": "40x40",
-      "idiom": "ipad",
-      "filename": "Icon40.png"
     },
     {
       "scale": "2x",
@@ -86,27 +62,51 @@
     },
     {
       "scale": "1x",
-      "size": "76x76",
-      "idiom": "ipad",
-      "filename": "Icon76.png"
+      "size": "1024x1024",
+      "idiom": "ios-marketing",
+      "filename": "steema_app_store.png"
     },
     {
-      "scale": "2x",
-      "size": "76x76",
+      "scale": "1x",
+      "size": "40x40",
       "idiom": "ipad",
-      "filename": "Icon152.png"
+      "filename": "ipad-spotlight-1x.png"
+    },
+    {
+      "scale": "1x",
+      "size": "20x20",
+      "idiom": "ipad",
+      "filename": "ipad-notification-x1.png"
+    },
+    {
+      "scale": "1x",
+      "size": "29x29",
+      "idiom": "ipad",
+      "filename": "ipad-settings-1x.png"
     },
     {
       "scale": "2x",
       "size": "83.5x83.5",
       "idiom": "ipad",
-      "filename": "Icon167.png"
+      "filename": "ipad-pro-app-2x.png"
     },
     {
       "scale": "1x",
-      "size": "1024x1024",
-      "idiom": "ios-marketing",
-      "filename": "steema_app_store.png"
+      "size": "76x76",
+      "idiom": "ipad",
+      "filename": "Icon-76.png"
+    },
+    {
+      "scale": "2x",
+      "size": "76x76",
+      "idiom": "ipad",
+      "filename": "Icon-76@2x.png"
+    },
+    {
+      "scale": "2x",
+      "size": "20x20",
+      "idiom": "ipad",
+      "filename": "Icon-Small-40.png"
     }
   ],
   "properties": {},

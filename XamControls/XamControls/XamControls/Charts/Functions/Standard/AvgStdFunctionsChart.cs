@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace XamControls.Charts.Functions.Standard
 {
-    public class AvgStdFunctionsChart
+    public class AvgStdFunctionsChart : SeriesModel
     {
 
 		private Steema.TeeChart.Functions.Average avgFunction;
@@ -75,8 +75,9 @@ namespace XamControls.Charts.Functions.Standard
 
 			BaseChart.Chart.Panel.MarginLeft = 5;
 
+            ImplementiOSMarks(BaseChart.Chart);
 
-		}
+        }
 		
     }
 }

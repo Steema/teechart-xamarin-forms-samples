@@ -10,7 +10,7 @@ using Steema.TeeChart.Drawing;
 
 namespace XamControls.Charts.Functions.Standard
 {
-    public class PercentStdFunctionsChart
+    public class PercentStdFunctionsChart : SeriesModel
     {
 
 		private Steema.TeeChart.Functions.PercentChange percentFunction;
@@ -80,7 +80,9 @@ namespace XamControls.Charts.Functions.Standard
 			BaseChart.Chart.Series[1].Marks.TailStyle = MarksTail.None;
 			BaseChart.Chart.Panel.MarginLeft = 3;
 
-		}
+            ImplementiOSMarks(BaseChart.Chart);
+
+        }
 		
     }
 }

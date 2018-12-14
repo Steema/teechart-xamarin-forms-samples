@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace XamControls.Charts.Functions.Standard
 {
-    public class DivStdFunctionsChart
+    public class DivStdFunctionsChart : SeriesModel
     {
 
 		private Steema.TeeChart.Functions.Divide divFunction;
@@ -90,8 +90,9 @@ namespace XamControls.Charts.Functions.Standard
 
             BaseChart.Chart.Panel.MarginLeft = 5;
 
+            ImplementiOSMarks(BaseChart.Chart);
 
-		}
+        }
 
     }
 }

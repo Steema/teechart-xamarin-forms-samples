@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace XamControls.Charts.Functions.Standard
 {
-    public class SubtStdFunctionsChart
+    public class SubtStdFunctionsChart : SeriesModel
     {
 
 		private Steema.TeeChart.Functions.Subtract subtFunction;
@@ -87,9 +87,10 @@ namespace XamControls.Charts.Functions.Standard
 			BaseChart.Chart.Series[1].Marks.Color = Xamarin.Forms.Color.Transparent;
 			BaseChart.Chart.Series[2].Marks.TailStyle = MarksTail.None;
 			BaseChart.Chart.Panel.MarginLeft = 5;
-						
 
-		}	
+            ImplementiOSMarks(BaseChart.Chart);
+
+        }	
 		
     }
 }

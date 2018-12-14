@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace XamControls.Charts.Functions.Standard
 {
-    public class LowStdFunctionsChart
+    public class LowStdFunctionsChart : SeriesModel
     {
 
 		private Steema.TeeChart.Functions.Low lowFunction;
@@ -72,8 +72,9 @@ namespace XamControls.Charts.Functions.Standard
 			BaseChart.Chart.Series[1].Marks.TailStyle = MarksTail.None;
 			BaseChart.Chart.Panel.MarginLeft = 5;
 
+            ImplementiOSMarks(BaseChart.Chart);
 
-		}
+        }
 		
     }
 }

@@ -9,7 +9,7 @@ using XamControls.Variables;
 
 namespace XamControls.Charts.Functions.Pro.Statistical
 {
-    public class SPCProFunctionChart
+    public class SPCProFunctionChart : SeriesModel
     {
 
 		private Line lineGood;
@@ -42,6 +42,8 @@ namespace XamControls.Charts.Functions.Pro.Statistical
 
             BaseChart.Chart.Series.Add(lineBad);
             BaseChart.Chart.Series.Add(lineGood);
+
+            ImplementiOSMarks(BaseChart.Chart);
 
         }
 

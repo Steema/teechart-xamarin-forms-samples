@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace XamControls.Charts.Functions.Standard
 {
-    public class MultStdFunctionsChart
+    public class MultStdFunctionsChart : SeriesModel
     {
 
 		private Steema.TeeChart.Functions.Multiply multFunction;
@@ -85,7 +85,9 @@ namespace XamControls.Charts.Functions.Standard
 			BaseChart.Chart.Series[2].Marks.TailStyle = MarksTail.None;
 			BaseChart.Chart.Panel.MarginLeft = 5;
 
-		}
+            ImplementiOSMarks(BaseChart.Chart);
+
+        }
 		
     }
 }
