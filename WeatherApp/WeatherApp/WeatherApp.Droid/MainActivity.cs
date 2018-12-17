@@ -16,7 +16,7 @@ using Android.Support.Design.Widget;
 
 namespace WeatherApp.Droid
 {
-    [Activity(Label = "WeatherApp", Icon = "@drawable/steema", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+    [Activity(Label = "WeatherApp", Icon = "@drawable/iconSteemaWeather", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         readonly string[] PermissionsLocation=
