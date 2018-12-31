@@ -706,8 +706,5 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\round_insert_chart_black_48dp.png" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\TeeChart.licenses" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
