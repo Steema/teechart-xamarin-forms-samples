@@ -36,27 +36,27 @@ namespace XamControls.Views
         public ChartTabPage(int ValorInicial)
         {
 						
-		        InitializeComponent();
+		    InitializeComponent();
                 
-                this.valorInicial = ValorInicial;
-                this.CurrentPageChanged += ChartTabPage_CurrentPageChanged;
-		        CrearPaginaInicial();
+            this.valorInicial = ValorInicial;
+            this.CurrentPageChanged += ChartTabPage_CurrentPageChanged;
+		    CrearPaginaInicial();
 
-                if (Device.RuntimePlatform == Device.iOS)
-                {
-                    foreach (Xamarin.Forms.Page page in contentPage)
-                    {
-
-                        Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetUseSafeArea(page, true);
-
-                    }
-                }
-                else
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                foreach (Xamarin.Forms.Page page in contentPage)
                 {
 
-                    Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.SetElevation(this, 0);
+                    Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetUseSafeArea(page, true);
 
                 }
+            }
+            else
+            {
+
+                Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.SetElevation(this, 0);
+
+            }
 
         }
 				
@@ -110,68 +110,68 @@ namespace XamControls.Views
 		private void CrearPaginaInicial()
 		{
 
-				this.BackgroundColor = Color.FromRgb(240, 240, 240);
+			this.BackgroundColor = Color.FromRgb(240, 240, 240);
 
-				switch (valorInicial)
-				{
+			switch (valorInicial)
+			{
 
-						case 1: case 2:
+					case 1: case 2:
 
-							// Pantalla estructura
-							contentPage = new ContentPage[2];
-							contentPage[0] = new ContentPage();
-							contentPage[1] = new ContentPage();
+						// Pantalla estructura
+						contentPage = new ContentPage[2];
+						contentPage[0] = new ContentPage();
+						contentPage[1] = new ContentPage();
 
-							if (valorInicial == 1) this.Title = var.GetStandardNomButtonsTypes[0];
-							else this.Title = var.GetProNomButtonsTypes[0];
+						if (valorInicial == 1) this.Title = var.GetStandardNomButtonsTypes[0];
+						else this.Title = var.GetProNomButtonsTypes[0];
 
-							contentPage[0].Title = "TYPES";
-							contentPage[1].Title = "FEATURES";
+						contentPage[0].Title = "TYPES";
+						contentPage[1].Title = "FEATURES";
 
-                            this.Children.Add(contentPage[0]);
-							this.Children.Add(contentPage[1]);
+                        this.Children.Add(contentPage[0]);
+						this.Children.Add(contentPage[1]);
 
-							break;
+						break;
 
-						case 15:
+					case 15:
 
-							// Pantalla estructura
-							contentPage = new ContentPage[3];
-							contentPage[0] = new ContentPage();
-							contentPage[1] = new ContentPage();
-							contentPage[2] = new ContentPage();
+						// Pantalla estructura
+						contentPage = new ContentPage[3];
+						contentPage[0] = new ContentPage();
+						contentPage[1] = new ContentPage();
+						contentPage[2] = new ContentPage();
 
-							this.Title = var.GetProFunctionsNomButtons[0][0];
+						this.Title = var.GetProFunctionsNomButtons[0][0];
 
-							contentPage[0].Title = "FINANCIAL";
-							contentPage[1].Title = "EXTENDED";
-							contentPage[2].Title = "STATISTICAL";
+						contentPage[0].Title = "FINANCIAL";
+						contentPage[1].Title = "EXTENDED";
+						contentPage[2].Title = "STATISTICAL";
 
-                            this.Children.Add(contentPage[0]);
-							this.Children.Add(contentPage[1]);
-							this.Children.Add(contentPage[2]);
+                        this.Children.Add(contentPage[0]);
+						this.Children.Add(contentPage[1]);
+						this.Children.Add(contentPage[2]);
 
-							break;
+						break;
 
-                }
+            }
 
-                if (Device.RuntimePlatform == Device.iOS)
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+
+                contentPage[0].Icon = "ic_radio_button_checked_white_24dp.png";
+
+                for (int i = 1; i < contentPage.Length; i++)
                 {
 
-                    contentPage[0].Icon = "ic_radio_button_checked_white_24dp.png";
-
-                    for (int i = 1; i < contentPage.Length; i++)
-                    {
-
-                        contentPage[i].Icon = "ic_radio_button_unchecked_white_24dp.png";
-
-                    }
+                    contentPage[i].Icon = "ic_radio_button_unchecked_white_24dp.png";
 
                 }
 
-                this.SelectedItem = contentPage[0];
+            }
 
-				CrearChart1VegadaPagina();
+            this.SelectedItem = contentPage[0];
+
+			CrearChart1VegadaPagina();
 
 		}
 
@@ -203,8 +203,8 @@ namespace XamControls.Views
 					break;
 
 				case Device.iOS:
-					grid[posicion].RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.12, GridUnitType.Star) });
-					grid[posicion].RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.88, GridUnitType.Star) });
+					grid[posicion].RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.08, GridUnitType.Star) });
+					grid[posicion].RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.92, GridUnitType.Star) });
 					grid[posicion].Children.Add(stackLayoutChart[posicion], 0, 1);
 					grid[posicion].Children.Add(menuInferior[posicion].GetScrollView, 0, 0);
 					break;
@@ -276,23 +276,23 @@ namespace XamControls.Views
 			if(valorInicial == 1)
 			{
 
-					menuInferior[0] = new MenuInferior(var.GetStandardNomButtonsTypes);
-					menuInferior[1] = new MenuInferior(var.GetStandardNomButtonsFeatures);
+				menuInferior[0] = new MenuInferior(var.GetStandardNomButtonsTypes);
+				menuInferior[1] = new MenuInferior(var.GetStandardNomButtonsFeatures);
 
 			}
 			else if(valorInicial == 2)
 			{
 
-					menuInferior[0] = new MenuInferior(var.GetProNomButtonsTypes);
-					menuInferior[1] = new MenuInferior(var.GetProNomButtonsFeatures);
+				menuInferior[0] = new MenuInferior(var.GetProNomButtonsTypes);
+				menuInferior[1] = new MenuInferior(var.GetProNomButtonsFeatures);
 
 			}
 			else
 			{
 			
-					menuInferior[0] = new MenuInferior(var.GetProFunctionsNomButtons[0]);
-					menuInferior[1] = new MenuInferior(var.GetProFunctionsNomButtons[1]);
-					menuInferior[2] = new MenuInferior(var.GetProFunctionsNomButtons[2]);
+				menuInferior[0] = new MenuInferior(var.GetProFunctionsNomButtons[0]);
+				menuInferior[1] = new MenuInferior(var.GetProFunctionsNomButtons[1]);
+				menuInferior[2] = new MenuInferior(var.GetProFunctionsNomButtons[2]);
 
 			}
 
@@ -305,7 +305,7 @@ namespace XamControls.Views
 			for(int i = 0; i < menuInferior[valor].GetButtons.Length; i++)
 			{
 
-					menuInferior[valor].GetButtons[i].Clicked += BtnInferior_Clicked;
+				menuInferior[valor].GetButtons[i].Clicked += BtnInferior_Clicked;
 			
 			}
 

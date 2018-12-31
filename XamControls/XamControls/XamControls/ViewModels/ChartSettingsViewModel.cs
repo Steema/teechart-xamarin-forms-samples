@@ -12,8 +12,6 @@ using XamControls.Components.SettingsPanel.BaseComponent;
 using XamControls.Charts.Standard;
 using System.Runtime.CompilerServices;
 using XamControls.Charts.Linear_Gauge;
-using Plugin.Share;
-using Plugin.Share.Abstractions;
 using Xamarin.Essentials;
 using Xamarin.Forms.PlatformConfiguration;
 using XamControls.Services.Share;

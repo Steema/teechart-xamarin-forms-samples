@@ -35,28 +35,16 @@ namespace XamControls.Styles
 			{
 
 				case 1:
-					Theme1(BaseChart);
+					BaseTheme(BaseChart);
 					break;
-
-				case 2:
-					//Theme2();
-					break;
-
-				case 3:
-					break;
-
-				case 4:
-					break;
-
-				case 5:
-					break;
+                default:
+                    break;
 
 			}
 
 		}
 
-		// Tema 1
-		private static void Theme1(ChartView BaseChart)
+		private static void BaseTheme(ChartView BaseChart)
 		{
 
 			// Propiedades principales del Chart
@@ -449,20 +437,6 @@ namespace XamControls.Styles
                 default:
                     throw new Exception("Unexpected Case");
             }
-
-            /*
-            switch (zoomTypeActual)
-            {
-
-                case "FullChart":
-                    chart.Chart.Aspect.ZoomStyle = Steema.TeeChart.Drawing.Aspect.ZoomStyles.FullChart;
-                    break;
-                case "InChart":
-                    chart.Chart.Aspect.ZoomStyle = Steema.TeeChart.Drawing.Aspect.ZoomStyles.InChart;
-                    break;
-                
-            }
-            */
 
             if (chart.Chart.Header.Text != "Zoom and Panning a Chart") {
 

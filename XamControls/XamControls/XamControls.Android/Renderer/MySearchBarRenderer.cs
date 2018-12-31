@@ -12,7 +12,6 @@ using Android.Widget;
 using Xamarin.Forms;
 using Xamarin.Android.Net;
 using Xamarin.Forms.Platform.Android.AppCompat;
-using Plugin.CurrentActivity;
 using Xamarin.Forms.Platform.Android;
 using Android.Support.V7.Graphics.Drawable;
 using XamControls.Views;

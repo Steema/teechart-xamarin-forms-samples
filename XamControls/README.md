@@ -9,16 +9,25 @@ Example showing Chart types and options when using the TeeChart for Xamarin.Form
 |Platform|Build|
 |--|--| 
 | Android |Passing|
-|iOS|Failing|
+|iOS|Passing|
 |UWP|Failing|
 
 #### Android
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/WeatherApp/Screenshots/DROID_TEECHART_XF_MEDIA.mp4)
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/XamControls/Screenshots/DROID_VIDEO_APP.gif)
+<!--
+#### iOS
+
+![screenshot]()
+
+#### UWP
+
+![screenshot]()
+-->
 
 ## Sample Requeriments
 
-You will need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/forms) (Standard or Pro) version and your location enabled to run the example on this repository.
+You will need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/forms) (Standard or Pro) version.
 
 ### Author
 

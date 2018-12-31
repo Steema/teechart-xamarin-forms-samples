@@ -60,7 +60,15 @@ namespace XamControls.Views
 
             // Propiedades "listView"
             lView.ItemsSource = ListItems;
-            lView.RowHeight = 120;
+            if(Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.UWP)
+            {
+                lView.RowHeight = 120;
+            }
+            else
+            {
+                lView.RowHeight = 110;
+            }
+            
             lView.ItemSelected += (sender, e) => { ((Xamarin.Forms.ListView)sender).SelectedItem = null; };
             lView.ItemTapped += ItemsListView_ChangeActivity;
             lView.SeparatorVisibility = SeparatorVisibility.None;

@@ -11,7 +11,7 @@ namespace XamControls.ViewModels.Base
     public class ChartViewRender : ChartView
     {
 
-				public ChartViewRender() {}
+		public ChartViewRender() {}
 
     }
 }

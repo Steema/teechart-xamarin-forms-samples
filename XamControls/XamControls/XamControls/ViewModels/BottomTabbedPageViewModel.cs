@@ -7,16 +7,16 @@ using Xamarin.Forms;
 
 namespace XamControls.ViewModels
 {
-		public class BottomTabbedPageViewModel : BottomTabbedPage
-        {
+	public class BottomTabbedPageViewModel : BottomTabbedPage
+    {
 
-				public BottomTabbedPageViewModel()
-				{
+		public BottomTabbedPageViewModel()
+		{
 
-						if(Device.RuntimePlatform == Device.Android) NavigationPage.SetHasNavigationBar(this, false);
-                        this.Title = "TeeChart DEMO";
+				if(Device.RuntimePlatform == Device.Android) NavigationPage.SetHasNavigationBar(this, false);
+                this.Title = "TeeChart DEMO";
 
-				}
+		}
 
-        }
+    }
 }

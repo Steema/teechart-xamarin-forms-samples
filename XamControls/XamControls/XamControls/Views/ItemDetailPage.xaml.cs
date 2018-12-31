@@ -24,13 +24,13 @@ namespace XamControls.Views
         {
             InitializeComponent();
 
-						var item = new Item
-						{
+			var item = new Item
+			{
 
-								Text = "Hola",
+					Text = "Hola",
 								
 								
-						};
+			};
 
 
             viewModel = new ItemDetailViewModel(item);

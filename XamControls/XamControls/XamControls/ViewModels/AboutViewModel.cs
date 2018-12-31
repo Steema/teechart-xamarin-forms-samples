@@ -18,13 +18,13 @@ namespace XamControls.ViewModels
 						GoogPlusCommand = new Command(() => Device.OpenUri(new Uri("https://plus.google.com/+Steema")));
 						LinkCommand = new Command(() => Device.OpenUri(new Uri("https://www.linkedin.com/company/steema-software")));
 
-				}
+		}
 
         public ICommand OpenWebCommand { get; }
-				public ICommand FacebookCommand { get; }
-				public ICommand TwitterCommand { get; }
-				public ICommand GoogPlusCommand { get; }
-				public ICommand LinkCommand { get; }
+		public ICommand FacebookCommand { get; }
+		public ICommand TwitterCommand { get; }
+		public ICommand GoogPlusCommand { get; }
+		public ICommand LinkCommand { get; }
 
 	}
 }

@@ -21,18 +21,13 @@ namespace XamControls
             CreateAppFiles();
 
 			MainPage = new MasterView();
-		    
-
 		}
 
         // Detecta si es la primera vez que accedes a la app (en el caso que sí, crea los archivos básicos)
         private void CreateAppFiles()
         {
-
             FileController fileController = new FileController();
-
             fileController.AppFilesCreated();
-
         }
 
         protected override void OnStart ()

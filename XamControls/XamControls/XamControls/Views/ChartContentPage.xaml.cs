@@ -189,18 +189,40 @@ namespace XamControls.Views
                     btnNextMonth.HorizontalOptions = LayoutOptions.End;
                     btnNextMonth.WidthRequest = 50;
 
-					grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.11, GridUnitType.Star) });
-					grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.79, GridUnitType.Star) });
-					grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.11, GridUnitType.Star) });
-					grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-					grid.Children.Add(labelHeader, 0, 0);
-                    grid.Children.Add(btnBackMonth, 0, 0);
-                    grid.Children.Add(btnNextMonth, 0, 0);
-					vChart = new ChartViewBase(this.Title, labelHeader);
-					stackLayoutChart.Children.Add(vChart.GetChart);
-					grid.Children.Add(stackLayoutChart, 0, 1);
-					grid.Children.Add(menuInferior.GetScrollView, 0, 2);
-					AsignarClickEvent(valorInicial);
+                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+
+                    if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.UWP)
+                    {
+                        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.11, GridUnitType.Star) });
+					    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.79, GridUnitType.Star) });
+					    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.11, GridUnitType.Star) });
+
+                        grid.Children.Add(labelHeader, 0, 0);
+                        grid.Children.Add(btnBackMonth, 0, 0);
+                        grid.Children.Add(btnNextMonth, 0, 0);
+                        grid.Children.Add(stackLayoutChart, 0, 1);
+                        grid.Children.Add(menuInferior.GetScrollView, 0, 2);
+                    }
+                    else
+                    {
+                        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.08, GridUnitType.Star) });
+                        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.81, GridUnitType.Star) });
+                        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.11, GridUnitType.Star) });
+
+                        btnBackMonth.BorderWidth = 1;
+                        btnBackMonth.BorderColor = Color.FromRgb(100, 100, 100);
+                        btnNextMonth.BorderWidth = 1;
+                        btnNextMonth.BorderColor = Color.FromRgb(100, 100, 100);
+                        grid.Children.Add(labelHeader, 0, 2);
+                        grid.Children.Add(btnBackMonth, 0, 2);
+                        grid.Children.Add(btnNextMonth, 0, 2);
+                        grid.Children.Add(stackLayoutChart, 0, 1);
+                        grid.Children.Add(menuInferior.GetScrollView, 0, 0);
+                    }
+
+                    vChart = new ChartViewBase(this.Title, labelHeader);
+                    stackLayoutChart.Children.Add(vChart.GetChart);
+                    AsignarClickEvent(valorInicial);
 					break;
 
 				default:
@@ -218,8 +240,8 @@ namespace XamControls.Views
                             break;
 
                         case Device.iOS:
-                            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.11, GridUnitType.Star) });
-                            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.89, GridUnitType.Star) });
+                            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.08, GridUnitType.Star) });
+                            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.92, GridUnitType.Star) });
                             grid.Children.Add(stackLayoutChart, 0, 1);
                             grid.Children.Add(menuInferior.GetScrollView, 0, 0);
                             break;
@@ -444,12 +466,15 @@ namespace XamControls.Views
                     else { grid.Children.Add(stackLayoutChart, 0, 1); }
 
                 }
-				else { vChart.CrearChart(btn, grid.Children.ElementAt(0) as LabelSwipe); grid.Children.Add(stackLayoutChart, 0, 1); }
+				else
+                {
+                    vChart.CrearChart(btn, grid.Children.ElementAt(0) as LabelSwipe);
+                    grid.Children.Add(stackLayoutChart, 0, 1);
+                }
 						
 				stackLayoutChart.Children.Add(vChart.GetChart);
 				btn.TextColor = Color.FromRgb(60, 100, 220);
 						
-
 				this.Title = btn.Text;
 
 				selectedButton = btn;

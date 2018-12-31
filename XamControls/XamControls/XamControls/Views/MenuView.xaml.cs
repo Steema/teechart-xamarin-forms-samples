@@ -19,218 +19,152 @@ using System.Text.RegularExpressions;
 namespace XamControls.Views
 {
 
-		[XamlCompilation(XamlCompilationOptions.Compile)]
-		public partial class MenuView : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MenuView : ContentPage
+    {
+
+        private ObservableCollection<GroupeditemsMasterViewModel> grouped { get; set; }
+
+        private IEnumerable<Grouping<string, MasterViewMenuItem>> iEnumerableItems;
+        public ListView lView = new ListView(ListViewCachingStrategy.RecycleElementAndDataTemplate);
+		private MasterViewModel masterViewModel;
+
+		// Constructor
+		public MenuView()
 		{
 
-                private ObservableCollection<GroupeditemsMasterViewModel> grouped { get; set; }
+			InitializeComponent();
 
-                // ** Obsoleto
-                private IEnumerable<Grouping<string, MasterViewMenuItem>> iEnumerableItems;
-				//private List<Grouping<string, MasterViewMenuItem>> listItems;
-                // **
-                public ListView lView = new ListView(ListViewCachingStrategy.RecycleElementAndDataTemplate);
-				private MasterViewModel masterViewModel;
+            // Main scrollView
+            ScrollView mainScrollView = new ScrollView();
+            mainScrollView.HorizontalOptions = LayoutOptions.FillAndExpand;
+            mainScrollView.VerticalOptions = LayoutOptions.FillAndExpand;
 
-				// Constructor
-				public MenuView()
-				{
+            // MainLayout in scrollView
+            StackLayout mainLayout = new StackLayout();
+            mainScrollView.Content = mainLayout;
+            mainLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
+            mainLayout.VerticalOptions = LayoutOptions.FillAndExpand;
+            mainLayout.Spacing = 0;
 
-					InitializeComponent();
+            // HeaderMasterLayout
+            StackLayout headerMasterLayout = new StackLayout();
+            headerMasterLayout.BackgroundColor = Color.FromHex("4da6ff");
+            headerMasterLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
+            headerMasterLayout.VerticalOptions = LayoutOptions.Start;
+            headerMasterLayout.Margin = new Thickness(0, 0, 0, 0);
+            headerMasterLayout.Padding = new Thickness(0, 0, 0, 10);
+            headerMasterLayout.Spacing = 0;
 
-					// Inicializar variables
-                    Grid grid = new Grid();
-                    StackLayout sLayoutSuper = new StackLayout();
-                    Image image = new Image();
-                    Label labelDescripcio = new Label();
-                    StackLayout sLayoutlView = new StackLayout();
-                    grouped = new ObservableCollection<GroupeditemsMasterViewModel>();
+            // HeaderMasterItems
+            Image image = new Image();
+            image.Source = ImageSource.FromFile("hamburgTitlePhoto.png");
+            image.HeightRequest = 60;
+            image.MinimumHeightRequest = 40;
+            image.WidthRequest = 300;
+            image.Margin = new Thickness(0, 20, 0, 20);
 
-                    grouped = IniciListItems();
+            Label labelDescripcio = new Label();
+            labelDescripcio.HeightRequest = 100;
+            labelDescripcio.MinimumHeightRequest = 80;
+            labelDescripcio.Text = "This is a TeeChart DEMO which offers a series of components for different graphics oriented to sectors such as financial or statistical...";
+            labelDescripcio.TextColor = Color.White;
+            labelDescripcio.Margin = new Thickness(20, 0, 12, 0);
+            labelDescripcio.FontSize = 14;
+            labelDescripcio.HorizontalOptions = LayoutOptions.FillAndExpand;
+            labelDescripcio.VerticalTextAlignment = TextAlignment.Center;
+            labelDescripcio.HorizontalTextAlignment = TextAlignment.Start;
 
-                    // Definir grid principal
-                    grid.RowSpacing = 0;
-                    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.32, GridUnitType.Star) });
-                    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.68, GridUnitType.Star) });
-                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+            headerMasterLayout.Children.Add(image);
+            headerMasterLayout.Children.Add(labelDescripcio);
 
-					// Layout de la imagen y la descripción
-                    sLayoutSuper.BackgroundColor = Color.FromHex("4da6ff");
-                    sLayoutSuper.HorizontalOptions = LayoutOptions.FillAndExpand;
-					sLayoutSuper.VerticalOptions = LayoutOptions.FillAndExpand;
-                    sLayoutSuper.MinimumHeightRequest = 160;
-                    sLayoutSuper.Margin = new Thickness(0, 0, 0, 0);
-                    sLayoutSuper.Padding = new Thickness(0, 0, 0, 10);
-                    sLayoutSuper.Spacing = 0;
-                    sLayoutSuper.Children.Add(image);
-                    sLayoutSuper.Children.Add(labelDescripcio);
+            //MasterListView
+            StackLayout layoutMasterLView = new StackLayout();
+            layoutMasterLView.BackgroundColor = Color.White;
+            layoutMasterLView.Children.Add(lView);
+            layoutMasterLView.Spacing = 0;
+            layoutMasterLView.HorizontalOptions = LayoutOptions.FillAndExpand;
+            layoutMasterLView.VerticalOptions = LayoutOptions.FillAndExpand;
+            layoutMasterLView.Margin = new Thickness(0, 0, 0, 0);
+            layoutMasterLView.Spacing = 0;
 
-					// Propiedades imagen
-                    image.Source = ImageSource.FromFile("hamburgTitlePhoto.png");
-                    image.HeightRequest = 60;
-                    image.MinimumHeightRequest = 40;
-                    image.WidthRequest = 300;
-                    image.Margin = new Thickness(0, 20, 0, 20);
+            grouped = new ObservableCollection<GroupeditemsMasterViewModel>();
 
-					// Propiedades descripción
-                    labelDescripcio.HeightRequest = 100;
-                    labelDescripcio.MinimumHeightRequest = 80;
-                    labelDescripcio.Text = "This is a TeeChart DEMO which offers a series of components for different graphics oriented to sectors such as financial or statistical...";
-                    labelDescripcio.TextColor = Color.White;
-                    labelDescripcio.Margin = new Thickness(20, 0, 12, 0);
-					labelDescripcio.FontSize = 14;
-					labelDescripcio.HorizontalOptions = LayoutOptions.FillAndExpand;
-					labelDescripcio.VerticalTextAlignment = TextAlignment.Center;
-					labelDescripcio.HorizontalTextAlignment = TextAlignment.Start;
+            grouped = IniciListItems();
 
-					// Layout del "listView" del menú
-                    sLayoutlView.BackgroundColor = Color.White;
-                    sLayoutlView.HeightRequest = 330;
-					sLayoutlView.Children.Add(lView);
-                    sLayoutlView.Spacing = 0;
+			// Propiedades del "listView"
+			lView.SeparatorVisibility = SeparatorVisibility.None;
+			lView.ItemsSource = grouped;
+			lView.IsGroupingEnabled = true;
+			lView.GroupDisplayBinding = new Binding("groupName");
+			//lView.GroupShortNameBinding = new Binding("shortName");
+			//lView.ItemTapped += MarcarPage;
+            ContentTemplate();
 
-					// Propiedades del "listView"
-					lView.SeparatorVisibility = SeparatorVisibility.None;
-					lView.ItemsSource = grouped;
-					lView.IsGroupingEnabled = true;
-					lView.GroupDisplayBinding = new Binding("groupName");
-					//lView.GroupShortNameBinding = new Binding("shortName");
-					//lView.ItemTapped += MarcarPage;
-                    ContentTemplate();
+            // Añadir elementos al grid principal
+            mainLayout.Children.Add(headerMasterLayout);
+            mainLayout.Children.Add(layoutMasterLView);
 
-					// Añadir elementos al grid principal
-					grid.Children.Add(sLayoutSuper, 0, 0);
-					grid.Children.Add(sLayoutlView, 0, 1);
+            this.Content = mainLayout;
+		}
 
-                    this.Content = grid;
+        // Crear "Cells" de la información necesaria
+        private void ContentTemplate()
+        {              
 
-				}
-
-                /*
-				// Acción que marca la página en la que te encuentras
-				private void MarcarPage(object sender, ItemTappedEventArgs e)
-				{
-		
-					int valorActualTop = -1;
-					int valorActualUnder = -1;
-					bool trobat = false;
-						
-					while (valorActualTop < listItems.Count() - 1 && !trobat)
-					{
-
-							valorActualTop++;
-
-							while (valorActualUnder < listItems[valorActualTop].Count - 1 && !trobat)
-							{
-
-									valorActualUnder++;
-									if (listItems[valorActualTop][valorActualUnder] == e.Item) { trobat = true; }
-										
-
-							}
-
-							valorActualUnder = 0;
-
-					}
-
-					if (!(listItems[valorActualTop][valorActualUnder].Id == 1 || listItems[valorActualTop][valorActualUnder].Id == 2 || listItems[valorActualTop][valorActualUnder].Id == 3))
-					{
-
-							ShowTransparent();
-							if (listItems[valorActualTop][valorActualUnder] == e.Item) { listItems[valorActualTop][valorActualUnder].BackgroundColor = Color.FromRgb(238, 238, 238); }
-							ContentTemplate();
-
-					}
-						
-				}
-                */
-        /*
-
-        // Acción que desmarca las páginas
-        private void ShowTransparent()
-        {
-
-            for (int i = 0; i < listItems.Count(); i++)
+            lView.ItemTemplate = new DataTemplate(() =>
             {
 
-                    for (int b = 0; b < listItems[i].Count; b++)
-                    {
+				Grid grid = new Grid();
+				Image image = new Image();
+				Label label = new Label();
+				ViewCell vCell = new ViewCell();
+				StackLayout viewStackLayout = new StackLayout();
+				StackLayout viewStackLayout2 = new StackLayout();
 
-                        listItems[i][b].BackgroundColor = Color.Transparent;
+				grid.Padding = new Thickness(15, 10, 0, 10);
+                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.2, GridUnitType.Star) });
+                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.8, GridUnitType.Star) });
+				grid.SetBinding(BackgroundColorProperty, "BackgroundColor");
 
-                    }
+                image.SetBinding(Image.SourceProperty, "ImageSource");
 
-            }
+                label.TextColor = Color.Black;
+                label.FontAttributes = FontAttributes.Bold;
+                label.FontSize = 14;
+                label.SetBinding(Label.TextProperty, "Title");
+                if (Device.RuntimePlatform == Device.iOS) label.Margin = new Thickness(0, 4, 0, 0);
 
-        }
-        */
+                grid.Children.Add(image, 0, 0);
+                grid.Children.Add(label, 1, 0);
 
-                // Crear "Cells" de la información necesaria
-                private void ContentTemplate()
-                {              
+                // Creación de la "viewCell" y devolverla
 
-                    lView.ItemTemplate = new DataTemplate(() =>
-                    {
+                vCell.View = grid;
+                viewStackLayout.Padding = new Thickness(0, 0);
+                viewStackLayout.Orientation = StackOrientation.Horizontal;
+                viewStackLayout.Children.Add(viewStackLayout2);
+                viewStackLayout2.VerticalOptions = LayoutOptions.Center;
+                viewStackLayout2.Spacing = 0;
+                viewStackLayout2.Children.Add(grid);
 
-								Grid grid = new Grid();
-								Image image = new Image();
-								Label label = new Label();
-								ViewCell vCell = new ViewCell();
-								StackLayout viewStackLayout = new StackLayout();
-								StackLayout viewStackLayout2 = new StackLayout();
+                // Devuelve la Cell
+                return vCell;
 
-								grid.Padding = new Thickness(15, 10, 0, 10);
-                                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.2, GridUnitType.Star) });
-                                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.8, GridUnitType.Star) });
-								grid.SetBinding(BackgroundColorProperty, "BackgroundColor");
+            });
+		}
 
-                                image.SetBinding(Image.SourceProperty, "ImageSource");
+        // Inicialización de la lista para el "listView"
+        private ObservableCollection<GroupeditemsMasterViewModel> IniciListItems()
+		{
 
-                                label.TextColor = Color.Black;
-                                label.FontAttributes = FontAttributes.Bold;
-                                label.FontSize = 14;
-                                label.SetBinding(Label.TextProperty, "Title");
-                                if (Device.RuntimePlatform == Device.iOS) label.Margin = new Thickness(0, 4, 0, 0);
+			masterViewModel = new MasterViewModel();
+			return masterViewModel.GetMenuItems;
 
-                                grid.Children.Add(image, 0, 0);
-                                grid.Children.Add(label, 1, 0);
+		}
 
-                                // Creación de la "viewCell" y devolverla
-
-                                vCell.View = grid;
-                                viewStackLayout.Padding = new Thickness(0, 0);
-                                viewStackLayout.Orientation = StackOrientation.Horizontal;
-                                viewStackLayout.Children.Add(viewStackLayout2);
-                                viewStackLayout2.VerticalOptions = LayoutOptions.Center;
-                                viewStackLayout2.Spacing = 0;
-                                viewStackLayout2.Children.Add(grid);
-
-                                // Devuelve la Cell
-                                return vCell;
-
-                            });
-				}
-
-                // Inicialización de la lista para el "listView"
-                private ObservableCollection<GroupeditemsMasterViewModel> IniciListItems()
-				{
-
-						masterViewModel = new MasterViewModel();
-						return masterViewModel.GetMenuItems;
-
-				}
-
-				/*
-                async void DisplayQRShareCode(object sender, System.EventArgs e)
-				{
-
-						await Navigation.PushModalAsync(new ShareView(), true);
-
-				}
-				*/
-
-				// Propiedad para obtener "ListItems"
-				public IEnumerable<Grouping<string, MasterViewMenuItem>> GetSetListItems { get { return iEnumerableItems; } set { iEnumerableItems = value; } }
+		// Propiedad para obtener "ListItems"
+		public IEnumerable<Grouping<string, MasterViewMenuItem>> GetSetListItems { get { return iEnumerableItems; } set { iEnumerableItems = value; } }
 
 
     }

@@ -7,6 +7,12 @@ WeatherApp Xamarin Forms Demo
 Demo show a WeatherApp for Xamarin.Forms using TeeChart libraries. 
 This sample combines TeeChart for .NET CSharp combined with Xamarin.Forms Component library with <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/">Xamarin.Forms</a>.
 
+|Platform|Build|
+|--|--| 
+| Android |Passing|
+|iOS|Failing|
+|UWP|Passing|
+
 #### Android
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/WeatherApp/Screenshots/DROID_VIDEO_APP.gif)

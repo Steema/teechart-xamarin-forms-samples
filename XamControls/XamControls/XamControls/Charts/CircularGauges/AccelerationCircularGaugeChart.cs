@@ -13,10 +13,6 @@ namespace XamControls.Charts.CircularGauges
 
         private ChartView BaseChart;
         private CircularGauge circularGauge;
-        //private Button xAxisButton;
-        //private Button yAxisButton;
-        //private Button zAxisButton;
-        //private int axis = 0;
 
         public AccelerationCircularGaugeChart(ChartView BaseChart)
         {
@@ -90,37 +86,30 @@ namespace XamControls.Charts.CircularGauges
 
         private void InitializeAccelerometer()
         {
-
             try
             {
-
-                Accelerometer.Start(SensorSpeed.Normal);
+                Accelerometer.Start(SensorSpeed.Default);
                 Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
-
             }
 
             catch (FeatureNotSupportedException) { //BaseChart.Parent//DisplayAlert("Alert", "Accelerometer Unavailable", "OK"); 
             }
-
         }
 
         private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
         {
-
             Device.BeginInvokeOnMainThread(() =>
             {
 
                 circularGauge.Value = e.Reading.Acceleration.X;
 
             });
-
         }
 
         public void RemoveEvent()
         {
-
             Accelerometer.ReadingChanged -= Accelerometer_ReadingChanged;
-
+            Accelerometer.Stop();
         }
 
     }

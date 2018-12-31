@@ -6,13 +6,10 @@ namespace XamControls.ViewModels
 {
 	public class MenuViewModel : ViewModelBase
     {
-		
-
-
+	
 		public MenuViewModel()
         {
         }
-
 
     }
 }

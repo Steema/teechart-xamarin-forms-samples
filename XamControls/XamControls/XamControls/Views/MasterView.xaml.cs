@@ -18,18 +18,13 @@ namespace XamControls.Views
 	{
 
 		private HomePage home;
-		//private CustomChartPage myChartsPage;
-
-        //private BottomTabbedPage bottomTabPage;
         CustomNavigationPage navigationPage;
+
 		public MasterView()
 		{
-
 			InitializeComponent();
 
-            //bottomTabPage = new BottomTabbedPage();
             home = new HomePage();
-            //myChartsPage = new CustomChartPage();
 
             Menu.lView.ItemSelected += ListView_ItemSelected;
 
@@ -37,73 +32,48 @@ namespace XamControls.Views
 			home.CrearContenido();
 			home.Title = "Home";
 
-			//myChartsPage.Title = "Custom Charts";
-           // myChartsPage.SetMaster = this;
-
             if (Device.RuntimePlatform == Device.Android)
             {
-
                 navigationPage = new CustomNavigationPage(home, TransitionType.Fade);
-
-                //myChartsPage.SetMaster = this;
-
-                //Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetToolbarPlacement(bottomTabPage, ToolbarPlacement.Bottom);
                 Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ListView.SetIsFastScrollEnabled(this, true);
-                //Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(bottomTabPage, false);
-                //bottomTabPage.Children.Add(home);
-                //bottomTabPage.Children.Add(myChartsPage);
-
-                //bottomTabPage.CurrentPageChanged += TabbedPage_CurrentPageChanged;
-
             }
             else
             {
-
-                navigationPage = new CustomNavigationPage(home, TransitionType.Fade) { BarBackgroundColor = Color.FromRgb(33, 150, 244), Icon = "ic_menu_white_24dp.png", BarTextColor = Color.White };
-
-                //bottomTabPage.Children.Add(home);
-                //iosTabbedPage.Children.Add(myChartsPage);
-
+                navigationPage = new CustomNavigationPage(home, TransitionType.Fade)
+                {
+                    BarBackgroundColor = Color.FromRgb(33, 150, 244),
+                    Icon = "ic_menu_white_24dp.png",
+                    BarTextColor = Color.White
+                };
                 On<Xamarin.Forms.PlatformConfiguration.iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Always);
                 On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
-
             }
 
             Detail = navigationPage;
 
             home.Title = "XamControls";
             home.Appearing += Home_Appearing;
-            //bottomTabPage.Title = "XamControls";
-            //bottomTabPage.Appearing += BottomTabPage_Appearing;
-
-
         }
 
         private void Home_Appearing(object sender, EventArgs e)
         {
-
             home.GetListView.IsRefreshing = true;
             home.GetListView.EndRefresh();
             navigationPage.Elevation = 8;
             home.Elevation = 8;
-
         }
 
         private void BottomTabPage_Appearing(object sender, EventArgs e)
         {
-
             home.GetListView.IsRefreshing = true;
             home.GetListView.EndRefresh();
             navigationPage.Elevation = 8;
             home.Elevation = 8;
-
         }
 
 		private void TabbedPage_CurrentPageChanged(object sender, EventArgs e)
 		{
-
             if (Device.RuntimePlatform == Device.Android) home.ChangePage = 1;
-
         }
 
 		private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -117,49 +87,38 @@ namespace XamControls.Views
 			else if (item.Id == 3) { Device.OpenUri(new Uri("http://www.teechart.net/docs/TeeChartNETFormsReference.htm ")); }
 			else
 			{
-
 				if (item.BackgroundColor != Color.FromRgb(238, 238, 238))
 				{
-
 					var page = (Xamarin.Forms.Page)Activator.CreateInstance(item.TargetType);
 					if (item.Id != 4)	{
 
-						if(item.Id == 0) {
-
+						if(item.Id == 0)
+                        {
                             if (Device.RuntimePlatform == Device.Android) { Detail = new CustomNavigationPage(home, Services.TransitionType.Fade); }
                             else { Detail = new CustomNavigationPage(home, Services.TransitionType.Fade) { BarBackgroundColor = Color.FromRgb(33, 150, 244), Icon = "ic_menu_white_24dp.png", BarTextColor = Color.White }; }
-                            
                         }
-						else {
-
+						else
+                        {
                             if (Device.RuntimePlatform == Device.Android) Detail = new CustomNavigationPage(page, Services.TransitionType.Fade);
                             else Detail = new CustomNavigationPage(page, Services.TransitionType.Fade) { BarBackgroundColor = Color.FromRgb(33, 150, 244), Icon = "ic_menu_white_24dp.png", BarTextColor = Color.White };
-
-                        }
-						
+                        }						
 					}
 					else
 					{
 						Detail = new CustomNavigationPage(page, Services.TransitionType.Fade) { BarBackgroundColor = Color.FromRgb(101, 128, 146), BarTextColor = Color.White, };
-
 					}
-
                     home.Elevation = 8;
                     if(Device.RuntimePlatform == Device.Android) navigationPage = (CustomNavigationPage)Detail;
-
                 }
 			}
-
 			IsPresented = false;
 			Menu.lView.SelectedItem = null;
 		}
 
 		public void Mostrar()
 		{
-
 			if (IsPresented) { IsPresented = true; }
 			else { IsPresented = false; }
-
 		}
 
         /// <summary>
@@ -167,7 +126,6 @@ namespace XamControls.Views
         /// </summary>
         public CustomNavigationPage GetNavigationPage { get { return navigationPage; } }
 
-        // iOS LargeTitle event
         protected override void OnDisappearing()
         {
 
@@ -178,9 +136,7 @@ namespace XamControls.Views
 
         public override bool ShouldShowToolbarButton()
         {
-
             if (Device.RuntimePlatform == Device.Android) home.ChangePage = 1;
-
             return base.ShouldShowToolbarButton();
         }
 
