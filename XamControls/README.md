@@ -2,7 +2,7 @@
 <img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
 </a>
 
-TeeChart for Xamarin.Forms Demo
+XamControls - TeeChart for Xamarin.Forms Demo
 ================================
 Example showing Chart types and options when using the TeeChart for Xamarin.Forms Controls, programmable in Microsoft Visual Studio .NET using the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms">Xamarin.Forms</a> framework.
 
@@ -14,7 +14,7 @@ Example showing Chart types and options when using the TeeChart for Xamarin.Form
 
 #### Android
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/XamControls/Screenshots/DROID_VIDEO_APP.gif)
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/XamControls/Screenshots/DROID_VIDEO_APP.gif)
 <!--
 #### iOS
 
