@@ -53,6 +53,7 @@ namespace RotateTool.UWP
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Xamarin.Forms.Forms.Init(e);
+                Steema.TeeChart.TChart.Init();
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

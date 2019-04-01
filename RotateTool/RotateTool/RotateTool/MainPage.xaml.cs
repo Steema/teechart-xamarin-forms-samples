@@ -95,6 +95,7 @@ namespace RotateTool
                 LineChart.Chart.Panel.MarginBottom -= 25;
                 LineChart.Chart.Axes.Left.MinimumOffset = 5;
                 LineChart.Chart.Axes.Left.MaximumOffset = 4;
+                LineChart.Chart.Panning.Allow = ScrollModes.None;
             }
         }
     }

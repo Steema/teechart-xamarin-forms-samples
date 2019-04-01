@@ -24,6 +24,7 @@ namespace RotateTool.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            global::Steema.TeeChart.TChart.Init();
 
             return base.FinishedLaunching(app, options);
         }

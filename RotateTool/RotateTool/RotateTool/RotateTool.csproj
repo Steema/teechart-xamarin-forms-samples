@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Steema.TeeChart.NET.Xamarin.Forms.Eval" Version="4.2018.9.19" />
+    <PackageReference Include="Steema.TeeChart.NET.STD.Xamarin.Forms" Version="4.2018.10.18" />
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
   </ItemGroup>
 </Project>
