@@ -10,8 +10,23 @@ This sample combines [TeeChart for .NET CSharp combined with Xamarin.Forms Compo
 
 It shows how to create an Accelerometer based on a Circular Gauge, for iOS, Android and Universal Windows Platform.
 
+|Platform|Build|
+|--|--| 
+| Android |Passing|
+|iOS|Passing|
+|UWP|Passing|
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/android50%25.jpg?raw=true "TeeChart for Xamarin.Forms")
+#### Android
+
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/accelerometer_droid.jpg?raw=true)
+
+#### iOS
+
+
+
+#### UWP
+
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/accelerometer_uwp.png?raw=true)
 
 Click [here](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/android_video.mp4) to download a short video of the Accelerometer.
 
@@ -19,9 +34,8 @@ Click [here](https://github.com/Steema/teechart-xamarin-forms-samples/blob/maste
 
 You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/forms) (Standard or Pro) version to run the example on this repository. 
 
----
-### Author
-------
-Josep Lluis Jorge
-@joseplluisjorge
+## Author
+
+Josep Lluis Jorge & Rubén Bermúdez Sáez <br/>
+@joseplluisjorge & @rubenglam
 

@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using Steema.TeeChart.Styles;
 using Steema.TeeChart;
 using Xamarin.Essentials;
+using System.Threading;
 
 namespace AccelerometerTest
 {
@@ -20,7 +21,6 @@ namespace AccelerometerTest
 
         public MainPage()
         {
-
             InitializeComponent();
 
             this.CurrentPage = xContentPage;
@@ -39,6 +39,7 @@ namespace AccelerometerTest
             ChartY.Chart.Series.Add(circularGaugeY);
             ChartZ.Chart.Series.Add(circularGaugeZ);
 
+            threadAccelerometer = new Thread(InitializeAccelerometer);
         }
 
         /// <summary>
@@ -47,7 +48,6 @@ namespace AccelerometerTest
         /// <param name="chartView"></param>
         private void InitializePages(ChartView chartView)
         {
-
             chartView.Chart.Title.Text = "Accelerometer Circular Gauge";
             chartView.Chart.Title.Alignment = TextAlignment.Center;
             chartView.Chart.Title.TextAlign = TextAlignment.End;
@@ -61,7 +61,6 @@ namespace AccelerometerTest
             chartView.Chart.Axes.Left.Labels.Font.Size += 7;
             chartView.HorizontalOptions = LayoutOptions.FillAndExpand;
             chartView.VerticalOptions = LayoutOptions.FillAndExpand;
-
         }
 
         /// <summary>
@@ -70,7 +69,6 @@ namespace AccelerometerTest
         /// <returns></returns>
         private CircularGauge InitializeGauge()
         {
-
             CircularGauge gauge = new CircularGauge();
 
             gauge.Title = "Accelerometer Circular Gauge";
@@ -109,74 +107,34 @@ namespace AccelerometerTest
             gauge.Frame.InnerBand.Color = Color.FromRgb(120, 120, 120);
 
             return gauge; 
-
         }
 
         private void InitializeAccelerometer()
         {
-
             try
             {
-
-                Accelerometer.Start(SensorSpeed.Normal);
-                Accelerometer.ReadingChanged += Accelerometer_ReadingChangedAntic;
-                //Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
-
+                Accelerometer.Start(SensorSpeed.Fastest);
+                Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             }
-
-            catch(FeatureNotSupportedException) {
-
-                DisplayAlert("Alert", "Accelerometer Unavailable", "OK");
-                circularGaugeX.Value = 0;
-                circularGaugeY.Value = 0;
-                circularGaugeZ.Value = 0;
-                ChartX.Chart.Title.Text = "Accelerometer Unavailable";
-                ChartX.Chart.Title.Color = Color.Red;
-                ChartY.Chart.Title.Text = "Accelerometer Unavailable";
-                ChartY.Chart.Title.Color = Color.Red;
-                ChartZ.Chart.Title.Text = "Accelerometer Unavailable";
-                ChartZ.Chart.Title.Color = Color.Red;
-
+            catch(FeatureNotSupportedException)
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    DisplayAlert("Alert", "Accelerometer Unavailable", "OK");
+                    circularGaugeX.Value = 0;
+                    circularGaugeY.Value = 0;
+                    circularGaugeZ.Value = 0;
+                    ChartX.Chart.Title.Text = "Accelerometer Unavailable";
+                    ChartX.Chart.Title.Color = Color.Red;
+                    ChartY.Chart.Title.Text = "Accelerometer Unavailable";
+                    ChartY.Chart.Title.Color = Color.Red;
+                    ChartZ.Chart.Title.Text = "Accelerometer Unavailable";
+                    ChartZ.Chart.Title.Color = Color.Red;
+                });
             }
-
         }
 
-        /// <summary>
-        /// Xamarin.Essentials 0.6 PRE
-        /// </summary>
-        /// <param name="e"></param>
-        private void Accelerometer_ReadingChangedAntic(AccelerometerChangedEventArgs e)
-        {
-
-            Device.BeginInvokeOnMainThread(() =>
-            {
-
-                if (axis == 0) circularGaugeX.Value = e.Reading.Acceleration.X;
-                else if (axis == 1) circularGaugeY.Value = e.Reading.Acceleration.Y;
-                else circularGaugeZ.Value = e.Reading.Acceleration.Z;
-
-            });
-
-        }
-
-        /// <summary>
-        /// Xamarin.Essentials 0.11 PRE
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
-        {
-
-            Device.BeginInvokeOnMainThread(() =>
-            {
-
-                if (axis == 0) circularGaugeX.Value = e.Reading.Acceleration.X;
-                else if (axis == 1) circularGaugeY.Value = e.Reading.Acceleration.Y;
-                else circularGaugeZ.Value = e.Reading.Acceleration.Z;
-
-            });            
-
-        }
+        Thread threadAccelerometer;
 
         /// <summary>
         /// Change page
@@ -185,37 +143,56 @@ namespace AccelerometerTest
         /// <param name="e"></param>
         private void TabbedPage_CurrentPageChanged(object sender, EventArgs e)
         {
-
             var tabbedPage = sender as TabbedPage;
 
             if(tabbedPage.CurrentPage == xContentPage)
             {
-
                 axis = 0;
                 ChartX.Chart.SubTitle.Text = "X Axis";
                 if(circularGaugeY != null) circularGaugeY.Value = 0;
                 if (circularGaugeZ != null) circularGaugeZ.Value = 0;
-
             }
             else if(tabbedPage.CurrentPage == yContentPage)
             {
-
                 axis = 1;
                 ChartY.Chart.SubTitle.Text = "Y Axis";
                 circularGaugeX.Value = 0;
                 circularGaugeZ.Value = 0;
-
             }
             else
-            {
-
+            { 
                 axis = 2;
                 ChartZ.Chart.SubTitle.Text = "Z Axis";
                 circularGaugeY.Value = 0;
                 circularGaugeX.Value = 0;
+            }
+        }
 
+        private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
+        {
+            CircularGauge circularGauge;
+            float newValue;
+            if (axis == 0)
+            {
+                circularGauge = circularGaugeX;
+                newValue = e.Reading.Acceleration.X;
+            }
+            else if (axis == 1)
+            {
+                circularGauge = circularGaugeY;
+                newValue = e.Reading.Acceleration.Y;
+            }
+            else
+            {
+                circularGauge = circularGaugeZ;
+                newValue = e.Reading.Acceleration.Z;
             }
 
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                circularGauge.Value = newValue;
+            });
         }
+
     }
 }

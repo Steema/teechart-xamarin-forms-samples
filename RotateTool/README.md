@@ -39,6 +39,6 @@ You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/
 
 ## Author
 
-Josep Lluis Jorge & Rubén Bermúdez Sáez
+Josep Lluis Jorge & Rubén Bermúdez Sáez <br/>
 @joseplluisjorge & @rubenglam
 
