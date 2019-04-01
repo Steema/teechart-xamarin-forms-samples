@@ -15,11 +15,11 @@ This sample combines TeeChart for .NET CSharp combined with Xamarin.Forms Compon
 
 #### Android
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/WeatherApp/Screenshots/DROID_VIDEO_APP.gif)
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/WeatherApp/Resources/DROID_VIDEO_APP.gif)
 
 #### UWP
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/WeatherApp/Screenshots/UWP_VIDEO_APP.gif)
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/WeatherApp/Resources/UWP_VIDEO_APP.gif)
 
 ## Sample Requeriments
 

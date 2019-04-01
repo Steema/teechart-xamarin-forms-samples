@@ -46,14 +46,33 @@ namespace WeatherApp.Droid
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.SetMessage("We need your location, active it.");
                 builder.Show();
+                Action actionWaitGpsEnabled = new Action(() => WaitToGpsEnabled());
+                Task.Run(actionWaitGpsEnabled);
             }
             else
             {
                 Forms.Init(this, bundle);
                 LoadApplication(new App());
             }
-
         }
+
+        private void WaitToGpsEnabled()
+        {
+            bool isEnabled = false;
+            LocationManager locationManager = (LocationManager)GetSystemService(Context.LocationService);
+            while (!isEnabled)
+            {
+                if (!locationManager.IsProviderEnabled(LocationManager.GpsProvider)) isEnabled = false;
+                else isEnabled = true;
+                Task.Delay(1000);
+            }
+            Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
+            {
+                Forms.Init(this, bundle);
+                LoadApplication(new App());
+            });         
+        }
+
 
         private bool ServiceGpsEnabled()
         {
