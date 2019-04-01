@@ -12,3 +12,11 @@ WeatherApp/eResources/
 WeatherApp/WeatherApp/WeatherApp.iOS/
 WeatherApp/OPENWEATHERMAP/
 TeeChartXamarinAndroid/.vs/
+Visamic/.vs/
+Visamic/Visamic/bin
+Visamic/Visamic/obj
+*.keystore
+TeeChartDemo/.vs/
+AreaLineWithPointerSTD/.vs/
+RotateTool/RotateTool/.vs/
+RotateTool/.vs/

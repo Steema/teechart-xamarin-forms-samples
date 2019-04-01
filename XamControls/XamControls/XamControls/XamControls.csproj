@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Naxam.BottomTabbedPage" Version="0.2.0.3" />
+    <PackageReference Include="PCLStorage" Version="1.0.2" />
     <PackageReference Include="Refractored.FloatingActionButtonForms" Version="2.1.0" />
     <PackageReference Include="Rg.Plugins.Popup" Version="1.1.4.168" />
     <PackageReference Include="Steema.TeeChart.NET.Xamarin.Forms" Version="4.2018.10.17" />

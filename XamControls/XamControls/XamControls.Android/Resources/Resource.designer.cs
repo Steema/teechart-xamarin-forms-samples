@@ -3224,6 +3224,8 @@ namespace XamControls.Droid
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_id = global::XamControls.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_inflatedId = global::XamControls.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_layout = global::XamControls.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::PCLStorage.Resource.String.ApplicationName = global::XamControls.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::XamControls.Droid.Resource.String.Hello;
 			global::Refractored.Fab.Resource.Attribute.fab_colorDisabled = global::XamControls.Droid.Resource.Attribute.fab_colorDisabled;
 			global::Refractored.Fab.Resource.Attribute.fab_colorNormal = global::XamControls.Droid.Resource.Attribute.fab_colorNormal;
 			global::Refractored.Fab.Resource.Attribute.fab_colorPressed = global::XamControls.Droid.Resource.Attribute.fab_colorPressed;
