@@ -24,10 +24,7 @@ You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/
 #### Android
 
 | ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/RotateTool/Screenshots/image_no_dragged_droid.png) | ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/RotateTool/Screenshots/image_dragged_droid.png) |
-
-
-
-
+|--|--|
 
 #### iOS
 
