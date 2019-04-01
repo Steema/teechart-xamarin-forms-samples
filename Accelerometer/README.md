@@ -18,7 +18,7 @@ It shows how to create an Accelerometer based on a Circular Gauge, for iOS, Andr
 
 #### Android
 
-<img src="ttps://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/accelerometer_droid.jpg?raw=true" width=200 height=200/>
+<img src="https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/Accelerometer/Screenshots/accelerometer_droid.jpg" width=200 height=200/>
 
 #### iOS
 
