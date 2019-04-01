@@ -24,21 +24,24 @@ You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/
 #### Android
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/RotateTool/Screenshots/image_no_dragged_droid.png)
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/RotateTool/Screenshots/image_dragged_droid.png)
 
-### iOS
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/RotateTool/Screenshots/image_dragged_droid.png)
+
+#### iOS
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/RotateTool/Screenshots/image_no_dragged_ios.png)
+
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/RotateTool/Screenshots/image_dragged_ios.png)
 
-## UWP
+#### UWP
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/RotateTool/Screenshots/image_no_dragged_uwp.png)
+
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/tree/master/RotateTool/Screenshots/image_dragged_uwp.png)
 
----
-### Author
-------
+
+## Author
+
 Josep Lluis Jorge & Rubén Bermúdez Sáez
 @joseplluisjorge & @rubenglam
 
