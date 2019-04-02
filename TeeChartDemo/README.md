@@ -27,11 +27,9 @@ Here some screenshots of the Demo app :
 ![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image10.png "TeeChart for Xamarin.Forms")
 ![screenshot](https://raw.githubusercontent.com/Steema/teechart-xamarin-forms-samples/master/TeeChartDemo/Screenshots/image11.png "TeeChart for Xamarin.Forms")
 
-------
-### Author
-------
+## Author
+
 Steema Team
 
 Last update by : 
-Josep Lluis Jorge 
-@joseplluisjorge
+Josep Lluis Jorge @joseplluisjorge

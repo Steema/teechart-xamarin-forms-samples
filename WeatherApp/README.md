@@ -35,5 +35,4 @@ PCLStorage 1.0.2 - Store local data (Daniel Plaisted)
 
 ### Author
 
-Rubén Bermúdez Sáez 
-<a href="https://twitter.com/rubenglam">@rubenglam</a>
+Rubén Bermúdez Sáez <a href="https://twitter.com/rubenglam">@rubenglam</a>

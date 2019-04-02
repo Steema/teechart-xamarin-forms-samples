@@ -2,22 +2,28 @@
 <img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
 </a>
 
-Gauge Speed example
+AreaLine with Pointer
 ===================
 Demo showing how to use TeeChart .NET CSharp with Xamarin.Forms.
 
 This sample combines [TeeChart for .NET CSharp combined with Xamarin.Forms Component library](https://www.steema.com/product/forms) with [Xamarin.Forms](https://www.xamarin.com/forms). 
 
-It shows how to create an Speed Gauge for iOS and Android, and animate it.
+It shows how to create a Pointer on an AreaLine Series to output the value at which the vertical postion of the cursor intersects the Chart, for iOS and Android.
 
 |Platform|Build|
 |--|--| 
-| Android |Passing|
+|Android|Parcial Passing|
 |iOS|Passing|
 
-## Android & iOS
+> Crash on Android 8.0 or bigger
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/GaugeSpeed/screenshots/TeeChart.GaugeSpeed.Xamarin.Forms.gif?raw=true "TeeChart for Xamarin.Forms")
+## Android
+
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/AreaLineWithPointerSTD/Screenshots/android.gif?raw=true "TeeChart for Xamarin.Forms")
+
+## iOS
+
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/AreaLineWithPointerSTD/Screenshots/ios.gif?raw=true "TeeChart for Xamarin.Forms")
 
 ## Sample Requirements
 
@@ -26,4 +32,3 @@ You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/
 ## Author
 
 Josep Lluis Jorge @joseplluisjorge
-
