@@ -10,6 +10,10 @@ This sample combines [TeeChart for .NET CSharp combined with Xamarin.Forms Compo
 
 It shows how to create an Speed Gauge for iOS and Android, and animate it.
 
+|Platform|Build|
+|--|--| 
+| Android |Passing|
+|iOS|Passing|
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/GaugeSpeed/screenshots/TeeChart.GaugeSpeed.Xamarin.Forms.gif?raw=true "TeeChart for Xamarin.Forms")
 
@@ -17,9 +21,8 @@ It shows how to create an Speed Gauge for iOS and Android, and animate it.
 
 You'll need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/forms) (Standard or Pro) version to run the example on this repository. 
 
----
-### Author
-------
+## Author
+
 Josep Lluis Jorge
 @joseplluisjorge
 
