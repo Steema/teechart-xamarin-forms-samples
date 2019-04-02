@@ -16,7 +16,7 @@ It demonstrates how to create a simple Pie Series to output the value when the p
 
 |Android|iOS|UWP|
 |--|--|--|
-|<img src="https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_android.gif" width="200"/>|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_ios.png "TeeChart for Xamarin.Forms")|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_uwp.png "TeeChart for Xamarin.Forms")|
+|<img src="https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_android.gif" width="600"/>|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_ios.png "TeeChart for Xamarin.Forms")|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_uwp.png "TeeChart for Xamarin.Forms")|
 
 ## Sample Requirements
 
