@@ -24,6 +24,7 @@ namespace PieChart.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            Steema.TeeChart.TChart.Init();
 
             return base.FinishedLaunching(app, options);
         }

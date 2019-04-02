@@ -102,6 +102,8 @@ namespace PieChart
                 pie.MarksPie.InsideSlice = true;
             }
 
+            Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetUseSafeArea(this, true);
+
             Content = PieChart;
         }
 

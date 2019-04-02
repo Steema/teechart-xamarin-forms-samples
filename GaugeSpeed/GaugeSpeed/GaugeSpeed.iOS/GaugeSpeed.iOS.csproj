@@ -124,9 +124,6 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Steema.TeeChart.NET.STD.Xamarin.Forms">
-      <Version>4.2018.10.18</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
