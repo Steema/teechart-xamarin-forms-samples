@@ -20,11 +20,13 @@ It demonstrates how to create a simple Pie Series to output the value when the p
 
 #### iOS
 
-![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_ios.gif?raw=true "TeeChart for Xamarin.Forms")
+> Not available
+
+<!--![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_ios.gif?raw=true "TeeChart for Xamarin.Forms") -->
 
 #### UWP
 
-![screenshot] (https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_uwp.png "TeeChart for Xamarin.Forms")
+![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/PieChart/Screenshots/pie_uwp.png "TeeChart for Xamarin.Forms")
 
 ## Sample Requirements
 
