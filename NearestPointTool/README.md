@@ -23,12 +23,12 @@ It shows how the NearestPoint Tool can be used in your applications for iOS and 
 
 #### iOS
 
-|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/NearestPointTool/Screenshots/nearest_point_btn_ios.png "TeeChart for Xamarin.Forms")|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/NearestPointTool/Screenshots/nearest_point_tool_ios.jpg "TeeChart for Xamarin.Forms")|
+|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/NearestPointTool/Screenshots/nearest_point_btn_ios.png "TeeChart for Xamarin.Forms")|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/NearestPointTool/Screenshots/nearest_point_tool_ios.png "TeeChart for Xamarin.Forms")|
 |--|--|
 
 #### UWP
 
-|> Not available|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/NearestPointTool/Screenshots/nearest_point_tool_uwp.jpg "TeeChart for Xamarin.Forms")|
+|> Not available|![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/NearestPointTool/Screenshots/nearest_point_tool_uwp.png "TeeChart for Xamarin.Forms")|
 |--|--|
 
 ## Sample Requirements
