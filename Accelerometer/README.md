@@ -22,7 +22,7 @@ It shows how to create an Accelerometer based on a Circular Gauge, for iOS, Andr
 
 #### iOS
 
-
+> Not available
 
 #### UWP
 
