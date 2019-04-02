@@ -33,6 +33,6 @@ Xam.Plugin.Connectivity 3.2.0 - Network connectivity (James Montemagno) <br/>
 Xamarin.Essentials 0.11.0Preview - Location, GPS (Microsoft) <br/>
 PCLStorage 1.0.2 - Store local data (Daniel Plaisted) 
 
-### Author
+## Author
 
 Rubén Bermúdez Sáez <a href="https://twitter.com/rubenglam">@rubenglam</a>

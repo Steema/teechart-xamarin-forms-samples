@@ -15,7 +15,7 @@ It shows how to create an Speed Gauge for iOS and Android, and animate it.
 | Android |Passing|
 |iOS|Passing|
 
-## Android & iOS
+#### Android & iOS
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/GaugeSpeed/screenshots/TeeChart.GaugeSpeed.Xamarin.Forms.gif?raw=true "TeeChart for Xamarin.Forms")
 

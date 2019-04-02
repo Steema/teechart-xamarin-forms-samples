@@ -17,11 +17,11 @@ It shows how to create a Pointer on an AreaLine Series to output the value at wh
 
 > Crash on Android 8.0 or bigger
 
-## Android
+#### Android
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/AreaLineWithPointerSTD/Screenshots/android.gif?raw=true "TeeChart for Xamarin.Forms")
 
-## iOS
+#### iOS
 
 ![screenshot](https://github.com/Steema/teechart-xamarin-forms-samples/blob/master/AreaLineWithPointerSTD/Screenshots/ios.gif?raw=true "TeeChart for Xamarin.Forms")
 

@@ -29,6 +29,6 @@ Example showing Chart types and options when using the TeeChart for Xamarin.Form
 
 You will need [TeeChart for .NET  Xamarin.Forms](https://www.steema.com/downloads/forms) (Standard or Pro) version.
 
-### Author
+## Author
 
 Rubén Bermúdez Sáez <a href="https://twitter.com/rubenglam">@rubenglam</a>
