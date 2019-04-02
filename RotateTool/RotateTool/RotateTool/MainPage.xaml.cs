@@ -97,6 +97,9 @@ namespace RotateTool
                 LineChart.Chart.Axes.Left.MaximumOffset = 4;
                 LineChart.Chart.Panning.Allow = ScrollModes.None;
             }
+			
+			Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetUseSafeArea(this, true);
+			
         }
     }
 }

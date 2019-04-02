@@ -8,46 +8,34 @@ using Steema.TeeChart.Styles;
 using Steema.TeeChart;
 using Xamarin.Essentials;
 using System.Threading;
+using System.Diagnostics;
 
 namespace AccelerometerTest
 {
-    public partial class MainPage : TabbedPage
+    public partial class MainPage : ContentPage
     {
 
-        private CircularGauge circularGaugeX;
-        private CircularGauge circularGaugeY;
-        private CircularGauge circularGaugeZ;
-        private int axis = 0;
+        private CircularGauge _circularGauge;
+        private ChartView _chartView;
+        private AccelerationVector _accelerationVector;
 
         public MainPage()
         {
             InitializeComponent();
 
-            this.CurrentPage = xContentPage;
+            _chartView = InitializeChartView();
+            _circularGauge = InitializeCircularGauge();
+            _accelerationVector = AccelerationVector.X;
 
-            InitializePages(ChartX);
-            InitializePages(ChartY);
-            InitializePages(ChartZ);
-
-            circularGaugeX = InitializeGauge();
-            circularGaugeY = InitializeGauge();
-            circularGaugeZ = InitializeGauge();
-
-            InitializeAccelerometer();
-
-            ChartX.Chart.Series.Add(circularGaugeX);
-            ChartY.Chart.Series.Add(circularGaugeY);
-            ChartZ.Chart.Series.Add(circularGaugeZ);
-
-            threadAccelerometer = new Thread(InitializeAccelerometer);
+            stkChart.Children.Add(_chartView);
         }
 
         /// <summary>
-        /// Custom chartView
+        /// Initialize ChartView
         /// </summary>
-        /// <param name="chartView"></param>
-        private void InitializePages(ChartView chartView)
+        private ChartView InitializeChartView()
         {
+            ChartView chartView = new ChartView();
             chartView.Chart.Title.Text = "Accelerometer Circular Gauge";
             chartView.Chart.Title.Alignment = TextAlignment.Center;
             chartView.Chart.Title.TextAlign = TextAlignment.End;
@@ -61,15 +49,16 @@ namespace AccelerometerTest
             chartView.Chart.Axes.Left.Labels.Font.Size += 7;
             chartView.HorizontalOptions = LayoutOptions.FillAndExpand;
             chartView.VerticalOptions = LayoutOptions.FillAndExpand;
+            return chartView;
         }
 
         /// <summary>
-        /// Create serie
+        /// Create series
         /// </summary>
-        /// <returns></returns>
-        private CircularGauge InitializeGauge()
+        /// <returns>CircularGauge</returns>
+        private CircularGauge InitializeCircularGauge()
         {
-            CircularGauge gauge = new CircularGauge();
+            CircularGauge gauge = new CircularGauge(_chartView.Chart);
 
             gauge.Title = "Accelerometer Circular Gauge";
             gauge.Maximum = 1;
@@ -113,86 +102,83 @@ namespace AccelerometerTest
         {
             try
             {
-                Accelerometer.Start(SensorSpeed.Fastest);
+                Accelerometer.Start(SensorSpeed.UI);
                 Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             }
-            catch(FeatureNotSupportedException)
+            catch(FeatureNotSupportedException exception)
             {
+                Debug.WriteLine(exception.Message);
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     DisplayAlert("Alert", "Accelerometer Unavailable", "OK");
-                    circularGaugeX.Value = 0;
-                    circularGaugeY.Value = 0;
-                    circularGaugeZ.Value = 0;
-                    ChartX.Chart.Title.Text = "Accelerometer Unavailable";
-                    ChartX.Chart.Title.Color = Color.Red;
-                    ChartY.Chart.Title.Text = "Accelerometer Unavailable";
-                    ChartY.Chart.Title.Color = Color.Red;
-                    ChartZ.Chart.Title.Text = "Accelerometer Unavailable";
-                    ChartZ.Chart.Title.Color = Color.Red;
+                    _circularGauge.Value = 0;
+                    _chartView.Chart.Title.Text = "Accelerometer Unavailable";
+                    _chartView.Chart.Title.Color = Color.Red;
                 });
-            }
-        }
-
-        Thread threadAccelerometer;
-
-        /// <summary>
-        /// Change page
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void TabbedPage_CurrentPageChanged(object sender, EventArgs e)
-        {
-            var tabbedPage = sender as TabbedPage;
-
-            if(tabbedPage.CurrentPage == xContentPage)
-            {
-                axis = 0;
-                ChartX.Chart.SubTitle.Text = "X Axis";
-                if(circularGaugeY != null) circularGaugeY.Value = 0;
-                if (circularGaugeZ != null) circularGaugeZ.Value = 0;
-            }
-            else if(tabbedPage.CurrentPage == yContentPage)
-            {
-                axis = 1;
-                ChartY.Chart.SubTitle.Text = "Y Axis";
-                circularGaugeX.Value = 0;
-                circularGaugeZ.Value = 0;
-            }
-            else
-            { 
-                axis = 2;
-                ChartZ.Chart.SubTitle.Text = "Z Axis";
-                circularGaugeY.Value = 0;
-                circularGaugeX.Value = 0;
             }
         }
 
         private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
         {
-            CircularGauge circularGauge;
-            float newValue;
-            if (axis == 0)
+            float value = 0;
+            switch(_accelerationVector)
             {
-                circularGauge = circularGaugeX;
-                newValue = e.Reading.Acceleration.X;
+                case AccelerationVector.X:
+                    value = e.Reading.Acceleration.X;
+                    break;
+                case AccelerationVector.Y:
+                    value = e.Reading.Acceleration.Y;
+                    break;
+                case AccelerationVector.Z:
+                    value = e.Reading.Acceleration.Z;
+                    break;
             }
-            else if (axis == 1)
-            {
-                circularGauge = circularGaugeY;
-                newValue = e.Reading.Acceleration.Y;
-            }
-            else
-            {
-                circularGauge = circularGaugeZ;
-                newValue = e.Reading.Acceleration.Z;
-            }
-
             Device.BeginInvokeOnMainThread(() =>
             {
-                circularGauge.Value = newValue;
+                _circularGauge.Value = value;
             });
         }
 
+        /// <summary>
+        /// Change Accelerometer Reading
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAcceleration_Clicked(object sender, EventArgs e)
+        {
+            string selectedButton = (sender as Button).Text.ToUpper();
+
+            switch (selectedButton)
+            {
+                case "X":
+                    _chartView.Chart.SubTitle.Text = "X Axis";
+                    _accelerationVector = AccelerationVector.X;
+                    break;
+
+                case "Y":
+                    _chartView.Chart.SubTitle.Text = "Y Axis";
+                    _accelerationVector = AccelerationVector.Y;
+                    break;
+
+                case "Z":
+                    _chartView.Chart.SubTitle.Text = "Z Axis";
+                    _accelerationVector = AccelerationVector.Z;
+                    break;
+            }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            InitializeAccelerometer();
+        }
+
+        private enum AccelerationVector
+        {
+            X,
+            Y,
+            Z
+        }
+        
     }
 }

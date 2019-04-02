@@ -105,6 +105,9 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>3.6.0.264807</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Visual.Material">
+      <Version>3.6.0.264807</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

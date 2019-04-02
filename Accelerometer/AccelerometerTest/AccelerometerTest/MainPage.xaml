@@ -1,43 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AccelerometerTest"
+             xmlns:iosSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              xmlns:tee="clr-namespace:Steema.TeeChart;assembly=TeeChart.StandardPCL"
-            xmlns:teeStyles="clr-namespace:Steema.TeeChart.Styles;assembly=TeeChart.StandardPCL"
+             xmlns:teeStyles="clr-namespace:Steema.TeeChart.Styles;assembly=TeeChart.StandardPCL"
              x:Class="AccelerometerTest.MainPage" NavigationPage.HasNavigationBar="True"
-            Title="Accelerometer" CurrentPageChanged="TabbedPage_CurrentPageChanged">
-
-    <ContentPage x:Name="xContentPage" Title="X">
-
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
-                     BackgroundColor="White">
-
-            <tee:ChartView x:Name="ChartX"/>
+             Title="Accelerometer" Visual="Material" iosSpecific:Page.UseSafeArea="True">
+    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout x:Name="stkChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
         </StackLayout>
-
-    </ContentPage>
-
-    <ContentPage x:Name="yContentPage" Title="Y">
-
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
-                     BackgroundColor="White">
-
-            <tee:ChartView x:Name="ChartY"/>
-
-        </StackLayout>
-
-    </ContentPage>
-
-    <ContentPage x:Name="zContentPage" Title="Z">
-
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
-                     BackgroundColor="White">
-
-            <tee:ChartView x:Name="ChartZ"/>
-
-        </StackLayout>
-
-    </ContentPage>
-
-</TabbedPage>
+        <Grid HeightRequest="60" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnGetX" Text="X" HorizontalOptions="FillAndExpand" Clicked="BtnAcceleration_Clicked"
+                    CornerRadius="0" BackgroundColor="#29a0ea" Margin="0"/>
+            <Button x:Name="btnGetY" Text="Y" HorizontalOptions="Fill" Clicked="BtnAcceleration_Clicked"
+                    Grid.Column="1" CornerRadius="0" BackgroundColor="#29a0ea" Margin="0"/>
+            <Button x:Name="btnGetZ" Text="Z" HorizontalOptions="Fill" Clicked="BtnAcceleration_Clicked"
+                    Grid.Column="2" CornerRadius="0" BackgroundColor="#29a0ea" Margin="0"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
