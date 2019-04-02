@@ -3,19 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:NearestPointTool"
              xmlns:charting="clr-namespace:Steema.TeeChart;assembly=TeeChart.PCL"
-             x:Class="NearestPointTool.MainPage">
-
-    <Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center"/>
-   
-        <StackLayout x:Name="PageLayout">
-
-        <!-- /* Create TeeChart ChartView by using xaml code 
-        <charting:ChartView x:Name="BarChart"
-                        HeightRequest="300"
-                        WidthRequest="450">
-        </charting:ChartView> -->
-
+             x:Class="NearestPointTool.MainPage" Title="NearestPoint Tool">
+    <StackLayout>
+        <Grid HeightRequest="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnBack" Margin="10" BackgroundColor="CadetBlue" TextColor="White"/>
+            <Button x:Name="btnForward" Grid.Column="1" Margin="10" BackgroundColor="CadetBlue" TextColor="White"/>
+        </Grid>
+        <Label x:Name="lblNearestPoint" Text="Pan to show the Nearest Point !" HorizontalOptions="FillAndExpand" FontSize="20"
+               HorizontalTextAlignment="Center"/>
+        <StackLayout x:Name="stkChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            
+        </StackLayout>
     </StackLayout>
 </ContentPage>

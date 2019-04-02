@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace NearestPointTool
 {
     public partial class App : Application
@@ -13,7 +11,7 @@ namespace NearestPointTool
         {
             InitializeComponent();
 
-            MainPage = new NearestPointTool.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

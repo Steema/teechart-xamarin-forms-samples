@@ -22,11 +22,9 @@ namespace NearestPointTool.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            // Remember to Call Init method in order to Load the TeeChart custom Library Renderers.
-            Steema.TeeChart.TChart.Init();
-
-            global::Xamarin.Forms.Forms.Init();            
+            global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            Steema.TeeChart.TChart.Init();
 
             return base.FinishedLaunching(app, options);
         }

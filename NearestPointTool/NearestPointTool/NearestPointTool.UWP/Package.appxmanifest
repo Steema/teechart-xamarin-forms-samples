@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="fc59c648-a59b-4cd8-98f8-3f0db0c7757b"
-    Publisher="CN=Pep"
+    Name="5a1b948c-b988-4b2c-ae54-148a19d39e07"
+    Publisher="CN=9873b6ea-3919-482b-baa4-127b2910a7af"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="fc59c648-a59b-4cd8-98f8-3f0db0c7757b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>NearestPointTool.UWP</DisplayName>
-    <PublisherDisplayName>Pep</PublisherDisplayName>
+    <PublisherDisplayName>9873b6ea-3919-482b-baa4-127b2910a7af</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -26,7 +26,7 @@
   <Resources>
     <Resource Language="x-generate"/>
   </Resources>
-  
+
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
@@ -37,7 +37,13 @@
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="NearestPointTool.UWP"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>

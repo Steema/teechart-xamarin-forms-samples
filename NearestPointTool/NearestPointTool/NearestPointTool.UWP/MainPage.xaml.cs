@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using NearestPointTool;
 
 namespace NearestPointTool.UWP
 {
@@ -21,6 +20,7 @@ namespace NearestPointTool.UWP
         public MainPage()
         {
             this.InitializeComponent();
+
             LoadApplication(new NearestPointTool.App());
         }
     }

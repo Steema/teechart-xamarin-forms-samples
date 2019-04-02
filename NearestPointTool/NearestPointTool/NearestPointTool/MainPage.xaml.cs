@@ -18,41 +18,25 @@ namespace NearestPointTool
 		{
 			InitializeComponent();
 
-			/* Create ChartView by code at ContentPage */
+            /* Create ChartView by code at ContentPage */
 
-			/* cursor movement buttons */
-			Button bBack = new Button();
-			Button bFwd = new Button();
+            /* cursor movement buttons */
 
-			bFwd.Text = "forward";
-			bBack.Text = "back";
+            btnForward.Text = "Forward";
+			btnBack.Text = "Back";
 
-			bBack.HeightRequest = 100;
-			bFwd.HeightRequest = 100;
-			bBack.WidthRequest = 200;
-			bFwd.WidthRequest = 200;
-
-			bBack.Clicked += OnBackButtonClicked;
-			bFwd.Clicked += OnFwdButtonClicked;
+			btnBack.Clicked += OnBackButtonClicked;
+			btnForward.Clicked += OnFwdButtonClicked;
 
 			LineChart.Chart.BeforeDraw += ChartBeforeDraw;
 			LineChart.Chart.AfterDraw += ChartAfterDraw;
 
 			LineChart.Chart.AutoRepaint = true;
 
-			LineChart.WidthRequest = 400;
-			LineChart.HeightRequest = 300;
+            LineChart.HorizontalOptions = LayoutOptions.FillAndExpand;
+            LineChart.VerticalOptions = LayoutOptions.FillAndExpand;
 
-			Content = new StackLayout
-			{
-				Children =
-									{
-										new StackLayout { Orientation=StackOrientation.Horizontal, Children = { bBack, bFwd } },
-										LineChart
-									},
-				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HorizontalOptions = LayoutOptions.CenterAndExpand,
-			};
+            stkChart.Children.Add(LineChart);
 
 			LineChart.Chart.Series.Add(new Line());
 			double[] YValues = new double[] { 4000, 2500, 2200, 2000, 1800, 1700, 1500, 1300, 1100, 1000, 900, 850 };
@@ -69,12 +53,10 @@ namespace NearestPointTool
 			LineChart.Chart.Walls.Back.Pen.Color = Color.LightGray;
 			LineChart.Chart.Legend.Visible = true;
 			LineChart.Chart.Aspect.ColorPaletteIndex = 17;
-			LineChart.Chart.Title.Text = "Pan to show the Nearest Point !";
-			LineChart.Chart.Title.Alignment = TextAlignment.End;
 			LineChart.Chart.Axes.Left.Increment = 500;
 			LineChart.Chart.Axes.Left.AxisPen.Visible = false;
 			LineChart.Chart.Axes.Bottom.AxisPen.Visible = false;
-			LineChart.Chart.Panel.MarginBottom += 25;
+			LineChart.Chart.Panel.MarginBottom += 5;
 			LineChart.Chart.Panel.MarginLeft -= 1;
 			LineChart.Chart.Title.Font.Color = Color.Gray;
 			LineChart.Chart.Walls.Left.Pen.Width = 1;
@@ -92,22 +74,23 @@ namespace NearestPointTool
 
 			LineChart.Chart.Panning.Allow = ScrollModes.None;
 
-			if (Device.OS == TargetPlatform.Windows)
+			if (Device.RuntimePlatform == Device.UWP)
 			{
 				LineChart.Chart.Touch.Style = TouchStyle.FullChart; //currently required for UWP. Will be replaced.
 
 				LineChart.Chart.Title.Text = "";
 				LineChart.Chart.Walls.Back.Gradient.Visible = false;
 				LineChart.Chart.Walls.Back.Color = Color.White;
-				LineChart.Chart.Panel.MarginBottom -= 25;
+
 				LineChart.Chart.Axes.Left.MinimumOffset = 5;
 				LineChart.Chart.Axes.Left.MaximumOffset = 4;
 			}
-		}
+        }
 
 		private void NearestTool_Change(object sender, EventArgs e)
 		{
-			LineChart.Chart.Title.Text = "Point Value : " + LineChart.Chart.Series[0].YValues[(sender as NearestPoint).Point].ToString();
+            lblNearestPoint.Text = "Point Value: " + LineChart.Chart.Series[0].YValues[(sender as NearestPoint).Point].ToString();
+            //LineChart.Chart.Title.Text = "Point Value : " + LineChart.Chart.Series[0].YValues[(sender as NearestPoint).Point].ToString();
 		}
 
 		int currentIndex = -1;
@@ -117,26 +100,35 @@ namespace NearestPointTool
 		{
 			if (currentIndex < LineChart.Chart.Series[0].Count - 1)
 			{
-				currentIndex++;
+                btnBack.IsEnabled = true;
+                currentIndex++;
 
 				pBrush = LineChart.Chart.Series[0].bBrush;
 				pBrush.Transparency = 75;
 
 				LineChart.Chart.Invalidate();
-
-			}
+                if(currentIndex >= LineChart.Chart.Series[0].Count - 1)
+                {
+                    btnForward.IsEnabled = false;
+                }
+            }
 		}
 
 		void OnBackButtonClicked(object sender, EventArgs e)
 		{
 			if (currentIndex > 0)
 			{
+                btnForward.IsEnabled = true;
 				currentIndex--;
 
 				pBrush = LineChart.Chart.Series[0].bBrush;
 				pBrush.Transparency = 75;
 
 				LineChart.Chart.Invalidate();
+                if(currentIndex == 0)
+                {
+                    btnBack.IsEnabled = false;
+                }
 			}
 		}
 
@@ -163,12 +155,27 @@ namespace NearestPointTool
 
 				g.TextOut(xCenter - offSet, yCenter - (g.Font.Size * 4), " Value: " + LineChart.Chart.Series[0].YValues[currentIndex].ToString());
 
-				Rectangle r = new Rectangle(xCenter - 25, yCenter - 25, 50, 50);
+                Rectangle r = new Rectangle(xCenter - 25, yCenter - 25, 50, 50);
 
 				g.Brush = pBrush;
 				g.Pen.Width = 4;
 				g.Ellipse(r);
 			}
+
 		}
-	}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            
+            btnBack.IsEnabled = false;
+            currentIndex++;
+
+            pBrush = LineChart.Chart.Series[0].bBrush;
+            pBrush.Transparency = 75;
+
+            LineChart.Chart.Invalidate();
+        }
+
+    }
 }
