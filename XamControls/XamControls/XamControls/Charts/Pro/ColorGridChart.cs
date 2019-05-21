@@ -11,7 +11,7 @@ namespace XamControls.Charts.Pro
 {
     public class ColorGridChart
     {
-
+#if !TEE_STD
         private ColorGrid colorGrid;
         private Variables.Variables var;
 
@@ -60,6 +60,6 @@ namespace XamControls.Charts.Pro
             BaseChart.Chart.Series.Add(colorGrid);
 
         }
-
+#endif
     }
 }

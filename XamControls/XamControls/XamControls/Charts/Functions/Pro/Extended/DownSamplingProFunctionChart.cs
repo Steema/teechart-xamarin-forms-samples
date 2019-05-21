@@ -10,7 +10,7 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class DownSamplingProFunctionChart
     {
-
+        #if !TEE_STD
 		private Points points;
 		private Line line;
 		private DownSampling downSampling;
@@ -55,6 +55,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 
 
 		}
-
+#endif
     }
 }

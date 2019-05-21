@@ -9,8 +9,8 @@ namespace XamControls.Charts.Pro
 {
     public class HighLowChart
     {
-
-		private HighLow highLow;
+#if !TEE_STD
+        private HighLow highLow;
 		private Variables.Variables var;
 
 		public HighLowChart(ChartView BaseChart)
@@ -39,6 +39,6 @@ namespace XamControls.Charts.Pro
 			BaseChart.Chart.Axes.Bottom.SetMinMax(BaseChart.Chart.Axes.Bottom.MinXValue, BaseChart.Chart.Axes.Bottom.MaxXValue);
 
 		}
-
+#endif
     }
 }

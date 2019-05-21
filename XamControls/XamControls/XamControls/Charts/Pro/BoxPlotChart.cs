@@ -8,8 +8,8 @@ namespace XamControls.Charts.Pro
 {
     public class BoxPlotChart
     {
-
-				private Box boxPlot;
+#if !TEE_STD
+        private Box boxPlot;
 
 				public BoxPlotChart(ChartView BaseChart)
 				{
@@ -19,6 +19,6 @@ namespace XamControls.Charts.Pro
 						BaseChart.Chart.Series.Add(boxPlot);
 				
 				}
-
+#endif
     }
 }

@@ -12,8 +12,8 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
 	public class CorrelationProFunctionChart : SeriesModel
 	{
-
-			private Points points;
+#if !TEE_STD
+        private Points points;
 			private Line correlation;
 			private Line trend;
 			private CorrelationFunction correlationFunction;
@@ -68,6 +68,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 					BaseChart.Chart.Series.Add(trend);
 
 			}
-
+#endif
     }
 }

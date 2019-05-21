@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class MoneyFlowProFunctionChart : SeriesModel
     {
-
-				private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 				private Volume volume;
 				private Line line;
 				private MoneyFlowFunction moneyFlowFunction;
@@ -82,6 +82,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						BaseChart.Chart.Axes.Bottom.Automatic = true;
 
 		}
+#endif
 
     }
 }

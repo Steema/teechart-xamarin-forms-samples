@@ -12,7 +12,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class MACDProFunctionChart : SeriesModel
     {
-
+        #if !TEE_STD
 				private Candle candle;
 				private Line line;
 				private MACDFunction macd;
@@ -68,6 +68,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						BaseChart.Chart.Series.Add(line);
 
 				}
-
+#endif
     }
 }

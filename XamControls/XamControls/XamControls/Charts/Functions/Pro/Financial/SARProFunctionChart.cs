@@ -12,8 +12,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class SARProFunctionChart : SeriesModel
     {
-
-		private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 		private Line line;
 		private SARFunction sarFunction;
 		private Variables.Variables var;
@@ -55,6 +55,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
             line.Marks.FollowSeriesColor = true;
 
 		}
+#endif
 
     }
 }

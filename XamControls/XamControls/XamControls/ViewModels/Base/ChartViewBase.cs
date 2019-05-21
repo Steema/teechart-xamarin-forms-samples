@@ -228,7 +228,7 @@ namespace XamControls.ViewModels.Base
                 Themes.BasicAxes(BaseChart.Chart.Axes.Left, BaseChart.Chart.Axes.Right);
                 Themes.AplicarTheme(BaseChart);
 
-                switch (button.Text)
+            switch (button.Text)
                 {
 
                     case "Line":
@@ -322,7 +322,7 @@ namespace XamControls.ViewModels.Base
                     case "Semi-Donut":
                         semiDonutChart = new Semi_DonutChartFeatures(BaseChart);
                         break;
-
+#if !TEE_STD
                     case "Arrow":
                         arrowChart = new ArrowChart(BaseChart);
                         break;
@@ -398,8 +398,8 @@ namespace XamControls.ViewModels.Base
                     case "Horizontal Histogram":
                         horizHistogramChart = new HorizHistogramChart(BaseChart);
                         break;
-
-                    case "Circular Gauge":
+#endif
+                case "Circular Gauge":
                         basicCircGaugeChart = new BasicCircularGaugeChart(BaseChart);
                         break;
 
@@ -427,7 +427,7 @@ namespace XamControls.ViewModels.Base
                         try { compassChart = new CompassChart(BaseChart); }
                         catch(Exception e) {  }
                         break;
-
+                    #if !TEE_STD
                     case "Map GIS":
                         mapGSIChart = new MapGISChart(BaseChart);
                         break;
@@ -451,7 +451,7 @@ namespace XamControls.ViewModels.Base
                     case "Organizational Chart":
                         basicOrganizationalChart = new BasicOrganizationalChart(BaseChart);
                         break;
-
+#endif
                     case "Numeric Gauge":
                         numericGaugeChart = new NumericGaugeChart(BaseChart);
                         break;
@@ -479,11 +479,11 @@ namespace XamControls.ViewModels.Base
                     case "Special Dates":
                         specialDatesChart = new SpecialDatesChart(BaseChart, label);
                         break;
-
+#if !TEE_STD
                     case "TagCloud":
                         tagCloudChart = new TagCloudChart(BaseChart);
                         break;
-
+#endif
                     case "Add":
                         addStdFunctionsChart = new AddStdFunctionsChart(BaseChart);
                         break;
@@ -523,7 +523,7 @@ namespace XamControls.ViewModels.Base
                     case "Percent Change":
                         percentStdFunctionsChart = new PercentStdFunctionsChart(BaseChart);
                         break;
-
+#if !TEE_STD
                     case "ADX":
                         adxProFunctionChart = new ADXProFunctionChart(BaseChart);
                         break;
@@ -691,8 +691,8 @@ namespace XamControls.ViewModels.Base
                     case "Skewness":
                         skewnessProFunctionChart = new SkewnessProFunctionChart(BaseChart);
                         break;
-
-                }
+#endif
+            }
 
                 Themes.AplicarOptions(BaseChart);
 
@@ -701,8 +701,9 @@ namespace XamControls.ViewModels.Base
         // Elimina todos los elementos de los antiguos charts
 		public void ClearLastElements()
 		{
-
+#if !TEE_STD
 				if (interpolatingChart != null) { interpolatingChart.RemCursorTool(); }
+#endif
 				if (pieChart != null) { pieChart.RemoveEvent(); }
 				if (donutChart != null) { donutChart.RemoveEvent(); }
 				if (coneBarChart != null) { coneBarChart.RemoveEvent(); }
@@ -714,7 +715,9 @@ namespace XamControls.ViewModels.Base
 				if (compassChart != null) { compassChart.RemoveCompassEvent(); }
 				if (fLineRealTimeChart != null) { fLineRealTimeChart.RemoveEvent(); }
                 if (realTimeChart != null) { realTimeChart.RemoveEvent(); }
+#if !TEE_STD
 				if (errorBarChart != null) { errorBarChart.RemoveEvent(); }
+#endif
 				if (acProFunctionChart != null || adxProFunctionChart != null || aoProFunctionChart != null || atrProFunctionChart != null || 
 					cciProFunctionChart != null || clvProFunctionChart != null)
 				{
@@ -722,13 +725,19 @@ namespace XamControls.ViewModels.Base
 						BaseChart.Chart.Axes.Custom.RemoveAll();
 
 				}
-				if(compressionOHLCProFunctionChart != null) { compressionOHLCProFunctionChart.RemoveCompressionToolBarItem(); }
+#if !TEE_STD
+            if(compressionOHLCProFunctionChart != null) { compressionOHLCProFunctionChart.RemoveCompressionToolBarItem(); }
+#endif
                 if(accelerationCircularGaugeChart != null) { accelerationCircularGaugeChart.RemoveEvent(); }
+#if !TEE_STD
                 if(basicClockChart != null) { basicClockChart.RemoveTimer(); }
                 if(customClockChart != null) { customClockChart.RemoveTimer(); }
                 if(histogramChart != null) { histogramChart.RemoveEvent(); }
+#endif
                 if(spcProFunctionChart != null) { spcProFunctionChart.RemoveEvent(); }
+#if !TEE_STD
                 if(invertedPyramidChart != null) { invertedPyramidChart.Dispose(); }
+#endif
  
 		}
 

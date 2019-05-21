@@ -17,7 +17,9 @@ namespace XamControls.Charts.Standard
 				private Variables.Variables var;
 				private ChartView BaseChart;
 				private Tools.InterpolatingLine tool_interpolatingLine;
+        #if !TEE_STD
 				private CursorTool cursor;
+        #endif
 
 				private Annotation annotation = new Annotation();
 
@@ -122,11 +124,12 @@ namespace XamControls.Charts.Standard
 					//
 
 					Themes.AplicarMarksTheme1(BaseChart);
-
+            #if !TEE_STD
 					AddCursorTool();
+            #endif
 
                 }
-
+#if !TEE_STD
 				private void AddCursorTool()
 				{
 
@@ -167,7 +170,7 @@ namespace XamControls.Charts.Standard
 						annotation.Left = e.x - (annotation.Shape.Width / 2); annotation.Top = BaseChart.Chart.Series[0].CalcYPos(e.SnapPoint);
 					}
 				}
-
+#endif
 		
 	}
 }

@@ -10,8 +10,8 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class RMSProFunctionChart
     {
-
-				private Line line1;
+#if !TEE_STD
+        private Line line1;
 				private Line line2;
 				private RootMeanSquare rootMeanSquare;
 				private Variables.Variables var;
@@ -48,6 +48,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 
 
 				}
-
+#endif
     }
 }

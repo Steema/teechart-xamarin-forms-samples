@@ -14,8 +14,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class CompressionOHLCProFunctionChart
     {
-
-				private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 				private Candle candleSource;
 				private CompressOHLC compressOHLC;
 				private Variables.Variables var;
@@ -147,6 +147,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 					for(int i = arrayToolbar.Length - 1; i >= 0; i--) { toolbar.Add(arrayToolbar[i]); }
 
 				}
+#endif
 
 	}
 }

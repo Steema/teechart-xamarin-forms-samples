@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>DEBUG;NETSTANDARD2_0;NETSTANDARD2_0;DEBUG;NETSTANDARD2_0</DefineConstants>
+    <DefineConstants>DEBUG;NETSTANDARD2_0;NETSTANDARD2_0;NETSTANDARD2_0;TEE_STD;</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,7 +15,7 @@
     <PackageReference Include="PCLStorage" Version="1.0.2" />
     <PackageReference Include="Refractored.FloatingActionButtonForms" Version="2.1.0" />
     <PackageReference Include="Rg.Plugins.Popup" Version="1.1.4.168" />
-    <PackageReference Include="Steema.TeeChart.NET.Xamarin.Forms" Version="4.2018.10.17" />
+    <PackageReference Include="Steema.TeeChart.NET.STD.Xamarin.Forms" Version="4.2018.10.18" />
     <PackageReference Include="Xamarin.Essentials" Version="1.0.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.637273" />
   </ItemGroup>

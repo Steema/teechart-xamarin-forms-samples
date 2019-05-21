@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class CCIProFunctionChart
     {
-
-				private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 				private Line line;
 				private CCIFunction cciFunction;
 				private Variables.Variables var;
@@ -65,6 +65,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 
 
 				}
-
+#endif
     }
 }

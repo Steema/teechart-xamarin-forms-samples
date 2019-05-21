@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class ADXProFunctionChart : SeriesModel
     {
-
-				private ADXFunction adxFunction;
+#if !TEE_STD
+        private ADXFunction adxFunction;
 				private Candle candle;
 				private Line line;
 				private Axis myAxisLeft;
@@ -153,5 +153,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						}
 				}
 
-		}
+#endif
+
+    }
 }

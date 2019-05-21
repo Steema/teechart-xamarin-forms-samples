@@ -8,7 +8,7 @@ namespace XamControls.Charts.Pro
 {
     public class HorizHistogramChart
     {
-
+#if !TEE_STD
         private HorizHistogram horizHistoChart;
         private Variables.Variables var;
 
@@ -38,6 +38,6 @@ namespace XamControls.Charts.Pro
             BaseChart.Chart.Axes.Bottom.SetMinMax(BaseChart.Chart.Axes.Bottom.MinXValue, BaseChart.Chart.Axes.Bottom.MaxXValue + 75);
 
         }
-
+#endif
     }
 }

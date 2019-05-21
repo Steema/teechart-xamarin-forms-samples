@@ -115,7 +115,7 @@ namespace XamControls.Views
             // Section 3
             versionTextCell.Text = "TeeChart DEMO Xamarin Forms";
             versionTextCell.TextColor = Color.Black;
-            versionTextCell.Detail = "Version: 2.2";
+            versionTextCell.Detail = "Version: 3.0";
             versionTextCell.DetailColor = Color.FromRgb(100, 100, 100);
 
             // Add Items

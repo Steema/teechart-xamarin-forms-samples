@@ -11,7 +11,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class ExpAverageProFunctionChart
     {
-
+        #if !TEE_STD
 				private Line line1;
 				private Line line2;
 				private ExpAverage expAverage;
@@ -87,6 +87,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 					}
 
 				}
-
+#endif
 		}
 }

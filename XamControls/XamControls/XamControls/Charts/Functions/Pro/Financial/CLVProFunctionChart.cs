@@ -12,8 +12,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class CLVProFunctionChart
     {
-
-				private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 				private Volume volume;
 				private Line line;
 				private CLVFunction clvFunction;
@@ -85,6 +85,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 				
 
 				}
-
+#endif
     }
 }

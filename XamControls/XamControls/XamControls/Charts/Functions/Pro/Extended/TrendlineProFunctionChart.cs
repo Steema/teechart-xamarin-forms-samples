@@ -10,8 +10,8 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class TrendlineProFunctionChart
     {
-
-				private Area area;
+#if !TEE_STD
+        private Area area;
 				private Line line;
 				private TrendFunction trendFunction;
 				private Variables.Variables var;
@@ -49,5 +49,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 						trendFunction.TrendStyle = TrendStyles.Normal;
 
 				}
+#endif
     }
 }

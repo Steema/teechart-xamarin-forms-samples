@@ -13,7 +13,7 @@ namespace XamControls.Charts.Pro
 {
     public class KagiChart
     {
-
+        #if !TEE_STD
 		private Kagi kagi;
 		private Variables.Variables var;
         private Axis botAxis;
@@ -71,6 +71,6 @@ namespace XamControls.Charts.Pro
 			BaseChart.Chart.Title.Text = "Kagi";
 
 		}
-
+#endif
     }
 }

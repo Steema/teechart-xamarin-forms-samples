@@ -8,7 +8,7 @@ namespace XamControls.Charts.Pro
 {
     public class WaterfallChart
     {
-
+#if !TEE_STD
         private Waterfall waterfall;
         private Variables.Variables var;
 
@@ -39,6 +39,6 @@ namespace XamControls.Charts.Pro
             BaseChart.Chart.Series.Add(waterfall);
 
         }
-
+#endif
     }
 }

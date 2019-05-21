@@ -11,7 +11,7 @@ namespace XamControls.Charts.Pro
 {
     public class RenkoChart
     {
-
+        #if !TEE_STD
 			private Renko renko;
 			private Candle candle;
 			private Axis customLeftRenko;
@@ -130,6 +130,6 @@ namespace XamControls.Charts.Pro
                 BaseChart.Chart.Series.RemoveAllSeries();
 
             }
-
+#endif
     }
 }

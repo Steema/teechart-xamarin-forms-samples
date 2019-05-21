@@ -14,8 +14,8 @@ namespace XamControls.Charts.Pro
 {
     public class ErrorBarChart
     {
-
-			private ErrorBar errorBar;
+#if !TEE_STD
+        private ErrorBar errorBar;
 			private Variables.Variables var;
 			private Tools.DataPointSelection tool_dataPointSelection;
 			private ChartView BaseChart;
@@ -90,6 +90,6 @@ namespace XamControls.Charts.Pro
 					BaseChart.Chart.ClickSeries -= tool_dataPointSelection.ErrorBarSeries_Click;
 
 			}
-
+#endif
 	}
 }

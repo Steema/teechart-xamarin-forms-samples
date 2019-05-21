@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class PerformanceProFunctionChart : SeriesModel
     {
-
-				private Bar bar;
+#if !TEE_STD
+        private Bar bar;
 				private Line line;
 				private Performance performance;
 				private Variables.Variables var;
@@ -51,6 +51,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 						BaseChart.Chart.Series.Add(line);
 
 				}
-
+#endif
     }
 }

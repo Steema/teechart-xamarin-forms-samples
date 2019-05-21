@@ -10,14 +10,15 @@ namespace XamControls.Charts.Pro
 {
     public class BezierChart
     {
-
-		private Bezier bezier;
+#if !TEE_STD
+        private Bezier bezier;
 		private Variables.Variables var;
+#endif
 
 		public BezierChart(ChartView BaseChart)
 		{
-
-			bezier = new Bezier();
+#if !TEE_STD
+            bezier = new Bezier();
 			var = new Variables.Variables();
 
 			BaseChart.Chart.Title.Text = "Bezier series";
@@ -50,7 +51,7 @@ namespace XamControls.Charts.Pro
 
 			BaseChart.Chart.Axes.Left.SetMinMax(BaseChart.Chart.Axes.Left.MinYValue, BaseChart.Chart.Axes.Left.MaxYValue);
 			BaseChart.Chart.Axes.Bottom.SetMinMax(0, BaseChart.Chart.Axes.Bottom.MaxXValue);
-
+#endif
 		}
 
     }

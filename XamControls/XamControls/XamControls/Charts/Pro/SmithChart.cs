@@ -8,7 +8,7 @@ namespace XamControls.Charts.Pro
 {
     public class SmithChart
     {
-
+        #if !TEE_STD
 		private Smith smith;
 		private Variables.Variables var;
 
@@ -47,6 +47,6 @@ namespace XamControls.Charts.Pro
 			BaseChart.Chart.Series.Add(smith);
 
 		}
-
+#endif
     }
 }

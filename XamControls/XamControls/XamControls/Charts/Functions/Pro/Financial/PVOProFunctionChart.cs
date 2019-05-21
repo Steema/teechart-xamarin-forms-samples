@@ -10,8 +10,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class PVOProFunctionChart : SeriesModel
     {
-
-				private Volume volume;
+#if !TEE_STD
+        private Volume volume;
 				private FastLine fastLine;
 				private PVOFunction pvoFunction;
 				private Variables.Variables var;
@@ -48,6 +48,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 
 
 				}
-
+#endif
     }
 }

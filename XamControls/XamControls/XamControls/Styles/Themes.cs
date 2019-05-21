@@ -363,7 +363,7 @@ namespace XamControls.Styles
 
 
 		}
-
+#if !TEE_STD
 		public static void CandleGodStyle(Candle candle)
 		{
 
@@ -372,6 +372,7 @@ namespace XamControls.Styles
 			candle.DownCloseColor = var.GetPaletteBasic[1];
 
 		}
+#endif
 
         public static void RefreshTheme()
         {

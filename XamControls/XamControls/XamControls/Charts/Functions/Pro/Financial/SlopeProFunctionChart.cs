@@ -12,8 +12,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class SlopeProFunctionChart : SeriesModel
     {
-
-				private Area area;
+#if !TEE_STD
+        private Area area;
 				private Line line;
 				private SlopeFunction slopeFunction;
 				private Variables.Variables var;
@@ -61,6 +61,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						BaseChart.Chart.Series.Add(line);
 
 				}
-
+#endif
     }
 }

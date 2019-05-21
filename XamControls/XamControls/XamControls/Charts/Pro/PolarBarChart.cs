@@ -9,13 +9,14 @@ namespace XamControls.Charts.Pro
 {
     public class PolarBarChart
     {
-
+#if !TEE_STD
         private PolarBar polarBar;
+#endif
         private Variables.Variables var;
 
         public PolarBarChart(ChartView BaseChart)
         {
-
+#if !TEE_STD
             polarBar = new PolarBar();
             var = new Variables.Variables();
 
@@ -43,6 +44,8 @@ namespace XamControls.Charts.Pro
             BaseChart.Chart.Axes.Bottom.Increment = 10;
             BaseChart.Chart.Axes.Bottom.Automatic = true;
             BaseChart.Chart.Series.Add(polarBar);
+
+#endif
 
         }
 

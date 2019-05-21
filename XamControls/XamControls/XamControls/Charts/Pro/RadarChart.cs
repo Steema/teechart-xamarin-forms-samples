@@ -11,8 +11,8 @@ namespace XamControls.Charts.Pro
 {
     public class RadarChart
     {
-
-				private Radar radar1;
+#if !TEE_STD
+        private Radar radar1;
 				private Radar radar2;
 				private Radar radar3;
 				private ChartView BaseChart;
@@ -77,6 +77,7 @@ namespace XamControls.Charts.Pro
 						BaseChart.Chart.Series.Add(radar);
 
 				}
+#endif
 
 		}
 }

@@ -11,8 +11,8 @@ namespace XamControls.Charts.Pro
 {
     public class HistogramChart
     {
-
-		private Histogram histogram;
+#if !TEE_STD
+        private Histogram histogram;
 		private Variables.Variables var;
 		private Tools.DataPointSelection tool_dataPointSelection;
         private ChartView BaseChart;
@@ -69,6 +69,7 @@ namespace XamControls.Charts.Pro
             histogram.GetSeriesMark -= tool_dataPointSelection.SerieHistogram_GetSeriesMark;
 
         }
+#endif
 
     }
 }

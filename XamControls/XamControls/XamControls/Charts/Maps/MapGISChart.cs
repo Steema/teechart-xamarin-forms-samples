@@ -9,8 +9,8 @@ namespace XamControls.Charts.Maps
 {
     public class MapGISChart
     {
-
-			private Map mapGSI;
+#if !TEE_STD
+        private Map mapGSI;
 			private ChartView BaseChart;
 			private Variables.Variables var;
 
@@ -63,6 +63,6 @@ namespace XamControls.Charts.Maps
 					}
 
 			}
-
+#endif
     }
 }

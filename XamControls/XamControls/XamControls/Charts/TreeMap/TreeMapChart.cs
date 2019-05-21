@@ -12,7 +12,7 @@ namespace XamControls.Charts.TreeMap
 {
     public class TreeMapChart
     {
-
+        #if !TEE_STD
 				private Steema.TeeChart.Styles.TreeMap treeMap;
 				private Variables.Variables var;
 				private ChartView BaseChart;
@@ -65,7 +65,7 @@ namespace XamControls.Charts.TreeMap
 
 				}
 
-		
+#endif
 
     }
 }

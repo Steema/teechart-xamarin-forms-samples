@@ -10,7 +10,7 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class PerimeterProFunctionChart
     {
-
+        #if !TEE_STD
 				private Points points;
 				private Line line;
 				private PerimeterFunction perimeter;
@@ -101,7 +101,7 @@ namespace XamControls.Charts.Functions.Pro.Extended
 						BaseChart.Chart.Series.Add(line);
 
 				}
-
+#endif
 
     }
 }

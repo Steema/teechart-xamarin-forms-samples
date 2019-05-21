@@ -14,8 +14,10 @@ namespace XamControls.Charts.Functions.Pro.Extended
 		FastLine fastLineSource;
 		FastLine fastLineCoe1;
 		FastLine fastLineCoe2;
-		PolyFitting polyFitting;
+#if !TEE_STD
+        PolyFitting polyFitting;
 		PolyFitting polyFitting2;
+#endif
 		Variables.Variables var;
 
 		public FindCoeffProFunctionChart(ChartView BaseChart)
@@ -24,8 +26,10 @@ namespace XamControls.Charts.Functions.Pro.Extended
 			fastLineSource = new FastLine();
 			fastLineCoe1 = new FastLine();
 			fastLineCoe2 = new FastLine();
-			polyFitting = new PolyFitting();
+#if !TEE_STD
+            polyFitting = new PolyFitting();
 			polyFitting2 = new PolyFitting();
+
 			var = new Variables.Variables();
 
 			BaseChart.Chart.Title.Text = "Polynomial Fitting";
@@ -60,8 +64,8 @@ namespace XamControls.Charts.Functions.Pro.Extended
 			BaseChart.Chart.Series.Add(fastLineSource);
 			BaseChart.Chart.Series.Add(fastLineCoe1);
 			BaseChart.Chart.Series.Add(fastLineCoe2);
-
-		}
+#endif
+        }
 
     }
 }

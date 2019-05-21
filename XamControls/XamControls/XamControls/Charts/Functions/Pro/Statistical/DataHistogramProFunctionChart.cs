@@ -10,8 +10,8 @@ namespace XamControls.Charts.Functions.Pro.Statistical
 {
     public class DataHistogramProFunctionChart
     {
-
-				private Line line;
+#if !TEE_STD
+        private Line line;
 				private Histogram histogram;
 				private Steema.TeeChart.Functions.HistogramFunction histogramFunction;
 				private Variables.Variables var;
@@ -25,6 +25,6 @@ namespace XamControls.Charts.Functions.Pro.Statistical
 						var = new Variables.Variables();
 
 				}
-
+#endif
     }
 }

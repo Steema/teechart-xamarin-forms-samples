@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class OBVProFunctionChart : SeriesModel
     {
-
-				private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 				private Volume volume;
 				private Line line;
 				private OBVFunction obvFunction;
@@ -85,6 +85,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 
 
 				}
-
+#endif
     }
 }

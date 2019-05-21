@@ -13,7 +13,7 @@ namespace XamControls.Charts.Pro
 {
     public class FunnelChart
     {
-
+        #if !TEE_STD
 				private Funnel funnel;
 				private Variables.Variables var;
 
@@ -55,6 +55,6 @@ namespace XamControls.Charts.Pro
 						BaseChart.Chart.Legend.TextStyle = LegendTextStyles.Plain;
 
 				}
-
+#endif
     }
 }

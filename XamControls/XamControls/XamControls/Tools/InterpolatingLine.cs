@@ -10,17 +10,22 @@ namespace XamControls.Tools
     {
 
 				private Annotation annotation;
+        #if !TEE_STD
 				private CursorTool cursor;
+#endif
 				private ChartView BaseChart;
 
 				public InterpolatingLine(ChartView BaseChart)
 				{
 
 						annotation = new Annotation();
+            #if !TEE_STD
 						cursor = new CursorTool();
+#endif
 						this.BaseChart = BaseChart;
 
 				}
+        #if !TEE_STD
 				private void AddCursorTool()
 				{
 
@@ -60,6 +65,7 @@ namespace XamControls.Tools
 						annotation.Left = e.x - (annotation.Shape.Width / 2); annotation.Top = BaseChart.Chart.Series[0].CalcYPos(e.SnapPoint);
 					}
 				}
+        #endif
 
 	}
 }

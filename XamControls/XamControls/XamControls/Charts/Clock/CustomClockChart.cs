@@ -9,7 +9,7 @@ namespace XamControls.Charts.Clock
 {
     public class CustomClockChart
     {
-
+        #if !TEE_STD
         private Steema.TeeChart.Styles.Clock clock;
         
         public CustomClockChart(ChartView BaseChart)
@@ -47,6 +47,6 @@ namespace XamControls.Charts.Clock
             clock.CancelTimer = true;
 
         }
-
+#endif
     }
 }

@@ -9,7 +9,7 @@ namespace XamControls.Charts.Pro
 {
     public class VolumeChart : SeriesModel
     {
-
+#if !TEE_STD
         private Volume volume;
         private Variables.Variables var;
         private ChartView BaseChart;
@@ -59,5 +59,6 @@ namespace XamControls.Charts.Pro
             base.OnAfterDraw(sender, g);
 
         }
+#endif
     }
 }

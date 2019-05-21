@@ -9,8 +9,8 @@ namespace XamControls.Charts.Organizational
 {
     public class BasicOrganizationalChart
     {
-
-		private OrgSeries organizationalChart;
+#if !TEE_STD
+        private OrgSeries organizationalChart;
 
 		public BasicOrganizationalChart(ChartView BaseChart)
 		{
@@ -50,6 +50,6 @@ namespace XamControls.Charts.Organizational
 			}
 
 		}
-
+#endif
     }
 }

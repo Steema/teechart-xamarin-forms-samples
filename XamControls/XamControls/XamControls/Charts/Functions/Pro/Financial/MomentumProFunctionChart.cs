@@ -10,7 +10,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class MomentumProFunctionChart : SeriesModel
     {
-
+        #if !TEE_STD
 				private Line line1;
 				private Line line2;
 				private Momentum momentum;
@@ -47,6 +47,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						BaseChart.Chart.Series.Add(line2);
 
 				}
-
+#endif
     }
 }

@@ -13,8 +13,8 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class CumulativeProFunctionChart
     {
-
-				private Bar bar;
+#if !TEE_STD
+        private Bar bar;
 				private Line line;
 				private Cumulative cumulative;
 				private Variables.Variables var;
@@ -66,6 +66,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 
 
 				}
-
+#endif
     }
 }

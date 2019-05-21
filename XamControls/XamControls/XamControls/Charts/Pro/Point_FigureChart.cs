@@ -10,8 +10,8 @@ namespace XamControls.Charts.Pro
 {
     public class Point_FigureChart
     {
-
-				private PointFigure pointFigure;
+#if !TEE_STD
+        private PointFigure pointFigure;
 
 				public Point_FigureChart(ChartView BaseChart)
 				{
@@ -52,6 +52,6 @@ namespace XamControls.Charts.Pro
 						BaseChart.Chart.Axes.Bottom.Title.Visible = false;
 
 				}
-
+#endif
     }
 }

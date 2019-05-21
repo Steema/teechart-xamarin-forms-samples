@@ -9,7 +9,7 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class CrossPointsProFunctionsChart
     {
-
+        #if !TEE_STD
 		private Line line1;
 		private Line line2;
 		private Steema.TeeChart.Functions.CrossPoints crossPoints;
@@ -60,6 +60,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 				BaseChart.Chart.Series.Add(crossLine);
 
 		}
-
+#endif
     }
 }

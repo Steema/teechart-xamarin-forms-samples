@@ -11,8 +11,8 @@ namespace XamControls.Charts.Pro
 {
     public class PolarChart
     {
-
-		private Polar polar1;
+#if !TEE_STD
+        private Polar polar1;
         private Polar polar2;
 		private Variables.Variables var;
 		private ChartView BaseChart;
@@ -78,7 +78,7 @@ namespace XamControls.Charts.Pro
                 polar2.RadiusIncrement = 300;
 
         }	
-
+#endif
 	}
 
 }

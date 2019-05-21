@@ -11,7 +11,7 @@ namespace XamControls.Charts.Maps
 {
     public class WorldMapChart
     {
-
+        #if !TEE_STD
 				private World world;
 				private ChartView BaseChart;
 				private Picker pickerChangeMap;
@@ -151,5 +151,6 @@ namespace XamControls.Charts.Maps
 						pickerChangeMap.Focus();
 
 				}
+#endif
 		}
 }

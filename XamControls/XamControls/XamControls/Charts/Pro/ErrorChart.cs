@@ -10,7 +10,7 @@ namespace XamControls.Charts.Pro
 {
     public class ErrorChart
     {
-
+        #if !TEE_STD
 				private Error errorChart;
 				private Variables.Variables var;
 
@@ -53,6 +53,6 @@ namespace XamControls.Charts.Pro
 						BaseChart.Chart.Axes.Bottom.SetMinMax(0, BaseChart.Chart.Axes.Bottom.MaxXValue);
 
 				}
-
+#endif
     }
 }

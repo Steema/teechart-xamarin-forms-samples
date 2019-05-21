@@ -9,8 +9,8 @@ namespace XamControls.Charts.Organizational
 {
     public class CustomOrgChart
     {
-
-				private OrgSeries organizationalChart;
+#if !TEE_STD
+        private OrgSeries organizationalChart;
 
 				public CustomOrgChart(ChartView BaseChart)
 				{
@@ -71,6 +71,6 @@ namespace XamControls.Charts.Organizational
 					}
 
 				}
-
+#endif
 		}
 }

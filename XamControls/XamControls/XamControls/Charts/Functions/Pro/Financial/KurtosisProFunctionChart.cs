@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 
     public class KurtosisProFunctionChart : SeriesModel
     {
-
-		private Area area;
+#if !TEE_STD
+        private Area area;
 		private Line line;
 		private KurtosisFunction kurtosis;
 		private Variables.Variables var;
@@ -56,6 +56,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 			line.Title = "Kurtosis";
 
 		}
-
-	}
+#endif
+    }
 }

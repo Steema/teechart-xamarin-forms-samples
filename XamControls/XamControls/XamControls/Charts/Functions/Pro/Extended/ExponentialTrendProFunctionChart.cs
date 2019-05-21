@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class ExponentialTrendProFunctionChart : SeriesModel
     {
-
-				private FastLine flineSource;
+#if !TEE_STD
+        private FastLine flineSource;
 				private FastLine flineExpTrend;
 				private ExpTrendFunction expTrendFunction;
 				private FastLine flineTrend;
@@ -62,6 +62,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 						((((BaseChart.Parent as StackLayout).Parent as Grid).Parent as ContentPage).Parent as TabbedPage).Title = "Exp. Trend";
 
 				}
-
+#endif
     }
 }

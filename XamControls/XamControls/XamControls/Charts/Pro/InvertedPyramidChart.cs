@@ -11,7 +11,7 @@ namespace XamControls.Charts.Pro
 {
     public class InvertedPyramidChart
     {
-
+#if !TEE_STD
         private Pyramid pyramid1;
         private Variables.Variables var;
         private ChartView BaseChart;
@@ -85,6 +85,6 @@ namespace XamControls.Charts.Pro
             BaseChart.Chart.Axes.Left.Inverted = false;
 
         }
-
+#endif
     }
 }

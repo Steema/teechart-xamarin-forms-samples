@@ -11,8 +11,8 @@ namespace XamControls.Charts.Pro
 {
 	public class PyramidChart
 	{
-
-		private Pyramid pyramid1;
+#if !TEE_STD
+        private Pyramid pyramid1;
 		private Variables.Variables var;
 		private ChartView BaseChart;
 
@@ -78,7 +78,7 @@ namespace XamControls.Charts.Pro
                     
 
 		}
-
+#endif
 	}
 
 }

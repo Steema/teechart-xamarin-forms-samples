@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class BollingerProFunctionChart
     {
-
-				private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 				private Line line;
 				private Bollinger bollingerFunction;
 				private Variables.Variables var;
@@ -69,6 +69,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 
 
 				}
-
+#endif
     }
 }

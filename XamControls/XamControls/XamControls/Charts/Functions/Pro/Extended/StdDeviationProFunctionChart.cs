@@ -10,8 +10,8 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class StdDeviationProFunctionChart
     {
-
-				private Line line1;
+#if !TEE_STD
+        private Line line1;
 				private Line line2;
 				private StdDeviation stdDeviation;
 				private Variables.Variables var;
@@ -46,6 +46,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 						BaseChart.Chart.Series.Add(line2);
 
 				}
-
+#endif
     }
 }

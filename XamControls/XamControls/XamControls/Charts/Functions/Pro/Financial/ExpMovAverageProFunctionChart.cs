@@ -13,8 +13,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class ExpMovAverageProFunctionChart : SeriesModel
     {
-
-				private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 				private Line line;
 				private ExpMovAverage expMovAverage;
 				private Variables.Variables var;
@@ -54,6 +54,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						BaseChart.Chart.Axes.Left.Ticks.Transparency = 100;
 
 				}
+#endif
 
 		}
 }

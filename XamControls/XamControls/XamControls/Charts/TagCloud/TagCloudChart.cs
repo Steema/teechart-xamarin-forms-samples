@@ -8,7 +8,7 @@ namespace XamControls.Charts.TagCloud
 {
     public class TagCloudChart
     {
-
+        #if !TEE_STD
 				private Steema.TeeChart.Styles.TagCloud tagCloud;
 
 				public TagCloudChart(ChartView BaseChart)
@@ -24,6 +24,6 @@ namespace XamControls.Charts.TagCloud
 						tagCloud.TagSeparation = 5;
 
 				}
-
+#endif
     }
 }

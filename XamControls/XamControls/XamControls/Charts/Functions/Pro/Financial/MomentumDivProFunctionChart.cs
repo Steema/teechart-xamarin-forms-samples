@@ -10,8 +10,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class MomentumDivProFunctionChart : SeriesModel
     {
-
-				private Line line1;
+        #if !TEE_STD
+        private Line line1;
 				private Line line2;
 				private MomentumDivision momentumDivision;
 				private Variables.Variables var;
@@ -59,6 +59,6 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						BaseChart.Chart.Series.Add(line2);
 
 				}
-
+    #endif
     }
 }

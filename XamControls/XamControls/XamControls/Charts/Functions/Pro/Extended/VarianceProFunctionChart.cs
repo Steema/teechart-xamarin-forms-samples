@@ -10,7 +10,7 @@ namespace XamControls.Charts.Functions.Pro.Extended
 {
     public class VarianceProFunctionChart : SeriesModel
     {
-
+        #if !TEE_STD
 				private Points points;
 				private Line line;
 				private VarianceFunction variance;
@@ -58,6 +58,6 @@ namespace XamControls.Charts.Functions.Pro.Extended
 						BaseChart.Chart.Series.Add(line);
 
 				}
-
+#endif
     }
 }

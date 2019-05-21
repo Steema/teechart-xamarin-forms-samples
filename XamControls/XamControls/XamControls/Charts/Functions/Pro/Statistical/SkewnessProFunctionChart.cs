@@ -11,7 +11,7 @@ namespace XamControls.Charts.Functions.Pro.Statistical
 {
     public class SkewnessProFunctionChart : SeriesModel
     {
-
+        #if !TEE_STD
 		private Area area;
 		private Line line;
 		private SkewnessFunction skeweness;
@@ -58,6 +58,6 @@ namespace XamControls.Charts.Functions.Pro.Statistical
 			BaseChart.Chart.Axes.Left.SetMinMax(BaseChart.Chart.Axes.Left.MinYValue, BaseChart.Chart.Axes.Left.MaxYValue + 20);
 
 		}
-
+#endif
     }
 }

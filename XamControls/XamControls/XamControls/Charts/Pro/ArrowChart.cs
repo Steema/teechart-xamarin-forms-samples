@@ -11,14 +11,16 @@ namespace XamControls.Charts.Pro
 {
     public class ArrowChart
     {
-
-	    private Arrow arrow1;
+#if !TEE_STD
+        private Arrow arrow1;
 	    private Variables.Variables var;
 	    private ChartView BaseChart;
 
+#endif
+
 	    public ArrowChart(ChartView BaseChart)
 	    {
-
+            #if !TEE_STD
 		    // Variables
 		    arrow1 = new Arrow();
 		    var = new Variables.Variables();
@@ -88,7 +90,7 @@ namespace XamControls.Charts.Pro
             // Themes Marks
             arrow1.Marks.AutoSize = true;
             arrow1.Marks.Font.Size = 15;
-
+#endif
 	    }
 
 	}

@@ -12,7 +12,7 @@ namespace XamControls.Charts.Pro
 {
     public class CandleChart
     {
-
+        #if !TEE_STD
 		private Candle candle;
 		private Variables.Variables var;
 
@@ -85,6 +85,6 @@ namespace XamControls.Charts.Pro
 				else { series.Pointer.Pen.Color = var.GetPaletteBasic[1]; }
 
 		}
-
-		}
+#endif
+	}
 }

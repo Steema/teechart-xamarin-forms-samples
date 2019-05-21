@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class GatorOscillProFunctionChart : SeriesModel
     {
-
-		private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 		private Line line;
 		private AlligatorFunction alligator;
 		private Volume volume;
@@ -20,10 +20,12 @@ namespace XamControls.Charts.Functions.Pro.Financial
 		private Variables.Variables var;
 		private Axis leftAxis;
 
+#endif
+
 		public GatorOscillProFunctionChart(ChartView BaseChart)
 		{
-
-			candle = new Candle();
+#if !TEE_STD
+            candle = new Candle();
 			line = new Line();
 			alligator = new AlligatorFunction();
 			volume = new Volume();
@@ -84,9 +86,9 @@ namespace XamControls.Charts.Functions.Pro.Financial
 			BaseChart.Chart.Series.Add(candle);
 			BaseChart.Chart.Series.Add(line);
 			BaseChart.Chart.Series.Add(volume);
+#endif
 
-
-		}
+        }
 
     }
 }

@@ -9,9 +9,10 @@ using XamControls.Variables;
 
 namespace XamControls.Charts.Functions.Pro.Financial
 {
+
     public class AOProFunctionChart
     {
-
+        #if !TEE_STD
 				private Candle candle;
 				private Volume volume;
 				private AOFunction aoFunction;
@@ -92,6 +93,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						}
 
 				}
+#endif
 
 		}
 }

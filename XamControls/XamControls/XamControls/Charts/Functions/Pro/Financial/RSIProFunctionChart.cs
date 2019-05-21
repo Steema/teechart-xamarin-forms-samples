@@ -11,8 +11,8 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class RSIProFunctionChart : SeriesModel
     {
-
-				private Candle candle;
+#if !TEE_STD
+        private Candle candle;
 				private Line line;
 				private RSIFunction rsiFunction;
 				private Variables.Variables var;
@@ -59,7 +59,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 					BaseChart.Chart.Series.Add(line);
 
 				}
-
+#endif
 
     }
 }

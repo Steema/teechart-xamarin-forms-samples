@@ -11,17 +11,18 @@ namespace XamControls.Charts.Functions.Pro.Financial
 {
     public class AlligatorProFunctionChart : SeriesModel
     {
-
-				private AlligatorFunction allFunction;
+#if !TEE_STD
+        private AlligatorFunction allFunction;
 				private Candle candle;
 				private Line line;
 				private ChartView BaseChart;
 				private Variables.Variables var;
+#endif
 
 				public AlligatorProFunctionChart(ChartView BaseChart)
 				{
-
-						allFunction = new AlligatorFunction();
+#if !TEE_STD
+            allFunction = new AlligatorFunction();
 						candle = new Candle();
 						line = new Line();
 						this.BaseChart = BaseChart;
@@ -59,7 +60,9 @@ namespace XamControls.Charts.Functions.Pro.Financial
 						line.SeriesColor = var.GetPaletteBasic[0];
 						line.LinePen.Width = 3;
 
-				}
+#endif
 
-		}
+        }
+
+    }
 }

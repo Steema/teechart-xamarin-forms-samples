@@ -10,7 +10,7 @@ namespace XamControls.Charts.Functions.Pro.Statistical
 {
     public class CumulativeHistogProFunctionChart : SeriesModel
     {
-
+#if !TEE_STD
         private Line dataLine;
 		private Histogram histogram;
 		private HistogramFunction histogramFunction;
@@ -75,6 +75,6 @@ namespace XamControls.Charts.Functions.Pro.Statistical
             BaseChart.Chart.Series.Add(dataLine);
 
         }
-
+#endif
     }
 }
