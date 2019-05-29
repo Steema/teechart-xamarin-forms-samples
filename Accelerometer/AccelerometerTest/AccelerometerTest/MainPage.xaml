@@ -6,7 +6,7 @@
              xmlns:tee="clr-namespace:Steema.TeeChart;assembly=TeeChart.StandardPCL"
              xmlns:teeStyles="clr-namespace:Steema.TeeChart.Styles;assembly=TeeChart.StandardPCL"
              x:Class="AccelerometerTest.MainPage" NavigationPage.HasNavigationBar="True"
-             Title="Accelerometer" Visual="Material" iosSpecific:Page.UseSafeArea="True">
+             Title="Accelerometer" iosSpecific:Page.UseSafeArea="True">
     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <StackLayout x:Name="stkChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
