@@ -70,7 +70,9 @@ namespace XamControls.ViewModels.Base
 		private Semi_PieChartFeatures semiPieChart;
 		private Semi_DonutChartFeatures semiDonutChart;
         // PRO
+#if !TEE_STD
         private TowerChart towerChart;
+#endif
 		private ArrowChart arrowChart;
 		private PolarChart polarChart;
 		private RadarChart radarChart;
@@ -425,7 +427,7 @@ namespace XamControls.ViewModels.Base
                         try { compassChart = new CompassChart(BaseChart); }
                         catch(Exception e) {  }
                         break;
-                    #if !TEE_STD
+#if !TEE_STD
                     case "Map GIS":
                         mapGSIChart = new MapGISChart(BaseChart);
                         break;
