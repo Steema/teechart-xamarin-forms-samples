@@ -64,7 +64,9 @@ namespace XamControls.ViewModels
 			scrollView.Margin = 0;
 
 			CrearButtons(sLMenuInferior);
-		}
+
+ 
+        }
 
 		// Acción que añade los botones al menú inferior
 		private void CrearButtons(StackLayout sL)
@@ -143,10 +145,23 @@ namespace XamControls.ViewModels
 			BtnSelected();
 		}
 
+        public void UpdateSwipeTabbedPageEnabled(ChartTabPage tabPage)
+        {
+            UpdateScrollTabPage(tabPage);
+        }
+
 		private void UpdateScrollTabPage(ChartTabPage tabPage)
 		{
-			if (selectedButton.Text == "Interpolating Line" || selectedButton.Text == "Zoom & Panning") { Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(tabPage.On<Xamarin.Forms.PlatformConfiguration.Android>(), false); }
-			else { Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(tabPage.On<Xamarin.Forms.PlatformConfiguration.Android>(), true); }
+			if (selectedButton.Text == "Interpolating Line" || selectedButton.Text == "Zoom & Panning" || selectedButton.Text == "Tower")
+            {
+                Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.
+                    SetIsSwipePagingEnabled(tabPage.On<Xamarin.Forms.PlatformConfiguration.Android>(), false);
+            }
+			else
+            {
+                Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.
+                    SetIsSwipePagingEnabled(tabPage.On<Xamarin.Forms.PlatformConfiguration.Android>(), true);
+            }
 		}
 
 		// Propiedad que devuelve el "scrollView"

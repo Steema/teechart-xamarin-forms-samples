@@ -235,7 +235,7 @@ namespace XamControls.Variables
 			GetStandardNomButtonsTypes = new string[13] { "Line", "Column Bar", "Area", "Pie", "Fast Line", "Horizontal Area", "Horizontal Bar", "Horizontal Line", "Donut", "Bubble", "Gantt",
                                                           "Shape", "Point/Scatter" }; // 1
 			GetStandardNomButtonsFeatures = new string[10] { "Interpolating Line", "Bar Styles", "Zoom & Panning", "Bar Gradient", "Bubble Transparent", "Real Time", "Stack Area", "Multiple Pies", "Semi-Pie", "Semi-Donut" }; // 1
-			GetProNomButtonsTypes = new string[16] { "Arrow", "Polar", "Radar", "Pyramid", "Candle", //"Point&Figure", 
+			GetProNomButtonsTypes = new string[17] { "Tower", "Arrow", "Polar", "Radar", "Pyramid", "Candle", //"Point&Figure", 
                                                                                                      //"Kagi",
                                                                                                      //"Renko", 
                 "Histogram", "Error", "ErrorBar", "Funnel", //"BoxPlot",

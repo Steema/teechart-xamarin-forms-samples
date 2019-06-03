@@ -58,6 +58,7 @@ namespace XamControls.Views
 
             }
 
+            menuInferior[0].UpdateSwipeTabbedPageEnabled(this);
         }
 				
         // Inicializar un "toolbarItems"
@@ -170,6 +171,7 @@ namespace XamControls.Views
             }
 
             this.SelectedItem = contentPage[0];
+            
 
 			CrearChart1VegadaPagina();
 

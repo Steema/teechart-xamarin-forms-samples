@@ -69,7 +69,8 @@ namespace XamControls.ViewModels.Base
 		private MultiplePiesChartFeatures multiPiesChart;
 		private Semi_PieChartFeatures semiPieChart;
 		private Semi_DonutChartFeatures semiDonutChart;
-		// PRO
+        // PRO
+        private TowerChart towerChart;
 		private ArrowChart arrowChart;
 		private PolarChart polarChart;
 		private RadarChart radarChart;
@@ -181,11 +182,9 @@ namespace XamControls.ViewModels.Base
 		// Constructor
 		public ChartViewBase(Button button)
 		{
-
-				BaseChart = new ChartViewRender();
-				InitializeChart();
-				CrearChart(button);
-
+			BaseChart = new ChartViewRender();
+			InitializeChart();
+			CrearChart(button);
 		}
 
 		public ChartViewBase(string title)
@@ -199,34 +198,29 @@ namespace XamControls.ViewModels.Base
 
 		public ChartViewBase(string title, Label label)
 		{
-
 			BaseChart = new ChartViewRender();
 			InitializeChart();
 			CrearChart(new Button { Text = title }, label);
-
 		}
 
 		// Bases del "Chart"		
 		private void InitializeChart()
 		{
-
-				themes = new Themes(BaseChart);
-				Themes.valorTheme = 1;
-				Themes.AplicarTheme(BaseChart);
-
+			themes = new Themes(BaseChart);
+			Themes.valorTheme = 1;
+			Themes.AplicarTheme(BaseChart);
 		}
 
 		// Acción que determina que clase utilitzar para crear los "Charts"
 		public void CrearChart(Button button, Label label = null)
 		{
+			ClearLastElements();
 
-				ClearLastElements();
+			BaseChart.Chart.Series.RemoveAllSeries();
 
-				BaseChart.Chart.Series.RemoveAllSeries();
-
-                //Themes.RefreshTheme();
-                Themes.BasicAxes(BaseChart.Chart.Axes.Left, BaseChart.Chart.Axes.Right);
-                Themes.AplicarTheme(BaseChart);
+            //Themes.RefreshTheme();
+            Themes.BasicAxes(BaseChart.Chart.Axes.Left, BaseChart.Chart.Axes.Right);
+            Themes.AplicarTheme(BaseChart);
 
             switch (button.Text)
                 {
@@ -323,6 +317,10 @@ namespace XamControls.ViewModels.Base
                         semiDonutChart = new Semi_DonutChartFeatures(BaseChart);
                         break;
 #if !TEE_STD
+                    case "Tower":
+                        towerChart = new TowerChart(BaseChart);
+                        break;
+                    
                     case "Arrow":
                         arrowChart = new ArrowChart(BaseChart);
                         break;
