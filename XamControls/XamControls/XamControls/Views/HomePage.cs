@@ -183,7 +183,7 @@ namespace XamControls.Views
                 }
 
                 valor = posicioActual + 1;
-#if !TEE_STD
+#if TEE_STD
                 if (ListItems[posicioActual].Tipus == "PRO") {
 
                     await DisplayAlert("Alert", "This section is only for subscribers.", "OK"); return;
