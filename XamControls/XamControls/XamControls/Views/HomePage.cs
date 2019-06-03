@@ -183,7 +183,11 @@ namespace XamControls.Views
                 }
 
                 valor = posicioActual + 1;
-                if (ListItems[posicioActual].Tipus == "PRO") { await DisplayAlert("Alert", "This section is only for subscribers.", "OK"); return; }
+#if !TEE_STD
+                if (ListItems[posicioActual].Tipus == "PRO") {
+
+                    await DisplayAlert("Alert", "This section is only for subscribers.", "OK"); return;
+#endif
 
                 onlyOneClick = 1;
 
