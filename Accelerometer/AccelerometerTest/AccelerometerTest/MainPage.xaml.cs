@@ -173,6 +173,18 @@ namespace AccelerometerTest
             InitializeAccelerometer();
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            StopAccelerometer();
+        }
+
+        private void StopAccelerometer()
+        {
+            Accelerometer.ReadingChanged -= Accelerometer_ReadingChanged;
+            Accelerometer.Stop();
+        }
+
         private enum AccelerationVector
         {
             X,

@@ -18,11 +18,11 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="btnGetX" Text="X" HorizontalOptions="FillAndExpand" Clicked="BtnAcceleration_Clicked"
-                    CornerRadius="0" BackgroundColor="#29a0ea" Margin="0"/>
+                    CornerRadius="0" BackgroundColor="#29a0ea" Margin="0" TextColor="White"/>
             <Button x:Name="btnGetY" Text="Y" HorizontalOptions="Fill" Clicked="BtnAcceleration_Clicked"
-                    Grid.Column="1" CornerRadius="0" BackgroundColor="#29a0ea" Margin="0"/>
+                    Grid.Column="1" CornerRadius="0" BackgroundColor="#29a0ea" Margin="0" TextColor="White"/>
             <Button x:Name="btnGetZ" Text="Z" HorizontalOptions="Fill" Clicked="BtnAcceleration_Clicked"
-                    Grid.Column="2" CornerRadius="0" BackgroundColor="#29a0ea" Margin="0"/>
+                    Grid.Column="2" CornerRadius="0" BackgroundColor="#29a0ea" Margin="0" TextColor="White"/>
         </Grid>
     </StackLayout>
 </ContentPage>
