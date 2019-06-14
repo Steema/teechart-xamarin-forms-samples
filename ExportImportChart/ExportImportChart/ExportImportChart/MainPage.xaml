@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ExportImportChart"
+             xmlns:steema="clr-namespace:Steema.TeeChart;assembly=TeeChart.PCL"
+             xmlns:styles="clr-namespace:Steema.TeeChart.Styles;assembly=TeeChart.PCL"
+             x:Class="ExportImportChart.MainPage">
+
+    <StackLayout x:Name="stkLayout">
+        <Button x:Name="btnExport" Text="Export" WidthRequest="100" HeightRequest="80"></Button>
+    </StackLayout>
+
+</ContentPage>
