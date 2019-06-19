@@ -23,9 +23,24 @@ namespace ExportImportChart.iOS
 
         private void Element_OnSavePanelAsPNG(SaveChartEventArgs e)
         {
-            var nativeChartView = this.GetControl().Subviews[0];
-            string fileName = e.FileName;
-            SavePanelAsPNG(nativeChartView, fileName);
+            var nativeChartView = this.Subviews[0];
+            UIGraphics.BeginImageContext(nativeChartView.Frame.Size);
+            var ctx = UIGraphics.GetCurrentContext();
+            if (ctx != null)
+            {
+                nativeChartView.Layer.RenderInContext(ctx);
+                UIImage img = UIGraphics.GetImageFromCurrentImageContext();
+                UIGraphics.EndImageContext();
+
+                img.SaveToPhotosAlbum(
+                    (sender, args) => {
+                        Console.WriteLine("image saved to Photos");
+                    }
+                );
+
+                string fileName = "ruben.png";
+                SavePanelAsPNG(nativeChartView, fileName);
+            }
         }
 
         public void SavePanelAsPNG(UIView view, string fileName)

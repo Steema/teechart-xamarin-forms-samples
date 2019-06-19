@@ -22,6 +22,7 @@ namespace ExportImportChart.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Steema.TeeChart.TChart.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
