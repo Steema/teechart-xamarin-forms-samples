@@ -233,6 +233,7 @@ namespace XamControls.Views
                     {
 
                         case Device.Android:
+                        case Device.UWP:
                             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.89, GridUnitType.Star) });
                             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.11, GridUnitType.Star) });
                             grid.Children.Add(stackLayoutChart, 0, 0);
@@ -269,7 +270,7 @@ namespace XamControls.Views
 
             ToolbarItem toolbar = new ToolbarItem();
 
-            if (Device.RuntimePlatform == Device.Android) toolbar.Icon = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
+            if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.UWP) toolbar.Icon = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
             else toolbar.Icon = (FileImageSource)ImageSource.FromFile("mic_lightbulb_outline_white_36dp.png");
             toolbar.Text = "About Chart";
             toolbar.Clicked += AboutChart_Clicked;
@@ -462,7 +463,7 @@ namespace XamControls.Views
                 {
 
                     vChart.CrearChart(btn);
-                    if (Device.RuntimePlatform == Device.Android) { grid.Children.Add(stackLayoutChart, 0, 0); }
+                    if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.UWP) { grid.Children.Add(stackLayoutChart, 0, 0); }
                     else { grid.Children.Add(stackLayoutChart, 0, 1); }
 
                 }
