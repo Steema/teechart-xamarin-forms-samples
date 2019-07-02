@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:XamControls.PCL.Views"
+             mc:Ignorable="d" Visual="Material" Title="XamControls UWP"
+             x:Class="XamControls.PCL.Pages.MainPage">
+    <OnPlatform x:TypeArguments="StackLayout">
+        <On Platform="UWP">
+            <StackLayout x:Name="mainLayoutUWP" Padding="10">
+                <ListView x:Name="lstViewSeriesGroups" HorizontalOptions="FillAndExpand" 
+                          VerticalOptions="FillAndExpand" ItemsSource="{Binding SeriesGroupItems}"
+                          HeightRequest="100" WidthRequest="100" ItemTapped="LstViewSeriesGroups_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame CornerRadius="0" BorderColor="#DADCE0" HeightRequest="100">
+                                    <Grid Margin="10" Padding="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="3*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="2*"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Image Source=""/>
+                                        <Label Text="{Binding SeriesGroup}"/>
+                                        <Label Grid.Column="1" Text="{Binding Description}"/>
+                                        <Label Grid.Row="1" Text="{Binding SeriesCount}"/>
+                                        <Label Grid.Row="1" Grid.Column="1" Text="PRO"/>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </On>
+        <On Platform="Android, iOS">
+            <StackLayout x:Name="mainLayout">
+                <CollectionView x:Name="colViewSeriesGroup" HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand" ItemsSource="{Binding SeriesGroupItems}"
+                                HeightRequest="100" WidthRequest="100" ItemSizingStrategy="MeasureAllItems"
+                                SelectionMode="Single" SelectionChanged="ColViewSeriesGroup_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout VerticalItemSpacing="5" HorizontalItemSpacing="5" Orientation="Vertical"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame CornerRadius="6" BorderColor="#DADCE0">
+                                <Grid Margin="10" Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source=""/>
+                                    <Label Text="{Binding SeriesGroup}"/>
+                                    <Label Grid.Column="1" Text="{Binding Description}"/>
+                                    <Label Grid.Row="1" Text="{Binding SeriesCount}"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="PRO"/>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </On>
+    </OnPlatform>
+    
+</ContentPage>

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Steema.TeeChart.NET.Xamarin.Forms.Eval" Version="4.2018.9.19" />
+  </ItemGroup>
+
+</Project>

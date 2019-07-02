@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Series Colors -->
+    <Color x:Key="SeriesColor1">#27C1FF</Color>
+    <Color x:Key="SeriesColor2">#DE0000</Color>
+
+</ResourceDictionary>
