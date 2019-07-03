@@ -34,7 +34,10 @@ namespace XamControls.Charts.CircularGauges
             BaseChart.HorizontalOptions = LayoutOptions.FillAndExpand;
             BaseChart.VerticalOptions = LayoutOptions.FillAndExpand;
 
-            InitializeAccelerometer();
+            if (Device.RuntimePlatform != Device.UWP)
+            {
+                InitializeAccelerometer();
+            }
 
             BaseChart.Chart.Series.Add(circularGauge);
 
@@ -108,8 +111,11 @@ namespace XamControls.Charts.CircularGauges
 
         public void RemoveEvent()
         {
-            Accelerometer.ReadingChanged -= Accelerometer_ReadingChanged;
-            Accelerometer.Stop();
+            if (Device.RuntimePlatform != Device.UWP)
+            {
+                Accelerometer.ReadingChanged -= Accelerometer_ReadingChanged;
+                Accelerometer.Stop();
+            }
         }
 
     }

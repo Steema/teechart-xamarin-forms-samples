@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>DEBUG;NETSTANDARD2_0;NETSTANDARD2_0;NETSTANDARD2_0;TEE_STD;</DefineConstants>
+    <DefineConstants>DEBUG;NETSTANDARD2_0;NETSTANDARD2_0;NETSTANDARD2_0;</DefineConstants>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>

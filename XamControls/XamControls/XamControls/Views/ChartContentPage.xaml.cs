@@ -90,8 +90,8 @@ namespace XamControls.Views
 			this.ToolbarItems.Add(InicialitzarAboutChartToolbar());
 			if (valorInicial != 5 && valorInicial != 7 && valorInicial != 8 && valorInicial != 9 && valorInicial != 11 && valorInicial != 12 && valorInicial != 13)
 			{
-
-				this.ToolbarItems.Add(InicialitzarConfigToolBar());
+                if(Device.RuntimePlatform != Device.UWP)
+				    this.ToolbarItems.Add(InicialitzarConfigToolBar());
 
 			}   
 
@@ -270,9 +270,10 @@ namespace XamControls.Views
 
             ToolbarItem toolbar = new ToolbarItem();
 
-            if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.UWP) toolbar.Icon = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
+            if (Device.RuntimePlatform == Device.Android) toolbar.Icon = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
+            else if (Device.RuntimePlatform == Device.UWP) toolbar.Icon = (FileImageSource)ImageSource.FromFile("Assets/ic_lightbulb_outline_white_24dp.png");
             else toolbar.Icon = (FileImageSource)ImageSource.FromFile("mic_lightbulb_outline_white_36dp.png");
-            toolbar.Text = "About Chart";
+            toolbar.Text = "About";
             toolbar.Clicked += AboutChart_Clicked;
 
             return toolbar;

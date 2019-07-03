@@ -58,7 +58,14 @@ namespace XamControls.Views
 
             // HeaderMasterItems
             Image image = new Image();
-            image.Source = ImageSource.FromFile("hamburgTitlePhoto.png");
+            if (Device.RuntimePlatform != Device.UWP)
+            {
+                image.Source = ImageSource.FromFile("hamburgTitlePhoto.png");
+            }
+            else
+            {
+                image.Source = ImageSource.FromFile("Assets/hamburgTitlePhoto.png");
+            }
             image.HeightRequest = 60;
             image.MinimumHeightRequest = 40;
             image.WidthRequest = 300;

@@ -36,7 +36,8 @@ namespace XamControls.ViewModels
             groupResources.Add(new MasterViewMenuItem(Id: 1, Title: "Product", TargetType: null, ImageSource: iconSources[1], BackgroundColor: Color.Transparent));
             groupResources.Add(new MasterViewMenuItem(Id: 2, Title: "GitHub", TargetType: null, ImageSource: iconSources[2], BackgroundColor: Color.Transparent));
             groupResources.Add(new MasterViewMenuItem(Id: 3, Title: "Documentation", TargetType: null, ImageSource: iconSources[3], BackgroundColor: Color.Transparent));
-            groupMore.Add(new MasterViewMenuItem(Id: 4, Title: "Settings", TargetType: typeof(SettingsPage), ImageSource: iconSources[4], BackgroundColor: Color.Transparent));
+            if(Device.RuntimePlatform != Device.UWP)
+                groupMore.Add(new MasterViewMenuItem(Id: 4, Title: "Settings", TargetType: typeof(SettingsPage), ImageSource: iconSources[4], BackgroundColor: Color.Transparent));
             groupMore.Add(new MasterViewMenuItem(Id: 5, Title: "About us", TargetType: typeof(AboutPage), ImageSource: iconSources[5], BackgroundColor: Color.Transparent));
             groupMore.Add(new MasterViewMenuItem(Id: 6, Title: "Send comments", TargetType: typeof(SendCommentsPage), ImageSource: iconSources[6], BackgroundColor: Color.Transparent));
 
@@ -75,6 +76,16 @@ namespace XamControls.ViewModels
 
                 }
 
+            }
+            else
+            {
+                //sources = new string[6] { "Assets/ic_home_black_24dp.png", "Assets/iconSteema_day.png", "Assets/iconGithub.png", "Assets/ic_help_black_36dp.png", "ic_info_black_24dp.png", "ic_chat_bubble_black_36dp.png" };
+                //for (int i = 0; i < sources.Length; i++)
+                //{
+
+                    //iconSources[i] = sources[i];
+
+                //}
             }
 
         }
