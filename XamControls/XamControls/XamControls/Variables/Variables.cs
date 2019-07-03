@@ -16,7 +16,7 @@ namespace XamControls.Variables
 		public string[] GetListViewDescripcion { get; }
 
 		public const int N_ELEMENTS_LVIEW = 14;
-		public int GET_N_ELEMENTS_LVIEW { get { return N_ELEMENTS_LVIEW; } }
+		public int GET_N_ELEMENTS_LVIEW => (Device.RuntimePlatform == Device.UWP) ? 1 : N_ELEMENTS_LVIEW;
 		// Buttons Menu Inferior
 		public string[] GetStandardNomButtonsTypes { get; }
 		public string[] GetStandardNomButtonsFeatures { get; }

@@ -38,8 +38,10 @@ namespace XamControls.Utils
             catch(Exception e) { Log.Warning(e.Source, e.StackTrace); }
             finally
             {
-
-                sReader.Close();
+                if (sReader != null)
+                {
+                    sReader.Close();
+                }
 
             }
 
@@ -166,8 +168,10 @@ namespace XamControls.Utils
             catch (Exception e) { Log.Warning(e.Source, e.StackTrace); }
             finally
             {
-
-                sReader.Close();
+                if (sReader != null)
+                {
+                    sReader.Close();
+                }
 
             }
 

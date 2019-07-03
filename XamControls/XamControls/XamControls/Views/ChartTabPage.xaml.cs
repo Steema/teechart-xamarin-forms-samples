@@ -72,7 +72,7 @@ namespace XamControls.Views
 
 			    toolbar[i] = new ToolbarItem();
 			    if(Device.RuntimePlatform == Device.Android) toolbar[i].Icon = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
-                else toolbar[i].Icon = (FileImageSource)ImageSource.FromFile("mic_lightbulb_outline_white_36dp.png");
+                else if(Device.RuntimePlatform == Device.iOS) toolbar[i].Icon = (FileImageSource)ImageSource.FromFile("mic_lightbulb_outline_white_36dp.png");
                 toolbar[i].Text = "About Chart";
 				toolbar[i].Clicked += AboutChart_Clicked;
 				contentPage[i].ToolbarItems.Add(toolbar[i]);
@@ -198,6 +198,7 @@ namespace XamControls.Views
 			{
 
 				case Device.Android:
+                case Device.UWP:
 					grid[posicion].RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.88, GridUnitType.Star) });
 					grid[posicion].Children.Add(stackLayoutChart[posicion], 0, 0);
 					grid[posicion].RowDefinitions.Add(new RowDefinition { Height = new GridLength(0.12, GridUnitType.Star) });
@@ -334,7 +335,7 @@ namespace XamControls.Views
 				stackLayoutChart[valor] = new StackLayout();
 				stackLayoutChart[valor].Children.Add(vChart[valor].GetChart);
 				btn.TextColor = Color.FromRgb(60, 100, 220);
-				if(Device.RuntimePlatform == Device.Android) grid[valor].Children.Add(stackLayoutChart[valor], 0, 0);
+				if(Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.UWP) grid[valor].Children.Add(stackLayoutChart[valor], 0, 0);
                 else grid[valor].Children.Add(stackLayoutChart[valor], 0, 1);
 
                 this.Title = btn.Text;

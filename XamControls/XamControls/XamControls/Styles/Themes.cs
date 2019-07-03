@@ -435,8 +435,7 @@ namespace XamControls.Styles
                 case "Report":
                     chart.Chart.setTheme(ThemeType.Report);
                     break;
-                default:
-                    throw new Exception("Unexpected Case");
+                
             }
 
             if (chart.Chart.Header.Text != "Zoom and Panning a Chart") {

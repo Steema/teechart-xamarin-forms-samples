@@ -19,15 +19,7 @@ namespace XamControls
 			InitializeComponent();
 
             CreateAppFiles();
-            if(Xamarin.Forms.Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
-            {
-                MainPage = new MasterView();
-            }
-            else if(Device.RuntimePlatform == Device.UWP)
-            {
-                MainPage = new UWPHomePage();
-            }
-			
+            MainPage = new MasterView();
 		}
 
         // Detecta si es la primera vez que accedes a la app (en el caso que sí, crea los archivos básicos)
