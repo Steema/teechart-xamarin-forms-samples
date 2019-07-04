@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Visual="Material"
+             xmlns:teechart="clr-namespace:Steema.TeeChart;assembly=TeeChart.PCL"
+             xmlns:styles="clr-namespace:Steema.TeeChart.Styles;assembly=TeeChart.PCL"
+             x:Class="ChartGestures.MainPage" BackgroundColor="White">
+    <StackLayout Spacing="0">
+        <Label Text="ChartView Gestures Example" HorizontalOptions="CenterAndExpand" FontSize="18" Margin="0,5,0,5"/>
+        <teechart:ChartView x:Name="chartView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                            WidthRequest="300" HeightRequest="300">
+        </teechart:ChartView>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="0,5,0,0" Spacing="0" Margin="0">
+            <StackLayout HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"/>
+            <Label x:Name="lblAction" Text="Waiting action..." FontSize="20" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"
+                   Margin="0,5,0,0"/>
+            <ScrollView HorizontalOptions="Center" Orientation="Horizontal" Margin="10" HorizontalScrollBarVisibility="Always">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button x:Name="btnPanning" Text="Panning" WidthRequest="{OnPlatform UWP=200, Android=100, iOS=100}" 
+                                HeightRequest="{OnPlatform UWP=50, Android=40, iOS=40}" BackgroundColor="White" BorderWidth="1"
+                                BorderColor="Gray" TextColor="Gray" CornerRadius="4"></Button>
+                    <Button x:Name="btnZoom" Text="Zoom" WidthRequest="{OnPlatform Android=100, iOS=100}"
+                                        HeightRequest="{OnPlatform Android=40, iOS=40}" BackgroundColor="White" 
+                                        BorderColor="Gray" TextColor="Gray" CornerRadius="4" BorderWidth="1"></Button>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
