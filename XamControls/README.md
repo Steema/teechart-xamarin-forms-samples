@@ -10,7 +10,7 @@ Example showing Chart types and options when using the TeeChart for Xamarin.Form
 |--|--| 
 | Android |Passing|
 |iOS|Passing|
-|UWP|Failing|
+|UWP|Passing|
 
 #### Android
 
