@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ZoomPanningDemo.MainPage">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label VerticalOptions="Fill" VerticalTextAlignment="Center" FontSize="16">Zoom</Label>
+            <Picker x:Name="pckZoom" SelectedItem="Both" SelectedIndexChanged="ChangeZoomDirection_SelectedIndexChanged" Visual="Material" WidthRequest="120">
+                <Picker.Items>
+                    <x:String>Both</x:String>
+                    <x:String>Horizontal</x:String>
+                    <x:String>Vertical</x:String>
+                    <x:String>None</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label VerticalOptions="Fill" VerticalTextAlignment="Center" FontSize="16">Panning</Label>
+            <Picker x:Name="pckPanning" SelectedItem="Both" SelectedIndexChanged="ChangePanningMode_SelectedIndexChanged" Visual="Material" WidthRequest="120">
+                <Picker.Items>
+                    <x:String>Both</x:String>
+                    <x:String>Horizontal</x:String>
+                    <x:String>Vertical</x:String>
+                    <x:String>None</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
