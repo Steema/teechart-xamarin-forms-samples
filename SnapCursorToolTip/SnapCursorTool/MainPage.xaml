@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:teechart="clr-namespace:Steema.TeeChart;assembly=TeeChart.PCL"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SnapCursorTool.MainPage">
+    <teechart:ChartView x:Name="chartView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+</ContentPage>

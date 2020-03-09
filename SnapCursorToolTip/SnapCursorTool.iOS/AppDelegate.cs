@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace AreaLineWithPointer.iOS
+namespace SnapCursorTool.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
@@ -24,6 +24,7 @@ namespace AreaLineWithPointer.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            Steema.TeeChart.TChart.Init();
 
             return base.FinishedLaunching(app, options);
         }

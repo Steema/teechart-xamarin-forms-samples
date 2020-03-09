@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace AreaLineWithPointer.iOS
+namespace SnapCursorTool.iOS
 {
     public class Application
     {
