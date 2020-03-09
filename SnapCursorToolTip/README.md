@@ -8,7 +8,7 @@ Demo showing how to use TeeChart .NET CSharp with Xamarin.Forms.
 
 This sample combines [TeeChart for .NET CSharp combined with Xamarin.Forms Component library](https://www.steema.com/product/forms) with [Xamarin.Forms](https://www.xamarin.com/forms). 
 
-It shows how to create a Cursor Tool on an Pointer Series to output the value at which the vertical postion of the cursor intersects the Chart, for iOS and Android.
+It shows how to create a Snap Cursor Tool on an Pointer Series to output the value at which the vertical position of the cursor intersects the Chart, for iOS and Android.
 
 |Platform|Build|
 |--|--| 
