@@ -15,7 +15,7 @@ It shows how to create a Pointer on an AreaLine Series to output the value at wh
 |Android|Parcial Passing|
 |iOS|Passing|
 
-> Crash on Android 8.0 or higher
+> Crash on Android 8.0
 
 #### Android
 
