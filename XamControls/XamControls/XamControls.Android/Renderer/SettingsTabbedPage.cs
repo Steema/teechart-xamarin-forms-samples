@@ -24,7 +24,7 @@ namespace XamControls.Droid.Renderer
     {
 
         private TabLayout TabsLayout { get; set; }
-        private ViewPager PagerLayout { get; set; }
+        private AndroidX.ViewPager.Widget.ViewPager PagerLayout { get; set; }
         private TabbedPage CurrentTabbedPage { get; set; }
 
 

@@ -27,7 +27,7 @@ namespace XamControls.Droid
 	{
 
         public static Android.Support.V7.Widget.Toolbar ToolBar { get; set; }
-        public static Android.Support.V4.View.ViewPager ViewPager { get; set; }
+        public static AndroidX.ViewPager.Widget.ViewPager ViewPager { get; set; }
 
         const int ShareImageId = 1000;
 
@@ -38,7 +38,7 @@ namespace XamControls.Droid
 			ToolbarResource = Resource.Layout.Toolbar;
 
             ToolBar = (Android.Support.V7.Widget.Toolbar)FindViewById(Resource.Layout.Toolbar);
-            ViewPager = (Android.Support.V4.View.ViewPager)FindViewById(Resource.Layout.Tabbar);
+            ViewPager = (AndroidX.ViewPager.Widget.ViewPager)FindViewById(Resource.Layout.Tabbar);
 
             base.OnCreate(bundle);
 

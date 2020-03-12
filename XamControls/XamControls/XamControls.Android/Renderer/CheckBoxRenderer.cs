@@ -15,7 +15,7 @@ using Xamarin.Forms.Platform.Android;
 using XamControls.CustomRenders;
 using XamControls.Droid.Renderer;
 
-[assembly: ExportRenderer(typeof(CustomCheckBox), typeof(CheckBoxRenderer))]
+[assembly: ExportRenderer(typeof(CustomCheckBox), typeof(XamControls.Droid.Renderer.CheckBoxRenderer))]
 namespace XamControls.Droid.Renderer
 {
 	public class CheckBoxRenderer : ButtonRenderer
@@ -33,7 +33,7 @@ namespace XamControls.Droid.Renderer
 			if (f == 1)
             {
 
-                var control = new CheckBox(this.Context); control.SetHeight(control.Height + 10);
+                var control = new Android.Widget.CheckBox(this.Context); control.SetHeight(control.Height + 10);
                 (Element as CustomCheckBox).WasCheckedChanged = WasChecked;
                 this.SetNativeControl(control);
 
@@ -50,8 +50,8 @@ namespace XamControls.Droid.Renderer
             if(e.PropertyName == "Checked")
             {
 
-                if((Element as CustomCheckBox).Checked) { (Control as CheckBox).Checked = true; }
-                else { (Control as CheckBox).Checked = false; }
+                if((Element as CustomCheckBox).Checked) { (Control as Android.Widget.CheckBox).Checked = true; }
+                else { (Control as Android.Widget.CheckBox).Checked = false; }
 
             }
 

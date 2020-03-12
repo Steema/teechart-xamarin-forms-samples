@@ -18,7 +18,7 @@ namespace XamControls.Views
 
 	// Página de "Charts" con TabbedPage
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ChartTabPage : TabbedPage
+    public partial class ChartTabPage : Xamarin.Forms.TabbedPage
     {
 		
 	    private ChartViewBase[] vChart;
