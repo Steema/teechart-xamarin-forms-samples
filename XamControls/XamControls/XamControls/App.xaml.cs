@@ -10,7 +10,6 @@ namespace XamControls
 {
 	public partial class App : Application
 	{
-
         public static int ScreenHeight { get; set; }
         public static int ScreenWidth { get; set; }
 
@@ -45,8 +44,5 @@ namespace XamControls
 			// Handle when your app resumes
 
 		}
-
-
-
 	}
 }

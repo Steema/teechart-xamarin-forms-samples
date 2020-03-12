@@ -80,7 +80,7 @@ namespace XamControls.Droid.Renderer
 
         }
 
-        protected override void SetupPageTransition(Android.Support.V4.App.FragmentTransaction transaction, bool isPush)
+        protected override void SetupPageTransition(AndroidX.Fragment.App.FragmentTransaction transaction, bool isPush)
 		{
 			switch (_transitionType)
 			{

@@ -19,7 +19,7 @@ using XamControls.Variables;
 using XamControls.ViewModels.Base;
 using XamControls.Views;
 
-[assembly: ExportRenderer(typeof(LabelSwipe), typeof(SwipeViewRenderer))]
+[assembly: ExportRenderer(typeof(LabelSwipe), typeof(GestureRecognizers.Droid.SwipeViewRenderer))]
 namespace GestureRecognizers.Droid
 {
 
