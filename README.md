@@ -2,7 +2,7 @@
 <img align="right" src="http://www.teechart.net/img/logos/teechart_forms.png">
 </a>
 
-teechart-xamarin-foms-samples
+TeeChart samples for Xamarin.Forms
 =============================
 
 TeeChart for Xamarin.Forms example projects.
