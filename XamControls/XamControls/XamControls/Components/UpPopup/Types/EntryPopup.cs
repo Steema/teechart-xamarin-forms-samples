@@ -13,15 +13,12 @@ namespace XamControls.Components.UpPopup.Types
 {
     public class EntryPopup : PopupModel
     {
-
         private CustomCharts.Services.ChartController _chartService;
         private CustomNavigationPage _navPage;
 
 		public EntryPopup()
 		{
-
             InternalSelectItemsDisplay();
-
 		}
 
         #region PUBLIC FUNCTIONS
@@ -119,39 +116,31 @@ namespace XamControls.Components.UpPopup.Types
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ButtonOK_Clicked(object sender, EventArgs e)
+        private async void ButtonOK_Clicked(object sender, EventArgs e)
         {
-
             if (editTextView.Text.Length >= 5)
             {
-
                 CustomCharts.CustomChart chart = new CustomCharts.CustomChart(editTextView.Text, _navPage);
                 _chartService.Add(chart);
                 editTextView.Text = "Write the name for your chart";
                 editTextView.TextColor = Color.FromRgb(140, 140, 140);
-                PopupNavigation.Instance.RemovePageAsync(this);
-
+                await PopupNavigation.Instance.RemovePageAsync(this);
             }
-            else { DisplayAlertShortNameAsync(); }
-
+            else { await DisplayAlertShortNameAsync(); }
         }
         /// <summary>
         /// Edicion del textView para introducir nombre del chart
         /// </summary>
 		private void EditTextView_Focused(object sender, FocusEventArgs e)
 		{
-
             var editor = sender as Entry;
 
             if (editor.Text == "Write the name for your chart")
             {
-
                 editor.Text = "";
                 editor.TextColor = Color.Black;
-
             }
             else { editor.Focus(); }
-
 		}
 
 		/// <summary>
@@ -160,17 +149,13 @@ namespace XamControls.Components.UpPopup.Types
 		private FloatingActionButtonView onAppearingActionElement;
 		public void SetOnAppearing(FloatingActionButtonView view)
 		{
-
-				onAppearingActionElement = view;
-
+			onAppearingActionElement = view;
 		}
 
 		protected override void OnAppearing()
 		{
-
-				if (onAppearingActionElement != null) onAppearingActionElement.Hide();
-				base.OnAppearing();
-
+			if (onAppearingActionElement != null) onAppearingActionElement.Hide();
+			base.OnAppearing();
 		}
 
 		/// <summary>
@@ -179,18 +164,13 @@ namespace XamControls.Components.UpPopup.Types
 		private FloatingActionButtonView onBackActionElement;
 		public void SetOnBackButtonPressed(FloatingActionButtonView view)
 		{
-
-				onBackActionElement = view;
-
+			onBackActionElement = view;
 		}
 
 		protected override void OnDisappearing()
 		{
-
 			if (onBackActionElement != null) onBackActionElement.Show();
-
 			base.OnDisappearing();
-
 		}
 
         #endregion

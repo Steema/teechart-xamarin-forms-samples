@@ -18,10 +18,8 @@ using XamControls.Droid.Renderer;
 [assembly: ExportRenderer(typeof(CustomSwitchCell), typeof(CustomSwitchCellRenderer))]
 namespace XamControls.Droid.Renderer
 {
-
     public class CustomSwitchCellRenderer : SwitchCellRenderer
     {
-
         protected override Android.Views.View GetCellCore(Cell item, Android.Views.View convertView, ViewGroup parent, Context context)
         {
 

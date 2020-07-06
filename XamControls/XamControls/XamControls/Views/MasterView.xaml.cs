@@ -9,13 +9,13 @@ using XamControls.Services;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using XamControls.CustomRenders;
+using Xamarin.Essentials;
 
 namespace XamControls.Views
 {
-
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MasterView : MasterDetailPage
-	{
+	public partial class MasterView : Xamarin.Forms.MasterDetailPage
+    {
 
 		private HomePage home;
         CustomNavigationPage navigationPage;
@@ -46,7 +46,7 @@ namespace XamControls.Views
                 navigationPage = new CustomNavigationPage(home, TransitionType.Fade)
                 {
                     BarBackgroundColor = Color.FromRgb(33, 150, 244),
-                    Icon = "ic_menu_white_24dp.png",
+                    IconImageSource = "ic_menu_white_24dp.png",
                     BarTextColor = Color.White
                 };
                 On<Xamarin.Forms.PlatformConfiguration.iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Always);
@@ -86,9 +86,9 @@ namespace XamControls.Views
 
 			if (item == null)
 				return;
-			if (item.Id == 1) { Device.OpenUri(new Uri("https://www.steema.com/product/forms")); }
-			else if (item.Id == 2) { Device.OpenUri(new Uri("https://github.com/Steema/teechart-xamarin-forms-samples?files=1")); }
-			else if (item.Id == 3) { Device.OpenUri(new Uri("http://www.teechart.net/docs/TeeChartNETFormsReference.htm ")); }
+			if (item.Id == 1) { Launcher.OpenAsync(new Uri("https://www.steema.com/product/forms")); }
+			else if (item.Id == 2) { Launcher.OpenAsync(new Uri("https://github.com/Steema/teechart-xamarin-forms-samples?files=1")); }
+			else if (item.Id == 3) { Launcher.OpenAsync(new Uri("http://www.teechart.net/docs/TeeChartNETFormsReference.htm ")); }
 			else
 			{
 				if (item.BackgroundColor != Color.FromRgb(238, 238, 238))
@@ -105,7 +105,7 @@ namespace XamControls.Views
                                 Detail = new CustomNavigationPage(home, Services.TransitionType.Fade)
                                 {
                                     BarBackgroundColor = Color.FromRgb(33, 150, 244),
-                                    Icon = icon_name,
+                                    IconImageSource = icon_name,
                                     BarTextColor = Color.White
                                 };
                             }
@@ -119,7 +119,7 @@ namespace XamControls.Views
                                 Detail = new CustomNavigationPage(page, Services.TransitionType.Fade)
                                 {
                                     BarBackgroundColor = Color.FromRgb(33, 150, 244),
-                                    Icon = icon_name,
+                                    IconImageSource = icon_name,
                                     BarTextColor = Color.White
                                 };
                             }

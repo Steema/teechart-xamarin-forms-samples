@@ -13,14 +13,13 @@ namespace XamControls.Views
 {
     public class HomePage : XamControls.CustomRenders.CustomSearchPage
     {
-
         HomeViewModel vm;
         private Xamarin.Forms.ListView lView = new Xamarin.Forms.ListView(ListViewCachingStrategy.RecycleElementAndDataTemplate);
         private List<ItemsListView> ListItems;
         private MasterView master;
         private StackLayout stackPrincipal;
         private StackLayout stackLayoutGrid;
-        private SearchBar searchBar;
+        private Xamarin.Forms.SearchBar searchBar;
         bool uiInitialized;
 
         // Constructor de la "View"
@@ -35,21 +34,18 @@ namespace XamControls.Views
             // Título de la aplicación
             this.Title = "TeeChart DEMO";
             this.BackgroundColor = Color.FromRgb(240, 240, 240);
-            if (Device.RuntimePlatform == Device.Android) this.Icon = new FileImageSource { File = "home_black_36dp.png" };
-            else this.Icon = new FileImageSource { File = "mic_home_black_36dp.png" };
+            if (Device.RuntimePlatform == Device.Android) this.IconImageSource = new FileImageSource { File = "home_black_36dp.png" };
+            else this.IconImageSource = new FileImageSource { File = "mic_home_black_36dp.png" };
 
             // Características de la "App" según el dispositivo
             switch (Device.RuntimePlatform)
             {
-
                 case Device.Android:
-
                     lView.Margin = new Thickness(5, 0, 5, 0);
                     break;
 
                 case Device.iOS:
-
-                    searchBar = new SearchBar();
+                    searchBar = new Xamarin.Forms.SearchBar();
                     searchBar.BackgroundColor = Color.White;
                     searchBar.TextChanged += sBar_TextChanged;
                     On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
@@ -95,7 +91,6 @@ namespace XamControls.Views
         // Buscador que funciona cada vez que modificamos el texto
         private void sBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-
             if (string.IsNullOrEmpty(e.NewTextValue))
             {
                 lView.ItemsSource = ListItems;
@@ -105,7 +100,6 @@ namespace XamControls.Views
             {
                 lView.ItemsSource = ListItems.Where(x => x.Nom.ToUpper().Contains(e.NewTextValue.ToUpper()));
             }
-
         }
 
         public HomeViewModel ViewModel
@@ -124,7 +118,7 @@ namespace XamControls.Views
             ToolbarItem searchItem = new ToolbarItem();
 
             searchItem.Text = "Search";
-            searchItem.Icon = "ic_search_white_18pt_2x.png";
+            searchItem.IconImageSource = "ic_search_white_18pt_2x.png";
             searchItem.Clicked += SearchItem_Clicked;
 
             ToolbarItems.Add(searchItem);

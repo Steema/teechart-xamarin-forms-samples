@@ -69,7 +69,7 @@ namespace XamControls.ViewModels
 
             // Button "volverAtrasSearch"
             volverAtrasSearch = new Button();
-            volverAtrasSearch.Image = "ic_arrow_back_black_24dp.png";
+            volverAtrasSearch.ImageSource = "ic_arrow_back_black_24dp.png";
             volverAtrasSearch.Clicked += AtrasSearch_Clicked;
             volverAtrasSearch.BackgroundColor = Color.Transparent;
             volverAtrasSearch.VerticalOptions = LayoutOptions.Center;
@@ -145,7 +145,7 @@ namespace XamControls.ViewModels
 
             btnMasterMenu = new Button();
             btnMasterMenu.IsVisible = true;
-            btnMasterMenu.Image = "ic_menu_white_24dp.png";
+            btnMasterMenu.ImageSource = "ic_menu_white_24dp.png";
             btnMasterMenu.BackgroundColor = Color.Transparent;
             btnMasterMenu.BorderColor = Color.Transparent;
             btnMasterMenu.HorizontalOptions = LayoutOptions.Center;
@@ -185,10 +185,9 @@ namespace XamControls.ViewModels
 
         private void AñadirSearchButton()
         {
-
             btnSearch = new Button();
             btnSearch.IsVisible = true;
-            btnSearch.Image = "search.png";
+            btnSearch.ImageSource = "search.png";
             btnSearch.BackgroundColor = Color.Transparent;
             btnSearch.BorderColor = Color.Transparent;
             btnSearch.HorizontalOptions = LayoutOptions.Center;
@@ -201,12 +200,10 @@ namespace XamControls.ViewModels
             btnSearch.Pressed += btnSearch_Pressed;
             btnSearch.Released += btnSearch_Released;
             gridMenu.Children.Add(btnSearch, 2, 0);
-
         }
 
         private async void btnSearch_Clicked(object sender, EventArgs e)
         {
-
             sBar.IsVisible = true;
             labelTitle.IsVisible = false;
             btnSearch.IsVisible = false;
@@ -223,27 +220,21 @@ namespace XamControls.ViewModels
             //await frame.FadeTo(90, 250, Easing.BounceIn);
             await Task.WhenAll(
                 frame.ColorTo(Color.FromRgb(33, 150, 243), Color.White, c => frame.BackgroundColor = c, 130));
-
         }
 
         private void btnSearch_Released(object sender, EventArgs e)
         {
-
             btnSearch.BackgroundColor = Color.Transparent;
-
         }
 
         private void btnSearch_Pressed(object sender, EventArgs e)
         {
-
             btnSearch.BackgroundColor = Color.FromRgb(57, 162, 245);
-
         }
 
         // Buscador que funciona cada vez que modificamos el texto
         private void sBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-
             if (string.IsNullOrEmpty(e.NewTextValue))
             {
                 lView.ItemsSource = ListItems;
@@ -257,5 +248,5 @@ namespace XamControls.ViewModels
 
         public MasterView SetMasterView { set { master = value; } }
 
-		}
+    }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using XamControls.ViewModels.Base;
 
@@ -12,11 +12,11 @@ namespace XamControls.ViewModels
         {
             Title = "About";
 
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://www.steema.com")));
-						FacebookCommand = new Command(() => Device.OpenUri(new Uri("https://www.facebook.com/SteemaSoftware")));
-						TwitterCommand = new Command(() => Device.OpenUri(new Uri("https://twitter.com/SteemaSoftware")));
-						GoogPlusCommand = new Command(() => Device.OpenUri(new Uri("https://plus.google.com/+Steema")));
-						LinkCommand = new Command(() => Device.OpenUri(new Uri("https://www.linkedin.com/company/steema-software")));
+            OpenWebCommand = new Command(() => Launcher.OpenAsync(new Uri("https://www.steema.com")));
+						FacebookCommand = new Command(() => Launcher.OpenAsync(new Uri("https://www.facebook.com/SteemaSoftware")));
+						TwitterCommand = new Command(() => Launcher.OpenAsync(new Uri("https://twitter.com/SteemaSoftware")));
+						GoogPlusCommand = new Command(() => Launcher.OpenAsync(new Uri("https://plus.google.com/+Steema")));
+						LinkCommand = new Command(() => Launcher.OpenAsync(new Uri("https://www.linkedin.com/company/steema-software")));
 
 		}
 

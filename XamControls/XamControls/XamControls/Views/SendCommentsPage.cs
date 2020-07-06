@@ -22,7 +22,6 @@ namespace XamControls.Views
 
         public SendCommentsPage()
         {
-
             this.Title = "Give us your opinion";
 
             scrollView.Content = layout;
@@ -78,105 +77,79 @@ namespace XamControls.Views
             sendButton.Clicked += SendButton_Clicked;
                 
             this.Content = scrollView;
-
         }
 
         private void SubjectEntry_Unfocused(object sender, FocusEventArgs e)
         {
-
             if (subjectEntry.Text == "") { subjectEntry.Text = "Write your title"; subjectEntry.TextColor = Color.FromRgb(140, 140, 140); }
-
         }
 
         private void SubjectEntry_Focused(object sender, FocusEventArgs e)
         {
-
             if (subjectEntry.Text == "Write your title") { subjectEntry.Text = ""; subjectEntry.TextColor = Color.Black; }
-
         }
 
         private void CommentEntry_Unfocused(object sender, FocusEventArgs e)
         {
-
             if (commentEntry.Text == "") { commentEntry.Text = "Write your review"; commentEntry.TextColor = Color.FromRgb(140, 140, 140); }
-
         }
 
         private void CommentEntry_Focused(object sender, FocusEventArgs e)
         {
-
             if (commentEntry.Text == "Write your review") { commentEntry.Text = ""; commentEntry.TextColor = Color.Black; }
-
         }
 
-        private void SendButton_Clicked(object sender, EventArgs e)
+        private async void SendButton_Clicked(object sender, EventArgs e)
         {
-            
-            if(ValidReview()) { SendReview(); }
+            if (ValidReview()) { await SendReview(); }
             else { ShowError(); }
-
         }
 
         // Mira si la review es válida
         private bool ValidReview()
         {
-
             bool isValid = false;
 
             if(subjectEntry.Text != null && commentEntry.Text != null && subjectEntry.Text.Length > 2 && commentEntry.Text.Length > 10 && subjectEntry.Text != "Write your title" && commentEntry.Text != "Write your review") { isValid = true; }
             else { isValid = false; }
 
             return isValid;
-
         }
 
         // Si la review no cumple los requisitos
         private void ShowError()
         {
-
             string message = "";
 
             if (subjectEntry.Text == null || commentEntry.Text == null || subjectEntry.Text == "Write your title" || commentEntry.Text == "Write your review")
             {
-
                 message += "Fill all fields";
-
             }
             else
             {
                 if (subjectEntry.Text.Length <= 2) { message += "The from text entry is more small than 3. "; }
                 if (commentEntry.Text.Length <= 10) { message += "Your review is more small than 11. "; }
-
             }
 
             DisplayAlert("Short Review", message, "OK");
-
         }
 
         public async Task SendReview()
         {
-
-            EmailMessage message = new EmailMessage();
-
             try
             {
-
+                EmailMessage message = new EmailMessage();
                 message.Subject = subjectEntry.Text;
                 message.Body = commentEntry.Text;
                 message.To = new List<string> { "info@steema.com" };
                 await Email.ComposeAsync(message);
-
             }
-            catch(FeatureNotSupportedException fnsException)
+            catch(FeatureNotSupportedException)
             {
-
                 await DisplayAlert("Not supported", "Email is not supported on this device", "OK");
-
             }
-            catch(Exception exception)
+            catch(Exception)
             {
-
-
                 await DisplayAlert("Error", "Unknown error", "OK");
             }
 

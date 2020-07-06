@@ -8,7 +8,6 @@ using System.Drawing;
 using XamControls.Styles;
 using Xamarin.Forms;
 using System.Linq;
-using XamControls.Services.Timer;
 using System.Data;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
@@ -22,14 +21,11 @@ namespace XamControls.Charts.Standard
 		private FastLine fastLine2;
 		private Variables.Variables var;
 		private ChartView BaseChart;
-		private BaseTimer Timer;
 		private int tmprandom;
-		private int numRepeat;
 		private int pointsCreate;
 
 		public FLineRealTimeChartFeatures(ChartView BaseChart)
 		{
-
 			fastLine1 = new FastLine();
 			fastLine2 = new FastLine();
 			var = new Variables.Variables();
@@ -65,13 +61,10 @@ namespace XamControls.Charts.Standard
 			int tmprandom;
 			for (int t = 1; t < 1000; t++)
 			{
-
 				tmprandom = r.Next(Math.Abs(500 - t)) - (Math.Abs(500 - t) / 2);
 				fastLine1.Add(1000 - t + tmprandom);
 				fastLine2.Add(t + tmprandom);
-
 			}
-
 
 			BaseChart.Chart.Axes.Left.SetMinMax(BaseChart.Chart.Axes.Left.MinYValue - 100, BaseChart.Chart.Axes.Left.MaxYValue + 100);
 			BaseChart.Chart.Axes.Bottom.SetMinMax(0, BaseChart.Chart.Axes.Bottom.MaxXValue + 3);
@@ -179,9 +172,7 @@ namespace XamControls.Charts.Standard
 
 		public void RemoveEvent()
 		{
-
 			BaseChart.Chart.AfterDraw -= Chart_AfterDraw;
-
 		}
 
 	}

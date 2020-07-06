@@ -31,7 +31,7 @@ namespace XamControls.Views
 
             ToolbarItem optionsItem = new ToolbarItem();
 
-            optionsItem.Icon = "ic_build_white_24dp.png";
+            optionsItem.IconImageSource = "ic_build_white_24dp.png";
             optionsItem.Text = "Settings";
             optionsItem.Clicked += OptionsItem_Clicked;
 

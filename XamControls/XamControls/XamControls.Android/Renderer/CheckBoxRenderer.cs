@@ -38,7 +38,7 @@ namespace XamControls.Droid.Renderer
                 this.SetNativeControl(control);
 
             }
-			else { var control = new RadioButton(this.Context); this.SetNativeControl(control); }
+			else { var control = new Android.Widget.RadioButton(this.Context); this.SetNativeControl(control); }
 
 			base.OnElementChanged(e);
 

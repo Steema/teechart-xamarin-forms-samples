@@ -63,7 +63,7 @@ namespace XamControls.Charts.Functions.Pro.Financial
 				{
 
 						compressionToolBarItem = new ToolbarItem();
-						compressionToolBarItem.Icon = (FileImageSource)ImageSource.FromFile("ic_extension_white_24dp.png");
+						compressionToolBarItem.IconImageSource = (FileImageSource)ImageSource.FromFile("ic_extension_white_24dp.png");
 						compressionToolBarItem.Text = "Compression";
 						compressionToolBarItem.Clicked += Compression_ChangeProperty;
 

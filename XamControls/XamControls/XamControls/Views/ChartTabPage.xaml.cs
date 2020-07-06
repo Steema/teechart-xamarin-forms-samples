@@ -70,9 +70,9 @@ namespace XamControls.Views
 		    for (int i = 0; i < toolbar.Length; i++)
 		    {
 			    toolbar[i] = new ToolbarItem();
-			    if(Device.RuntimePlatform == Device.Android) toolbar[i].Icon = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
-                else if(Device.RuntimePlatform == Device.UWP) toolbar[i].Icon = (FileImageSource)ImageSource.FromFile("Assets/ic_lightbulb_outline_white_24dp.png");
-                else if(Device.RuntimePlatform == Device.iOS) toolbar[i].Icon = (FileImageSource)ImageSource.FromFile("mic_lightbulb_outline_white_36dp.png");
+			    if(Device.RuntimePlatform == Device.Android) toolbar[i].IconImageSource = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
+                else if(Device.RuntimePlatform == Device.UWP) toolbar[i].IconImageSource = (FileImageSource)ImageSource.FromFile("Assets/ic_lightbulb_outline_white_24dp.png");
+                else if(Device.RuntimePlatform == Device.iOS) toolbar[i].IconImageSource = (FileImageSource)ImageSource.FromFile("mic_lightbulb_outline_white_36dp.png");
                 toolbar[i].Text = "About";
 				toolbar[i].Clicked += AboutChart_Clicked;
 				contentPage[i].ToolbarItems.Add(toolbar[i]);
@@ -84,7 +84,7 @@ namespace XamControls.Views
                 for (int i = 0; i < toolbar.Length; i++)
                 {
                     toolbar[i] = new ToolbarItem();
-                    toolbar[i].Icon = (FileImageSource)ImageSource.FromFile("ic_build_white_24dp.png");
+                    toolbar[i].IconImageSource = (FileImageSource)ImageSource.FromFile("ic_build_white_24dp.png");
                     toolbar[i].Text = "Settings";
                     toolbar[i].Clicked += Settings_ClickedAsync;
                     contentPage[i].ToolbarItems.Add(toolbar[i]);
@@ -161,12 +161,12 @@ namespace XamControls.Views
             if (Device.RuntimePlatform == Device.iOS)
             {
 
-                contentPage[0].Icon = "ic_radio_button_checked_white_24dp.png";
+                contentPage[0].IconImageSource = "ic_radio_button_checked_white_24dp.png";
 
                 for (int i = 1; i < contentPage.Length; i++)
                 {
 
-                    contentPage[i].Icon = "ic_radio_button_unchecked_white_24dp.png";
+                    contentPage[i].IconImageSource = "ic_radio_button_unchecked_white_24dp.png";
 
                 }
 
@@ -824,8 +824,8 @@ namespace XamControls.Views
                 for (int i = 0; i < contentPage.Length; i++)
                 {
 
-                    if(CurrentPage != contentPage[i]) contentPage[i].Icon = "ic_radio_button_unchecked_white_24dp.png";
-                    else { contentPage[i].Icon = "ic_radio_button_checked_white_24dp.png"; }
+                    if(CurrentPage != contentPage[i]) contentPage[i].IconImageSource = "ic_radio_button_unchecked_white_24dp.png";
+                    else { contentPage[i].IconImageSource = "ic_radio_button_checked_white_24dp.png"; }
 
                 }
 

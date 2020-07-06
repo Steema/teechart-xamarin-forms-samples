@@ -55,7 +55,7 @@ namespace XamControls.Charts.Maps
 					var page = (((BaseChart.Parent as StackLayout).Parent as Grid).Parent as ContentPage);
 
 					itemChangePage = new ToolbarItem();
-					itemChangePage.Icon = new FileImageSource() { File = "ic_map_white_24dp.png" };
+					itemChangePage.IconImageSource = new FileImageSource() { File = "ic_map_white_24dp.png" };
 					itemChangePage.Text = "Change Map";
 					itemChangePage.Clicked += ItemChangePage_Clicked;
 					AddItemsInPickerChangeMap();

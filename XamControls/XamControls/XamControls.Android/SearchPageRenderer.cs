@@ -20,7 +20,6 @@ namespace XamControls.Droid
 {
     public class SearchPageRenderer : PageRenderer
     {
-
         private readonly Context _localContext;
         public Android.Support.V7.Widget.Toolbar _toolBar;
 
@@ -199,14 +198,12 @@ namespace XamControls.Droid
     /// </summary>
     public class OnSearchClickListener : FormsAppCompatActivity, Android.Views.View.IOnClickListener
     {
-
         private SearchPageRenderer _searchPageRenderer;
 
         public OnSearchClickListener(SearchPageRenderer searchPageRenderer) { _searchPageRenderer = searchPageRenderer; }
 
         public void OnClick(Android.Views.View v)
         {
-
             var view1 = (Android.Support.V7.Widget.ActionMenuView)_searchPageRenderer._toolBar.GetChildAt(0);
             var view1_1 = view1.GetChildAt(0);
 
@@ -218,7 +215,6 @@ namespace XamControls.Droid
             var backButton =  (Android.Support.V7.Widget.AppCompatImageButton)_searchPageRenderer._toolBar.GetChildAt(1);
             backButton.SetImageResource(Resource.Drawable.ic_arrow_back_black_24dp);
             backButton.SetOnClickListener(new OnCloseClickListener(_searchPageRenderer));
-
         }
 
     }
@@ -228,23 +224,19 @@ namespace XamControls.Droid
     /// </summary>
     public class OnCloseClickListener : FormsAppCompatActivity, Android.Views.View.IOnClickListener
     {
-
         private SearchPageRenderer _searchPageRenderer;
 
-        public OnCloseClickListener(SearchPageRenderer searchPageRenderer) {
-
+        public OnCloseClickListener(SearchPageRenderer searchPageRenderer) 
+        {
             _searchPageRenderer = searchPageRenderer;
-
         }
 
         public void OnClick(Android.Views.View v)
         {
-
             // Blue color to Toolbar
             _searchPageRenderer._toolBar.SetBackgroundColor(Android.Graphics.Color.Rgb(33, 150, 243));
 
             var search = ((_searchPageRenderer.actionMenuView?.FindViewById<Android.Support.V7.View.Menu.ActionMenuItemView>(Resource.Id.action_search))?.ItemData as Android.Support.V7.View.Menu.MenuItemImpl)?.CollapseActionView();
-
         }
 
     }

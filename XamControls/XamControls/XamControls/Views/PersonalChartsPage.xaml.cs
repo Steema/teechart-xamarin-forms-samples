@@ -37,7 +37,7 @@ namespace XamControls.Views
 			navBar = new NavigationBarViewModel(lView, new List<Models.ItemsListView>(), master);
 			floatingButton = InitializeFloatingButton();
 
-			this.Icon = new FileImageSource { File = "ic_pie_chart_black_24dp.png" };
+			this.IconImageSource = new FileImageSource { File = "ic_pie_chart_black_24dp.png" };
 			this.Title = "My Charts";
 			this.Content = absolutelayout;
 
@@ -95,14 +95,6 @@ namespace XamControls.Views
 			floatingButton.ColorNormal = Color.FromRgb(33, 150, 243);
 			floatingButton.ColorPressed = floatingButton.ColorNormal.AddLuminosity(0.1);
 			floatingButton.ColorRipple = floatingButton.ColorNormal.AddLuminosity(0.2);
-			floatingButton.Clicked = async (sender, args) =>
-			{
-				//var animate = await this.DisplayAlert("Fab", "Hide and show the Fab?", "Sure", "Not now");
-				//if (!animate) return;
-
-				//entryPopup.Display(collectionCustomChart);
-
-			};
 			floatingButton.ImageName = "ic_add.png";
 			AbsoluteLayout.SetLayoutFlags(floatingButton, AbsoluteLayoutFlags.PositionProportional);
 			AbsoluteLayout.SetLayoutBounds(floatingButton, new Rectangle(1f, 1f, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));

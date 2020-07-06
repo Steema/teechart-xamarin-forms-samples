@@ -425,7 +425,7 @@ namespace XamControls.ViewModels.Base
 
                     case "Compass":
                         try { compassChart = new CompassChart(BaseChart); }
-                        catch(Exception e) {  }
+                        catch(Exception) {  }
                         break;
 #if !TEE_STD
                     case "Map GIS":

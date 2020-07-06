@@ -27,7 +27,7 @@ namespace XamControls.Charts.Calendar
 			calendar = new Steema.TeeChart.Styles.Calendar();
 			swipeGesture = new SwipeGesture(label);
 			labelHeader = (label as LabelSwipe);
-			labelHeader.GetChart = BaseChart.Chart;
+			labelHeader.Chart = BaseChart.Chart;
             this.BaseChart = BaseChart;
     
 			labelHeader.Text = MyConvert.NumericMonthToString(calendar.Date.Month) + ", " + calendar.Date.Year.ToString();

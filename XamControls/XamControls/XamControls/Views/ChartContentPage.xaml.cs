@@ -51,7 +51,7 @@ namespace XamControls.Views
 
             ToolbarItem toolbar = new ToolbarItem();
 
-            toolbar.Icon = (FileImageSource)ImageSource.FromFile("ic_build_white_24dp.png");
+            toolbar.IconImageSource = (FileImageSource)ImageSource.FromFile("ic_build_white_24dp.png");
             toolbar.Text = "Settings";
             toolbar.Clicked += Settings_ClickedAsync;
 
@@ -270,9 +270,9 @@ namespace XamControls.Views
 
             ToolbarItem toolbar = new ToolbarItem();
 
-            if (Device.RuntimePlatform == Device.Android) toolbar.Icon = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
-            else if (Device.RuntimePlatform == Device.UWP) toolbar.Icon = (FileImageSource)ImageSource.FromFile("Assets/ic_lightbulb_outline_white_24dp.png");
-            else toolbar.Icon = (FileImageSource)ImageSource.FromFile("mic_lightbulb_outline_white_36dp.png");
+            if (Device.RuntimePlatform == Device.Android) toolbar.IconImageSource = (FileImageSource)ImageSource.FromFile("ic_lightbulb_outline_white_24dp.png");
+            else if (Device.RuntimePlatform == Device.UWP) toolbar.IconImageSource = (FileImageSource)ImageSource.FromFile("Assets/ic_lightbulb_outline_white_24dp.png");
+            else toolbar.IconImageSource = (FileImageSource)ImageSource.FromFile("mic_lightbulb_outline_white_36dp.png");
             toolbar.Text = "About";
             toolbar.Clicked += AboutChart_Clicked;
 

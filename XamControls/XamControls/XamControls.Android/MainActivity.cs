@@ -25,7 +25,6 @@ namespace XamControls.Droid
 	[Activity(Label = "XamControls", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
-
         public static Android.Support.V7.Widget.Toolbar ToolBar { get; set; }
         public static AndroidX.ViewPager.Widget.ViewPager ViewPager { get; set; }
 

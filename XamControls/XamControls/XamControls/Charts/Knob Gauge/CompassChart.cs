@@ -31,7 +31,7 @@ namespace XamControls.Charts.Knob_Gauge
                 Compass.Start(SensorSpeed.UI);
                 Compass.ReadingChanged += Compass_ReadingChanged;
             }
-            catch(Exception e) { }
+            catch (Exception) { }
 
 			BaseChart.Chart.Panning.Active = true;
 			BaseChart.Chart.Panning.Allow = ScrollModes.Both;

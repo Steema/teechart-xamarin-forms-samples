@@ -67,12 +67,12 @@ namespace GestureRecognizers.Droid
 							var startX = _listener.StartX;
 							var lastX = _listener.LastX;
 
-							if (lastX - startX < 200) { ((label.Element as LabelSwipe).GetChart.Series[0] as Calendar).NextMonth(); }
-							else { ((label.Element as LabelSwipe).GetChart.Series[0] as Calendar).PreviousMonth(); }
+							if (lastX - startX < 200) { ((label.Element as LabelSwipe).Chart.Series[0] as Calendar).NextMonth(); }
+							else { ((label.Element as LabelSwipe).Chart.Series[0] as Calendar).PreviousMonth(); }
 
-							if ((label.Element as LabelSwipe).GetChart.Header.Text == "BasicCalendar") { label.Element.Text = MyConvert.NumericMonthToString(((label.Element as LabelSwipe).GetChart.Series[0] as Calendar).Date.Month) + ", " + ((label.Element as LabelSwipe).GetChart.Series[0] as Calendar).Date.Year.ToString(); }
-							else if ((label.Element as LabelSwipe).GetChart.Header.Text == "SpecialCalendar" || (label.Element as LabelSwipe).GetChart.Header.Text == "EventCalendar")
-							{ label.Element.Text = ((label.Element as LabelSwipe).GetChart.Series[0] as Calendar).Date.ToShortDateString(); }
+							if ((label.Element as LabelSwipe).Chart.Header.Text == "BasicCalendar") { label.Element.Text = MyConvert.NumericMonthToString(((label.Element as LabelSwipe).Chart.Series[0] as Calendar).Date.Month) + ", " + ((label.Element as LabelSwipe).Chart.Series[0] as Calendar).Date.Year.ToString(); }
+							else if ((label.Element as LabelSwipe).Chart.Header.Text == "SpecialCalendar" || (label.Element as LabelSwipe).Chart.Header.Text == "EventCalendar")
+							{ label.Element.Text = ((label.Element as LabelSwipe).Chart.Series[0] as Calendar).Date.ToShortDateString(); }
 
 
 						}

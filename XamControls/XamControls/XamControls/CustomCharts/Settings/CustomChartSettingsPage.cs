@@ -246,7 +246,7 @@ namespace XamControls.CustomCharts.Settings
 
             imageChart.HorizontalOptions = LayoutOptions.Fill;
             imageChart.VerticalOptions = LayoutOptions.Fill;
-            imageChart.Image = "bar.png";
+            imageChart.ImageSource = "bar.png";
             imageChart.Clicked += ImageChart_Clicked;
             imageChart.CornerRadius = 0;
             imageChart.BorderWidth = 0;
@@ -331,7 +331,7 @@ namespace XamControls.CustomCharts.Settings
                     area.FillSampleValues(3);
                     _customChart.ChartView.Chart.Series.Add(area);
                     _customChart.ImageSource = dataPicker[0];
-                    imageButton.Image = dataPicker[0];
+                    imageButton.ImageSource = dataPicker[0];
 
                     break;
                     #if !TEE_STD
@@ -340,7 +340,7 @@ namespace XamControls.CustomCharts.Settings
                     arrow.FillSampleValues(10);
                     _customChart.ChartView.Chart.Series.Add(arrow);
                     _customChart.ImageSource = dataPicker[1];
-                    imageButton.Image = dataPicker[1];
+                    imageButton.ImageSource = dataPicker[1];
                     break;
 #endif
 
@@ -349,7 +349,7 @@ namespace XamControls.CustomCharts.Settings
                     bar.FillSampleValues(4);
                     _customChart.ChartView.Chart.Series.Add(bar);
                     _customChart.ImageSource = dataPicker[2];
-                    imageButton.Image = dataPicker[2];
+                    imageButton.ImageSource = dataPicker[2];
                     break;
                     #if !TEE_STD
                 case "BARJOIN":
@@ -357,7 +357,7 @@ namespace XamControls.CustomCharts.Settings
                     barjoin.FillSampleValues(5);
                     _customChart.ChartView.Chart.Series.Add(barjoin);
                     _customChart.ImageSource = dataPicker[3];
-                    imageButton.Image = dataPicker[3];
+                    imageButton.ImageSource = dataPicker[3];
                     break;
 
                 case "BEZIER":
@@ -365,7 +365,7 @@ namespace XamControls.CustomCharts.Settings
                     bezier.FillSampleValues(5);
                     _customChart.ChartView.Chart.Series.Add(bezier);
                     _customChart.ImageSource = dataPicker[4];
-                    imageButton.Image = dataPicker[4];
+                    imageButton.ImageSource = dataPicker[4];
                     break;
 
                 case "BOX":
@@ -373,7 +373,7 @@ namespace XamControls.CustomCharts.Settings
                     box.FillSampleValues(3);
                     _customChart.ChartView.Chart.Series.Add(box);
                     _customChart.ImageSource = dataPicker[5];
-                    imageButton.Image = dataPicker[5];
+                    imageButton.ImageSource = dataPicker[5];
                     break;
 #endif
                 case "BUBBLES":
@@ -381,7 +381,7 @@ namespace XamControls.CustomCharts.Settings
                     bubble.FillSampleValues(7);
                     _customChart.ChartView.Chart.Series.Add(bubble);
                     _customChart.ImageSource = dataPicker[6];
-                    imageButton.Image = dataPicker[6];
+                    imageButton.ImageSource = dataPicker[6];
                     break;
                     #if !TEE_STD
                 case "CANDLE":
@@ -389,7 +389,7 @@ namespace XamControls.CustomCharts.Settings
                     candle.FillSampleValues(5);
                     _customChart.ChartView.Chart.Series.Add(candle);
                     _customChart.ImageSource = dataPicker[7];
-                    imageButton.Image = dataPicker[7];
+                    imageButton.ImageSource = dataPicker[7];
                     break;
 
                 case "CONTOUR":
@@ -397,7 +397,7 @@ namespace XamControls.CustomCharts.Settings
                     countour.FillSampleValues(1);
                     _customChart.ChartView.Chart.Series.Add(countour);
                     _customChart.ImageSource = dataPicker[8];
-                    imageButton.Image = dataPicker[8];
+                    imageButton.ImageSource = dataPicker[8];
                     break;
 
                 case "DARVAS":
@@ -405,7 +405,7 @@ namespace XamControls.CustomCharts.Settings
                     darvas.FillSampleValues(3);
                     _customChart.ChartView.Chart.Series.Add(darvas);
                     _customChart.ImageSource = dataPicker[9];
-                    imageButton.Image = dataPicker[9];
+                    imageButton.ImageSource = dataPicker[9];
                     break;
 #endif
                 case "DONUT":
@@ -413,7 +413,7 @@ namespace XamControls.CustomCharts.Settings
                     donut.FillSampleValues(1);
                     _customChart.ChartView.Chart.Series.Add(donut);
                     _customChart.ImageSource = dataPicker[10];
-                    imageButton.Image = dataPicker[10];
+                    imageButton.ImageSource = dataPicker[10];
                     break;
                     #if !TEE_STD
                 case "ERROR":
@@ -421,7 +421,7 @@ namespace XamControls.CustomCharts.Settings
                     error.FillSampleValues(5);
                     _customChart.ChartView.Chart.Series.Add(error);
                     _customChart.ImageSource = dataPicker[11];
-                    imageButton.Image = dataPicker[11];
+                    imageButton.ImageSource = dataPicker[11];
                     break;
 
                 case "ERRORBAR":
@@ -429,7 +429,7 @@ namespace XamControls.CustomCharts.Settings
                     errorbar.FillSampleValues(5);
                     _customChart.ChartView.Chart.Series.Add(errorbar);
                     _customChart.ImageSource = dataPicker[12];
-                    imageButton.Image = dataPicker[12];
+                    imageButton.ImageSource = dataPicker[12];
                     break;
 
                 case "ERRORPOINT":
@@ -437,7 +437,7 @@ namespace XamControls.CustomCharts.Settings
                     errorPoint.FillSampleValues(7);
                     _customChart.ChartView.Chart.Series.Add(errorPoint);
                     _customChart.ImageSource = dataPicker[13];
-                    imageButton.Image = dataPicker[13];
+                    imageButton.ImageSource = dataPicker[13];
                     break;
 #endif
                 case "FASTLINE":
@@ -445,7 +445,7 @@ namespace XamControls.CustomCharts.Settings
                     fastLine.FillSampleValues(2);
                     _customChart.ChartView.Chart.Series.Add(fastLine);
                     _customChart.ImageSource = dataPicker[14];
-                    imageButton.Image = dataPicker[14];
+                    imageButton.ImageSource = dataPicker[14];
                     break;
                     #if !TEE_STD
                 case "HIGHLOW":
@@ -453,7 +453,7 @@ namespace XamControls.CustomCharts.Settings
                     highLow.FillSampleValues(4);
                     _customChart.ChartView.Chart.Series.Add(highLow);
                     _customChart.ImageSource = dataPicker[15];
-                    imageButton.Image = dataPicker[15];
+                    imageButton.ImageSource = dataPicker[15];
                     break;
 
                 case "HISTOGRAM":
@@ -461,7 +461,7 @@ namespace XamControls.CustomCharts.Settings
                     histogram.FillSampleValues(6);
                     _customChart.ChartView.Chart.Series.Add(histogram);
                     _customChart.ImageSource = dataPicker[16];
-                    imageButton.Image = dataPicker[16];
+                    imageButton.ImageSource = dataPicker[16];
                     break;
 #endif
                 case "HORIZAREA":
@@ -469,7 +469,7 @@ namespace XamControls.CustomCharts.Settings
                     horizArea.FillSampleValues(6);
                     _customChart.ChartView.Chart.Series.Add(horizArea);
                     _customChart.ImageSource = dataPicker[17];
-                    imageButton.Image = dataPicker[17];
+                    imageButton.ImageSource = dataPicker[17];
                     break;
 
                 case "HORIZBAR":
@@ -477,7 +477,7 @@ namespace XamControls.CustomCharts.Settings
                     horizBar.FillSampleValues(6);
                     _customChart.ChartView.Chart.Series.Add(horizBar);
                     _customChart.ImageSource = dataPicker[18];
-                    imageButton.Image = dataPicker[18];
+                    imageButton.ImageSource = dataPicker[18];
                     break;
 
                 case "HORIZLINE":
@@ -485,7 +485,7 @@ namespace XamControls.CustomCharts.Settings
                     horizLine.FillSampleValues(6);
                     _customChart.ChartView.Chart.Series.Add(horizLine);
                     _customChart.ImageSource = dataPicker[19];
-                    imageButton.Image = dataPicker[19];
+                    imageButton.ImageSource = dataPicker[19];
                     break;
                     #if !TEE_STD
                 case "ISOSURFACE":
@@ -493,7 +493,7 @@ namespace XamControls.CustomCharts.Settings
                     isoSurface.FillSampleValues(10);
                     _customChart.ChartView.Chart.Series.Add(isoSurface);
                     _customChart.ImageSource = dataPicker[20];
-                    imageButton.Image = dataPicker[20];
+                    imageButton.ImageSource = dataPicker[20];
                     break;
 #endif
                 case "LINE":
@@ -501,7 +501,7 @@ namespace XamControls.CustomCharts.Settings
                     line.FillSampleValues(5);
                     _customChart.ChartView.Chart.Series.Add(line);
                     _customChart.ImageSource = dataPicker[21];
-                    imageButton.Image = dataPicker[21];
+                    imageButton.ImageSource = dataPicker[21];
                     break;
 #if !TEE_STD
                 case "LINEPOINT":
@@ -509,7 +509,7 @@ namespace XamControls.CustomCharts.Settings
                     linePoint.FillSampleValues(6);
                     _customChart.ChartView.Chart.Series.Add(linePoint);
                     _customChart.ImageSource = dataPicker[22];
-                    imageButton.Image = dataPicker[22];
+                    imageButton.ImageSource = dataPicker[22];
                     break;
 #endif
                 case "PIE":
@@ -517,7 +517,7 @@ namespace XamControls.CustomCharts.Settings
                     pie.FillSampleValues(4);
                     _customChart.ChartView.Chart.Series.Add(pie);
                     _customChart.ImageSource = dataPicker[23];
-                    imageButton.Image = dataPicker[23];
+                    imageButton.ImageSource = dataPicker[23];
                     break;
 #if !TEE_STD
                 case "SURFACE":
@@ -526,7 +526,7 @@ namespace XamControls.CustomCharts.Settings
                     //surface.
                     _customChart.ChartView.Chart.Series.Add(surface);
                     _customChart.ImageSource = dataPicker[24];
-                    imageButton.Image = dataPicker[24];
+                    imageButton.ImageSource = dataPicker[24];
                     break;
 
                 case "TOWER":
@@ -534,7 +534,7 @@ namespace XamControls.CustomCharts.Settings
                     tower.FillSampleValues(8);
                     _customChart.ChartView.Chart.Series.Add(tower);
                     _customChart.ImageSource = dataPicker[25];
-                    imageButton.Image = dataPicker[25];
+                    imageButton.ImageSource = dataPicker[25];
                     break;
 
                 case "VOLUME":
@@ -542,15 +542,13 @@ namespace XamControls.CustomCharts.Settings
                     volume.FillSampleValues(9);
                     _customChart.ChartView.Chart.Series.Add(volume);
                     _customChart.ImageSource = dataPicker[26];
-                    imageButton.Image = dataPicker[26];
+                    imageButton.ImageSource = dataPicker[26];
                     break;
 #endif
             }
 
             _customChart.ChartView.Chart.Axes.Left.Automatic = true;
             _customChart.ChartView.Chart.Axes.Bottom.Automatic = true;
-
-        
         }
 
         // Configurar el listView per veure els values actuals

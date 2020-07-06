@@ -5,21 +5,19 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
-using XamControls.Services.Timer;
 
 namespace XamControls.Charts.Pro
 {
     public class SpeedTimeChart
     {
-
         private Line line1;
         private Line line2;
         private Line line3;
         private Variables.Variables var;
         private ChartView BaseChart;
+
         public SpeedTimeChart(ChartView BaseChart)
         {
-
             line1 = new Line();
             line2 = new Line();
             line3 = new Line();
@@ -92,10 +90,8 @@ namespace XamControls.Charts.Pro
 
         public void RemoveEvent()
         {
-
             stop = true;
             BaseChart.Chart.AfterDraw -= Chart_AfterDraw;
-
         }
 
     }
